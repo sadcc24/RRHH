@@ -1,0 +1,358 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{108A10EC-C454-4524-B4F9-62A1BE10A321}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WindowsFormsApplication1</RootNamespace>
+    <AssemblyName>WindowsFormsApplication1</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="frmplanilla.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmplanilla.designer.cs">
+      <DependentUpon>frmplanilla.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmaceptacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmaceptacion.designer.cs">
+      <DependentUpon>frmaceptacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmagregarcandidato.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmagregarcandidato.designer.cs">
+      <DependentUpon>frmagregarcandidato.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmasignacioncapacitaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmasignacioncapacitaciones.designer.cs">
+      <DependentUpon>frmasignacioncapacitaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmasignarcandidato.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmasignarcandidato.designer.cs">
+      <DependentUpon>frmasignarcandidato.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmcandidatonuevo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmcandidatonuevo.designer.cs">
+      <DependentUpon>frmcandidatonuevo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmcandidatos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmcandidatos.designer.cs">
+      <DependentUpon>frmcandidatos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmcapacitacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmcapacitacion.designer.cs">
+      <DependentUpon>frmcapacitacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmcapacitaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmcapacitaciones.designer.cs">
+      <DependentUpon>frmcapacitaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmdetallesasignaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmdetallesasignaciones.designer.cs">
+      <DependentUpon>frmdetallesasignaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmempleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmempleados.designer.cs">
+      <DependentUpon>frmempleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmenrevistageneral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmenrevistageneral.designer.cs">
+      <DependentUpon>frmenrevistageneral.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmentrevista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmentrevista.designer.cs">
+      <DependentUpon>frmentrevista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmevaluaciondesempeño.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmevaluaciondesempeño.designer.cs">
+      <DependentUpon>frmevaluaciondesempeño.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmvacacionesplanilla.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmvacacionesplanilla.designer.cs">
+      <DependentUpon>frmvacacionesplanilla.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmplantillaplanillas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmplantillaplanillas.designer.cs">
+      <DependentUpon>frmplantillaplanillas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmaprobacionsolicitud.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmaprobacionsolicitud.designer.cs">
+      <DependentUpon>frmaprobacionsolicitud.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmmodulovacaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmmodulovacaciones.designer.cs">
+      <DependentUpon>frmmodulovacaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmmotivo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmmotivo.designer.cs">
+      <DependentUpon>frmmotivo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="informacion solicitud.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="informacion solicitud.designer.cs">
+      <DependentUpon>informacion solicitud.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDI.Designer.cs">
+      <DependentUpon>MDI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="frmpruebas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmpruebas.designer.cs">
+      <DependentUpon>frmpruebas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmpuestodetrabajo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmpuestodetrabajo.designer.cs">
+      <DependentUpon>frmpuestodetrabajo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmrequisiciondepuesto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmrequisiciondepuesto.designer.cs">
+      <DependentUpon>frmrequisiciondepuesto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmresultadoPueba.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmresultadoPueba.designer.cs">
+      <DependentUpon>frmresultadoPueba.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frmplanilla.resx">
+      <DependentUpon>frmplanilla.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmaceptacion.resx">
+      <DependentUpon>frmaceptacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmagregarcandidato.resx">
+      <DependentUpon>frmagregarcandidato.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmasignacioncapacitaciones.resx">
+      <DependentUpon>frmasignacioncapacitaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmasignarcandidato.resx">
+      <DependentUpon>frmasignarcandidato.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmcandidatonuevo.resx">
+      <DependentUpon>frmcandidatonuevo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmcandidatos.resx">
+      <DependentUpon>frmcandidatos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmcapacitacion.resx">
+      <DependentUpon>frmcapacitacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmcapacitaciones.resx">
+      <DependentUpon>frmcapacitaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmdetallesasignaciones.resx">
+      <DependentUpon>frmdetallesasignaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmempleados.resx">
+      <DependentUpon>frmempleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmenrevistageneral.resx">
+      <DependentUpon>frmenrevistageneral.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmentrevista.resx">
+      <DependentUpon>frmentrevista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmevaluaciondesempeño.resx">
+      <DependentUpon>frmevaluaciondesempeño.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmvacacionesplanilla.resx">
+      <DependentUpon>frmvacacionesplanilla.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmplantillaplanillas.resx">
+      <DependentUpon>frmplantillaplanillas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmaprobacionsolicitud.resx">
+      <DependentUpon>frmaprobacionsolicitud.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmmodulovacaciones.resx">
+      <DependentUpon>frmmodulovacaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmmotivo.resx">
+      <DependentUpon>frmmotivo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="informacion solicitud.resx">
+      <DependentUpon>informacion solicitud.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDI.resx">
+      <DependentUpon>MDI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="frmpruebas.resx">
+      <DependentUpon>frmpruebas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmpuestodetrabajo.resx">
+      <DependentUpon>frmpuestodetrabajo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmrequisiciondepuesto.resx">
+      <DependentUpon>frmrequisiciondepuesto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmresultadoPueba.resx">
+      <DependentUpon>frmresultadoPueba.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="iconos\Iconos Generales SAD17\refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="iconos\Iconos Generales SAD17\go to first.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="iconos\Iconos Generales SAD17\anterior.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="iconos\Iconos Generales SAD17\go next.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="iconos\Iconos Generales SAD17\go to last.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="iconos\Iconos Generales SAD17\guardar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="iconos\Iconos Generales SAD17\editar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="iconos\Iconos Generales SAD17\help.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="iconos\Iconos Generales SAD17\nuevo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="iconos\Iconos Generales SAD17\eliminar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="iconos\Iconos Generales SAD17\bancos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="iconos\Iconos Generales SAD17\menu principal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="iconos\Iconos Generales SAD17\buscar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="iconos\Iconos Generales SAD17\loggin.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
