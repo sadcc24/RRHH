@@ -33,5 +33,22 @@ namespace WindowsFormsApplication1
             txtmotivo.Enabled = false;
             txtdescripcion.Enabled = false;
         }
+
+        private void frmmotivo_Load(object sender, EventArgs e)
+        {
+          /*
+            conexionbd.ObtenerConexion();
+            MessageBox.Show("conexion correcta");*/
+        }
+
+        private void btnguardar_Click(object sender, EventArgs e)
+        {
+            capa_presentacion pmotivo = new capa_presentacion();
+            pmotivo.motivo = txtmotivo.Text.Trim();
+            pmotivo.descripcion = txtdescripcion.Text.Trim();
+            new capa_negocio().Insert_Motivo(pmotivo);
+            txtmotivo.Enabled = false;
+            txtdescripcion.Enabled = false;
+        }
     }
 }

@@ -141,5 +141,13 @@ namespace WindowsFormsApplication1
             ventanaP.MdiParent = this;
             ventanaP.Show();
         }
+
+        private void nuevoEmpleadoToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmnuevoempleado ventanaP = new frmnuevoempleado();
+            ventanaP.MdiParent = this;
+            ventanaP.Show();
+            
+        }
     }
 }

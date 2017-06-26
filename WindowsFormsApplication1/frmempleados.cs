@@ -7,11 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace WindowsFormsApplication1
 {
     public partial class frmempleados : Form
     {
+        public static SqlConnection SQL_Conexion = new SqlConnection();
+
         public frmempleados()
         {
             InitializeComponent();
@@ -25,7 +28,27 @@ namespace WindowsFormsApplication1
         private void Form1_Load(object sender, EventArgs e)
         {
             this.Size = new Size(665, 322);
+            carga_gried();
+
         }
+
+        private void carga_gried()
+        {
+            try
+            {
+                SqlDataAdapter SQL_da = new SqlDataAdapter("exec gridEmpleado", conexionbd.ObtenerConexion());
+                DataTable DT_dat = new DataTable();
+                SQL_da.Fill(DT_dat);
+                this.dataGridView1.DataSource = DT_dat;
+                SQL_Conexion.Close();
+
+            }
+            catch (Exception ei)
+            {
+                MessageBox.Show("Ocurrio un error" + ei.Message);
+            }
+        }
+
 
         private void button8_Click(object sender, EventArgs e)
         {
