@@ -21,10 +21,16 @@ namespace WindowsFormsApplication1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            usuario = textBox1.Text;
-            this.Hide();
-            MDI ventanaP = new MDI(usuario);
-            ventanaP.Show();
+            string sUser = textBox1.Text;
+            string sContra = textBox2.Text;
+            int result = new capa_negocio().Login(sUser, sContra);
+            if (result > 0)
+            {
+                //Esconde este formulario y muestra el formulario de menu
+                this.Hide();
+                MDI ventanaP = new MDI(sUser);
+                ventanaP.Show();
+            }
         }
     }
 }
