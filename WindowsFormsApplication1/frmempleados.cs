@@ -36,7 +36,7 @@ namespace WindowsFormsApplication1
         {
             try
             {
-                SqlDataAdapter SQL_da = new SqlDataAdapter("exec gridEmpleado", conexionbd.ObtenerConexion());
+                SqlDataAdapter SQL_da = new SqlDataAdapter("exec gridEmpleado", conexionbd_Empleado.ObtenerConexion());
                 DataTable DT_dat = new DataTable();
                 SQL_da.Fill(DT_dat);
                 this.dataGridView1.DataSource = DT_dat;

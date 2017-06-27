@@ -12,28 +12,9 @@ namespace WindowsFormsApplication1
 {
     public partial class Detalle_Capacitacion : Form
     {
-        string id_capacitacion ;
-        public Detalle_Capacitacion(string valor,string nombre,string descripcion,string expositor,string tipo,string costo)
+        public Detalle_Capacitacion()
         {
-            id_capacitacion = valor;
             InitializeComponent();
-            List<capa_presentacion.infotipocapacitacion> info_tipocapacitaciones = capa_negocio.infotipocapacitacion();
-            if (valor != "0") {
-                txtnombre.Text = nombre;
-                txtDescripcion.Text = descripcion;
-                txtexpositor.Text = expositor;
-                txtcosto.Text = costo;
-
-                cbarea.DataSource = info_tipocapacitaciones;
-                cbarea.DisplayMember = "tipo";
-                cbarea.ValueMember = "idtipo";
-
-
-
-
-
-            }
-           
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -48,28 +29,10 @@ namespace WindowsFormsApplication1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string nombre = txtnombre.Text;
-            string descripcion = txtDescripcion.Text;
-            string expositor = txtexpositor.Text;
-            string costo = txtcosto.Text;
-            string area = cbarea.SelectedValue.ToString();
-            int resultado= capa_negocio.modificar_capacitacion(id_capacitacion,nombre, descripcion, expositor, costo, area);
-            if (resultado == 1) {
-                MessageBox.Show("Modificacion Exitosa");
-            }
+
         }
 
         private void Detalle_Capacitacion_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnGuardar_Click(object sender, EventArgs e)
         {
 
         }

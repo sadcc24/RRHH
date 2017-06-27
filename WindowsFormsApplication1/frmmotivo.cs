@@ -43,10 +43,10 @@ namespace WindowsFormsApplication1
 
         private void btnguardar_Click(object sender, EventArgs e)
         {
-            capa_presentacion pmotivo = new capa_presentacion();
+            capa_presentacion_Empleado pmotivo = new capa_presentacion_Empleado();
             pmotivo.motivo = txtmotivo.Text.Trim();
             pmotivo.descripcion = txtdescripcion.Text.Trim();
-            new capa_negocio().Insert_Motivo(pmotivo);
+            new capa_negocio_Empleado().Insert_Motivo(pmotivo);
             txtmotivo.Enabled = false;
             txtdescripcion.Enabled = false;
         }
