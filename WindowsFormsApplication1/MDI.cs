@@ -141,5 +141,15 @@ namespace WindowsFormsApplication1
             ventanaP.MdiParent = this;
             ventanaP.Show();
         }
+
+        private void MDI_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void capacitacionesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

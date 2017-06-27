@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MRP_BD">
+      <HintPath>..\..\..\Users\chepe\Desktop\seminario fase 2\bd\MRP_BD.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -46,6 +49,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="capa_logica.cs" />
+    <Compile Include="capa_negocio.cs" />
+    <Compile Include="capa_presentacion.cs" />
+    <Compile Include="conexionbd.cs" />
     <Compile Include="frmplanilla.cs">
       <SubType>Form</SubType>
     </Compile>
