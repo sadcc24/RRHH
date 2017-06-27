@@ -19,11 +19,16 @@ namespace WindowsFormsApplication1
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            int result = new capa_negocio().InsertaEmpleado();
+            int result = new capa_negocio_Empleado().InsertaEmpleado();
             if (result > 0)
             {
                 MessageBox.Show("Empleado Creado Correctamente");
             }
+        }
+
+        private void frmnuevoempleado_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

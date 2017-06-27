@@ -23,7 +23,7 @@ namespace WindowsFormsApplication1
         {
             string sUser = textBox1.Text;
             string sContra = textBox2.Text;
-            int result = new capa_negocio().Login(sUser, sContra);
+            int result = new capa_negocio_Empleado().Login(sUser, sContra);
             if (result > 0)
             {
                 //Esconde este formulario y muestra el formulario de menu
@@ -31,14 +31,6 @@ namespace WindowsFormsApplication1
                 MDI ventanaP = new MDI(sUser);
                 ventanaP.Show();
             }
-/*<<<<<<< HEAD
-=======*/
-        }
-
-        private void Login_Load(object sender, EventArgs e)
-        {
-
-//>>>>>>> fix_2
         }
     }
 }
