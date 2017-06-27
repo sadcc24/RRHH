@@ -30,8 +30,8 @@ namespace WindowsFormsApplication1
             string idcapacitacion,nombre,descripcion,expositor,costo,tipo;
             idcapacitacion = dgvCapacitaciones[0, dgvCapacitaciones.CurrentCell.RowIndex].Value.ToString();            nombre= dgvCapacitaciones[1, dgvCapacitaciones.CurrentCell.RowIndex].Value.ToString();
             descripcion= dgvCapacitaciones[2, dgvCapacitaciones.CurrentCell.RowIndex].Value.ToString();
-            expositor= dgvCapacitaciones[3, dgvCapacitaciones.CurrentCell.RowIndex].Value.ToString();
-            tipo=dgvCapacitaciones[4, dgvCapacitaciones.CurrentCell.RowIndex].Value.ToString();
+            expositor= dgvCapacitaciones[4, dgvCapacitaciones.CurrentCell.RowIndex].Value.ToString();
+            tipo=dgvCapacitaciones[3, dgvCapacitaciones.CurrentCell.RowIndex].Value.ToString();
             costo= dgvCapacitaciones[5, dgvCapacitaciones.CurrentCell.RowIndex].Value.ToString();
 
             Detalle_Capacitacion capa = new Detalle_Capacitacion(idcapacitacion,nombre,descripcion,expositor,tipo,costo);

@@ -62,7 +62,7 @@ namespace WindowsFormsApplication1
 
             
             SqlCommand comando2 = new SqlCommand("  update DETALLECAPACITACION set expositor='"+expositor+"', idtipo="+area +" where idcapacitacion="+ id_capacitacion, conexionbd.ObtenerConexion());
-            modificacion = comando.ExecuteNonQuery();
+            modificacion = comando2.ExecuteNonQuery();
             SQL_Conexion.Close();
 
             return modificacion;

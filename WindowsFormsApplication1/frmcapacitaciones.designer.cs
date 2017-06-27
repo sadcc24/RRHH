@@ -30,6 +30,7 @@
         {
             this.dgvCapacitaciones = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnnuevo = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
@@ -39,7 +40,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.btnnuevo = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCapacitaciones)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -69,6 +69,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(412, 40);
             this.panel1.TabIndex = 8;
+            // 
+            // btnnuevo
+            // 
+            this.btnnuevo.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.nuevo;
+            this.btnnuevo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnnuevo.Location = new System.Drawing.Point(242, 3);
+            this.btnnuevo.Name = "btnnuevo";
+            this.btnnuevo.Size = new System.Drawing.Size(41, 34);
+            this.btnnuevo.TabIndex = 12;
+            this.btnnuevo.UseVisualStyleBackColor = true;
+            this.btnnuevo.Click += new System.EventHandler(this.btnnuevo_Click);
             // 
             // button9
             // 
@@ -162,22 +173,11 @@
             this.button3.TabIndex = 5;
             this.button3.UseVisualStyleBackColor = true;
             // 
-            // btnnuevo
-            // 
-            this.btnnuevo.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.nuevo;
-            this.btnnuevo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnnuevo.Location = new System.Drawing.Point(242, 3);
-            this.btnnuevo.Name = "btnnuevo";
-            this.btnnuevo.Size = new System.Drawing.Size(41, 34);
-            this.btnnuevo.TabIndex = 12;
-            this.btnnuevo.UseVisualStyleBackColor = true;
-            this.btnnuevo.Click += new System.EventHandler(this.btnnuevo_Click);
-            // 
             // frmcapacitaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.MediumPurple;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(778, 411);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dgvCapacitaciones);
