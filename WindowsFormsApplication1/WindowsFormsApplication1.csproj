@@ -53,12 +53,15 @@
     <Compile Include="capa_negocio.cs" />
     <Compile Include="capa_presentacion.cs" />
     <Compile Include="conexionbd.cs" />
+<<<<<<< HEAD
     <Compile Include="frmnuevoempleado.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmnuevoempleado.Designer.cs">
       <DependentUpon>frmnuevoempleado.cs</DependentUpon>
     </Compile>
+=======
+>>>>>>> fix_2
     <Compile Include="frmplanilla.cs">
       <SubType>Form</SubType>
     </Compile>

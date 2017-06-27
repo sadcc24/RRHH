@@ -30,6 +30,28 @@ namespace WindowsFormsApplication1
                 }
             }
          }
+<<<<<<< HEAD
+=======
+
+        public static List<capa_presentacion.infotipocapacitacion> infotipocapacitacion() {
+            List<capa_presentacion.infotipocapacitacion> tipocapacitacion = capa_logica.info_tipocapacitaciones();
+            return tipocapacitacion;
+        }
+        public static List<capa_presentacion.info_capa> capacitaciones() {
+            List<capa_presentacion.info_capa> capa = capa_logica.info_capacitaciones();
+            return capa;
+        }
+
+
+        public static int modificar_capacitacion(string id_capacitacion,string nombre, string descripcion,string expositor,string costo,string area) {
+            int result=0;
+
+            result=capa_logica.modificar_capacitacion(id_capacitacion,nombre, descripcion, expositor, costo, area);
+
+            return result;
+
+        }
+>>>>>>> fix_2
         public int Login(string sUser, string sContra)
         {
             int resultado = 0;
@@ -51,6 +73,7 @@ namespace WindowsFormsApplication1
             }
             return resultado;
         }
+<<<<<<< HEAD
 
         public int InsertaEmpleado()
         {
@@ -73,5 +96,7 @@ namespace WindowsFormsApplication1
             
             return resultado;
         }
+=======
+>>>>>>> fix_2
     }
 }

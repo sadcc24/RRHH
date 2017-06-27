@@ -70,7 +70,10 @@
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel4 = new System.Windows.Forms.ToolStripStatusLabel();
+<<<<<<< HEAD
             this.nuevoEmpleadoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+=======
+>>>>>>> fix_2
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -307,6 +310,7 @@
             this.capacitacionesToolStripMenuItem.Name = "capacitacionesToolStripMenuItem";
             this.capacitacionesToolStripMenuItem.Size = new System.Drawing.Size(99, 20);
             this.capacitacionesToolStripMenuItem.Text = "Capacitaciones";
+            this.capacitacionesToolStripMenuItem.Click += new System.EventHandler(this.capacitacionesToolStripMenuItem_Click);
             // 
             // consultaToolStripMenuItem1
             // 
@@ -402,6 +406,7 @@
             this.toolStripStatusLabel4.Size = new System.Drawing.Size(118, 17);
             this.toolStripStatusLabel4.Text = "toolStripStatusLabel4";
             // 
+<<<<<<< HEAD
             // nuevoEmpleadoToolStripMenuItem1
             // 
             this.nuevoEmpleadoToolStripMenuItem1.Name = "nuevoEmpleadoToolStripMenuItem1";
@@ -409,6 +414,8 @@
             this.nuevoEmpleadoToolStripMenuItem1.Text = "Nuevo Empleado";
             this.nuevoEmpleadoToolStripMenuItem1.Click += new System.EventHandler(this.nuevoEmpleadoToolStripMenuItem1_Click);
             // 
+=======
+>>>>>>> fix_2
             // MDI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -421,6 +428,7 @@
             this.Name = "MDI";
             this.Text = "RRHH";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MDI_FormClosed);
             this.Load += new System.EventHandler(this.RRHH_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
