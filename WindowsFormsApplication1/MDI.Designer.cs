@@ -70,10 +70,10 @@
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel4 = new System.Windows.Forms.ToolStripStatusLabel();
-<<<<<<< HEAD
+//<<<<<<< HEAD
             this.nuevoEmpleadoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-=======
->>>>>>> fix_2
+//=======
+//>>>>>>> fix_2
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -406,7 +406,7 @@
             this.toolStripStatusLabel4.Size = new System.Drawing.Size(118, 17);
             this.toolStripStatusLabel4.Text = "toolStripStatusLabel4";
             // 
-<<<<<<< HEAD
+//<<<<<<< HEAD
             // nuevoEmpleadoToolStripMenuItem1
             // 
             this.nuevoEmpleadoToolStripMenuItem1.Name = "nuevoEmpleadoToolStripMenuItem1";
@@ -414,8 +414,8 @@
             this.nuevoEmpleadoToolStripMenuItem1.Text = "Nuevo Empleado";
             this.nuevoEmpleadoToolStripMenuItem1.Click += new System.EventHandler(this.nuevoEmpleadoToolStripMenuItem1_Click);
             // 
-=======
->>>>>>> fix_2
+//=======
+//>>>>>>> fix_2
             // MDI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);

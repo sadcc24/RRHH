@@ -30,8 +30,6 @@ namespace WindowsFormsApplication1
                 }
             }
          }
-<<<<<<< HEAD
-=======
 
         public static List<capa_presentacion.infotipocapacitacion> infotipocapacitacion() {
             List<capa_presentacion.infotipocapacitacion> tipocapacitacion = capa_logica.info_tipocapacitaciones();
@@ -51,7 +49,7 @@ namespace WindowsFormsApplication1
             return result;
 
         }
->>>>>>> fix_2
+//>>>>>>> fix_2
         public int Login(string sUser, string sContra)
         {
             int resultado = 0;
@@ -73,7 +71,7 @@ namespace WindowsFormsApplication1
             }
             return resultado;
         }
-<<<<<<< HEAD
+//<<<<<<< HEAD
 
         public int InsertaEmpleado()
         {
@@ -96,7 +94,7 @@ namespace WindowsFormsApplication1
             
             return resultado;
         }
-=======
->>>>>>> fix_2
+//=======
+//>>>>>>> fix_2
     }
 }

@@ -142,13 +142,14 @@ namespace WindowsFormsApplication1
             ventanaP.Show();
         }
 
-<<<<<<< HEAD
+        //<<<<<<< HEAD
         private void nuevoEmpleadoToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             frmnuevoempleado ventanaP = new frmnuevoempleado();
             ventanaP.MdiParent = this;
             ventanaP.Show();
-=======
+        }
+//=======
         private void MDI_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
@@ -156,7 +157,7 @@ namespace WindowsFormsApplication1
 
         private void capacitacionesToolStripMenuItem_Click(object sender, EventArgs e)
         {
->>>>>>> fix_2
+//>>>>>>> fix_2
             
         }
     }

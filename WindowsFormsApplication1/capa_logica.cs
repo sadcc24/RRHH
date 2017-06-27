@@ -12,7 +12,7 @@ namespace WindowsFormsApplication1
         public static SqlConnection SQL_Conexion = new SqlConnection();
 
         public static int Agregar(capa_presentacion pMotivo)
-<<<<<<< HEAD
+/*<<<<<<< HEAD
             {
 
                 int retorno = 0;
@@ -28,7 +28,7 @@ namespace WindowsFormsApplication1
 
         }
 
-=======
+=======*/
         {
 
             int retorno = 0;
@@ -84,18 +84,18 @@ namespace WindowsFormsApplication1
 
             return modificacion;
         }
->>>>>>> fix_2
+//>>>>>>> fix_2
         public static int LoginD(string sUser, string sContra)
         {
             int retorno = 0;
             SqlCommand comando = new SqlCommand("Select usuario from USUARIO_1 WHERE usuario='" + sUser + "'And password ='" + sContra + "'", conexionbd.ObtenerConexion());
             retorno = comando.ExecuteNonQuery();
-<<<<<<< HEAD
-            Object obj = comando.ExecuteScalar();
+//<<<<<<< HEAD
+            //Object obj = comando.ExecuteScalar();
 
-=======
+//=======
             object obj = comando.ExecuteScalar();
->>>>>>> fix_2
+//>>>>>>> fix_2
             if (obj == null)
             {
                 retorno = 0;
@@ -109,7 +109,7 @@ namespace WindowsFormsApplication1
             //devolvvemos la variable
             return retorno;
         }
-<<<<<<< HEAD
+//<<<<<<< HEAD
     
 
     public static int InsertaEmpleado()
@@ -119,9 +119,9 @@ namespace WindowsFormsApplication1
         retorno = comando.ExecuteNonQuery();
         return retorno;
     }
-}
-}
-=======
+//}
+//}
+//=======
     }
 }
->>>>>>> fix_2
+//>>>>>>> fix_2

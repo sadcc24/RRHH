@@ -31,14 +31,14 @@ namespace WindowsFormsApplication1
                 MDI ventanaP = new MDI(sUser);
                 ventanaP.Show();
             }
-<<<<<<< HEAD
-=======
+/*<<<<<<< HEAD
+=======*/
         }
 
         private void Login_Load(object sender, EventArgs e)
         {
 
->>>>>>> fix_2
+//>>>>>>> fix_2
         }
     }
 }

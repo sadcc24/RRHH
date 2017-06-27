@@ -12,9 +12,9 @@ namespace WindowsFormsApplication1
             public string motivo { get; set; }
             public string descripcion { get; set; }
 
-<<<<<<< HEAD
+/*<<<<<<< HEAD
             public capa_presentacion() { }
-=======
+=======*/
         public class info_capa {
             public string idcapacitacion { get; set; }
             public string nombre_capa { get; set; }
@@ -34,7 +34,7 @@ namespace WindowsFormsApplication1
 
 
         public capa_presentacion() { }
->>>>>>> fix_2
+//>>>>>>> fix_2
 
             public capa_presentacion(int pcodmotivo, string pmotivo, string pdescripcion)
 
