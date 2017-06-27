@@ -7,7 +7,7 @@ using System.Data.SqlClient;
 
 namespace WindowsFormsApplication1
 {
-   public class conexionbd
+   public class conexionbd_Empleado
     {
         public static SqlConnection ObtenerConexion()
         {

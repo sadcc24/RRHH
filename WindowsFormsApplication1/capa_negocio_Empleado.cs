@@ -7,9 +7,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1
 {
-     public class capa_negocio
+     public class capa_negocio_Empleado
     {
-        public void Insert_Motivo(capa_presentacion pmotivo)
+        public void Insert_Motivo(capa_presentacion_Empleado pmotivo)
         {
             if (string.IsNullOrWhiteSpace(pmotivo.motivo) || string.IsNullOrWhiteSpace(pmotivo.descripcion))
             {
@@ -18,7 +18,7 @@ namespace WindowsFormsApplication1
             else
             {
 
-                int resultado = capa_logica.Agregar(pmotivo);
+                int resultado = capa_logica_Empleado.Agregar(pmotivo);
 
                 if (resultado > 0)
                 {
@@ -39,7 +39,7 @@ namespace WindowsFormsApplication1
             }
             else
             {
-                resultado = capa_logica.LoginD(sUser, sContra);
+                resultado = capa_logica_Empleado.LoginD(sUser, sContra);
                 if (resultado > 0)
                 {
                     resultado = 1;
@@ -61,7 +61,7 @@ namespace WindowsFormsApplication1
             //}
             //else
             //{
-            resultado = capa_logica.InsertaEmpleado();
+            resultado = capa_logica_Empleado.InsertaEmpleado();
                 if (resultado > 0)
                 {
                     resultado = 1;

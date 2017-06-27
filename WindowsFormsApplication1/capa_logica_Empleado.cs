@@ -7,17 +7,17 @@ using System.Data.SqlClient;
 
 namespace WindowsFormsApplication1
 {
-    class capa_logica
+    class capa_logica_Empleado
     {
         public static SqlConnection SQL_Conexion = new SqlConnection();
 
-        public static int Agregar(capa_presentacion pMotivo)
+        public static int Agregar(capa_presentacion_Empleado pMotivo)
             {
 
                 int retorno = 0;
             
                 SqlCommand comando = new SqlCommand(string.Format("Insert into motivouno (motivo, descripcion) values ('{0}','{1}')",
-                   pMotivo.motivo, pMotivo.descripcion), conexionbd.ObtenerConexion());
+                   pMotivo.motivo, pMotivo.descripcion), conexionbd_Empleado.ObtenerConexion());
                 retorno = comando.ExecuteNonQuery();
                 return retorno;
             }
@@ -30,7 +30,7 @@ namespace WindowsFormsApplication1
         public static int LoginD(string sUser, string sContra)
         {
             int retorno = 0;
-            SqlCommand comando = new SqlCommand("Select usuario from USUARIO_1 WHERE usuario='" + sUser + "'And password ='" + sContra + "'", conexionbd.ObtenerConexion());
+            SqlCommand comando = new SqlCommand("Select usuario from USUARIO_1 WHERE usuario='" + sUser + "'And password ='" + sContra + "'", conexionbd_Empleado.ObtenerConexion());
             retorno = comando.ExecuteNonQuery();
             Object obj = comando.ExecuteScalar();
 
@@ -52,7 +52,7 @@ namespace WindowsFormsApplication1
     public static int InsertaEmpleado()
     {
         int retorno = 0;
-        SqlCommand comando = new SqlCommand("EXEC InsertaEmpleado", conexionbd.ObtenerConexion());
+        SqlCommand comando = new SqlCommand("EXEC InsertaEmpleado", conexionbd_Empleado.ObtenerConexion());
         retorno = comando.ExecuteNonQuery();
         return retorno;
     }

@@ -29,7 +29,15 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnAyuda = new System.Windows.Forms.Button();
+            this.btnEditar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnActualizar = new System.Windows.Forms.Button();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.btnAdelantefin = new System.Windows.Forms.Button();
+            this.btnAtrasfin = new System.Windows.Forms.Button();
+            this.btnAtras = new System.Windows.Forms.Button();
+            this.btnAdelante = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
@@ -54,22 +62,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnAyuda = new System.Windows.Forms.Button();
-            this.btnEditar = new System.Windows.Forms.Button();
-            this.btnActualizar = new System.Windows.Forms.Button();
-            this.btnGuardar = new System.Windows.Forms.Button();
-            this.btnAdelantefin = new System.Windows.Forms.Button();
-            this.btnAtrasfin = new System.Windows.Forms.Button();
-            this.btnAtras = new System.Windows.Forms.Button();
-            this.btnAdelante = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.textBox11 = new System.Windows.Forms.TextBox();
             this.textBox12 = new System.Windows.Forms.TextBox();
             this.textBox13 = new System.Windows.Forms.TextBox();
             this.textBox14 = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
@@ -96,6 +94,26 @@
             this.panel1.Size = new System.Drawing.Size(375, 40);
             this.panel1.TabIndex = 14;
             // 
+            // btnAyuda
+            // 
+            this.btnAyuda.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.help;
+            this.btnAyuda.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAyuda.Location = new System.Drawing.Point(322, 3);
+            this.btnAyuda.Name = "btnAyuda";
+            this.btnAyuda.Size = new System.Drawing.Size(41, 34);
+            this.btnAyuda.TabIndex = 11;
+            this.btnAyuda.UseVisualStyleBackColor = true;
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.editar;
+            this.btnEditar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnEditar.Location = new System.Drawing.Point(242, 3);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(41, 34);
+            this.btnEditar.TabIndex = 10;
+            this.btnEditar.UseVisualStyleBackColor = true;
+            // 
             // btnCancelar
             // 
             this.btnCancelar.Location = new System.Drawing.Point(282, 3);
@@ -104,6 +122,67 @@
             this.btnCancelar.TabIndex = 9;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            // 
+            // btnActualizar
+            // 
+            this.btnActualizar.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.refresh;
+            this.btnActualizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnActualizar.Location = new System.Drawing.Point(2, 3);
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Size = new System.Drawing.Size(41, 34);
+            this.btnActualizar.TabIndex = 8;
+            this.btnActualizar.UseVisualStyleBackColor = true;
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.guardar;
+            this.btnGuardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnGuardar.Location = new System.Drawing.Point(202, 3);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(41, 34);
+            this.btnGuardar.TabIndex = 7;
+            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
+            // btnAdelantefin
+            // 
+            this.btnAdelantefin.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.go_to_last;
+            this.btnAdelantefin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAdelantefin.Location = new System.Drawing.Point(162, 3);
+            this.btnAdelantefin.Name = "btnAdelantefin";
+            this.btnAdelantefin.Size = new System.Drawing.Size(41, 34);
+            this.btnAdelantefin.TabIndex = 6;
+            this.btnAdelantefin.UseVisualStyleBackColor = true;
+            // 
+            // btnAtrasfin
+            // 
+            this.btnAtrasfin.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.go_to_first;
+            this.btnAtrasfin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnAtrasfin.Location = new System.Drawing.Point(42, 3);
+            this.btnAtrasfin.Name = "btnAtrasfin";
+            this.btnAtrasfin.Size = new System.Drawing.Size(41, 34);
+            this.btnAtrasfin.TabIndex = 3;
+            this.btnAtrasfin.UseVisualStyleBackColor = true;
+            // 
+            // btnAtras
+            // 
+            this.btnAtras.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.anterior;
+            this.btnAtras.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAtras.Location = new System.Drawing.Point(82, 3);
+            this.btnAtras.Name = "btnAtras";
+            this.btnAtras.Size = new System.Drawing.Size(41, 34);
+            this.btnAtras.TabIndex = 4;
+            this.btnAtras.UseVisualStyleBackColor = true;
+            // 
+            // btnAdelante
+            // 
+            this.btnAdelante.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.go_next;
+            this.btnAdelante.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAdelante.Location = new System.Drawing.Point(122, 3);
+            this.btnAdelante.Name = "btnAdelante";
+            this.btnAdelante.Size = new System.Drawing.Size(41, 34);
+            this.btnAdelante.TabIndex = 5;
+            this.btnAdelante.UseVisualStyleBackColor = true;
             // 
             // panel2
             // 
@@ -335,122 +414,31 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Puesto";
             // 
-            // btnAyuda
-            // 
-            this.btnAyuda.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.help;
-            this.btnAyuda.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnAyuda.Location = new System.Drawing.Point(322, 3);
-            this.btnAyuda.Name = "btnAyuda";
-            this.btnAyuda.Size = new System.Drawing.Size(41, 34);
-            this.btnAyuda.TabIndex = 11;
-            this.btnAyuda.UseVisualStyleBackColor = true;
-            // 
-            // btnEditar
-            // 
-            this.btnEditar.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.editar;
-            this.btnEditar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnEditar.Location = new System.Drawing.Point(242, 3);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(41, 34);
-            this.btnEditar.TabIndex = 10;
-            this.btnEditar.UseVisualStyleBackColor = true;
-            // 
-            // btnActualizar
-            // 
-            this.btnActualizar.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.refresh;
-            this.btnActualizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnActualizar.Location = new System.Drawing.Point(2, 3);
-            this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(41, 34);
-            this.btnActualizar.TabIndex = 8;
-            this.btnActualizar.UseVisualStyleBackColor = true;
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.guardar;
-            this.btnGuardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnGuardar.Location = new System.Drawing.Point(202, 3);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(41, 34);
-            this.btnGuardar.TabIndex = 7;
-            this.btnGuardar.UseVisualStyleBackColor = true;
-            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
-            // 
-            // btnAdelantefin
-            // 
-            this.btnAdelantefin.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.go_to_last;
-            this.btnAdelantefin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnAdelantefin.Location = new System.Drawing.Point(162, 3);
-            this.btnAdelantefin.Name = "btnAdelantefin";
-            this.btnAdelantefin.Size = new System.Drawing.Size(41, 34);
-            this.btnAdelantefin.TabIndex = 6;
-            this.btnAdelantefin.UseVisualStyleBackColor = true;
-            // 
-            // btnAtrasfin
-            // 
-            this.btnAtrasfin.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.go_to_first;
-            this.btnAtrasfin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnAtrasfin.Location = new System.Drawing.Point(42, 3);
-            this.btnAtrasfin.Name = "btnAtrasfin";
-            this.btnAtrasfin.Size = new System.Drawing.Size(41, 34);
-            this.btnAtrasfin.TabIndex = 3;
-            this.btnAtrasfin.UseVisualStyleBackColor = true;
-            // 
-            // btnAtras
-            // 
-            this.btnAtras.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.anterior;
-            this.btnAtras.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnAtras.Location = new System.Drawing.Point(82, 3);
-            this.btnAtras.Name = "btnAtras";
-            this.btnAtras.Size = new System.Drawing.Size(41, 34);
-            this.btnAtras.TabIndex = 4;
-            this.btnAtras.UseVisualStyleBackColor = true;
-            // 
-            // btnAdelante
-            // 
-            this.btnAdelante.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.go_next;
-            this.btnAdelante.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnAdelante.Location = new System.Drawing.Point(122, 3);
-            this.btnAdelante.Name = "btnAdelante";
-            this.btnAdelante.Size = new System.Drawing.Size(41, 34);
-            this.btnAdelante.TabIndex = 5;
-            this.btnAdelante.UseVisualStyleBackColor = true;
-            // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.textBox10);
             this.groupBox3.Controls.Add(this.label11);
             this.groupBox3.Controls.Add(this.textBox11);
             this.groupBox3.Controls.Add(this.textBox12);
             this.groupBox3.Controls.Add(this.textBox13);
             this.groupBox3.Controls.Add(this.textBox14);
-            this.groupBox3.Controls.Add(this.label12);
             this.groupBox3.Controls.Add(this.label13);
             this.groupBox3.Controls.Add(this.label14);
             this.groupBox3.Controls.Add(this.label15);
-            this.groupBox3.Location = new System.Drawing.Point(12, 70);
+            this.groupBox3.Location = new System.Drawing.Point(214, 80);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(676, 176);
+            this.groupBox3.Size = new System.Drawing.Size(323, 176);
             this.groupBox3.TabIndex = 12;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Detalles Laborales";
-            // 
-            // textBox10
-            // 
-            this.textBox10.Enabled = false;
-            this.textBox10.Location = new System.Drawing.Point(92, 144);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(164, 20);
-            this.textBox10.TabIndex = 9;
+            this.groupBox3.Text = "Empleado";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(8, 63);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(74, 13);
+            this.label11.Size = new System.Drawing.Size(44, 13);
             this.label11.TabIndex = 8;
-            this.label11.Text = "Departamento";
+            this.label11.Text = "Apellido";
             // 
             // textBox11
             // 
@@ -484,46 +472,38 @@
             this.textBox14.Size = new System.Drawing.Size(164, 20);
             this.textBox14.TabIndex = 4;
             // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(8, 151);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(61, 13);
-            this.label12.TabIndex = 3;
-            this.label12.Text = "Comiciones";
-            // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.Location = new System.Drawing.Point(8, 120);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(64, 13);
+            this.label13.Size = new System.Drawing.Size(52, 13);
             this.label13.TabIndex = 2;
-            this.label13.Text = "Descuentos";
+            this.label13.Text = "Direccion";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.Location = new System.Drawing.Point(8, 93);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(39, 13);
+            this.label14.Size = new System.Drawing.Size(49, 13);
             this.label14.TabIndex = 1;
-            this.label14.Text = "Salario";
+            this.label14.Text = "Telefono";
             // 
             // label15
             // 
             this.label15.AutoSize = true;
             this.label15.Location = new System.Drawing.Point(8, 34);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(40, 13);
+            this.label15.Size = new System.Drawing.Size(44, 13);
             this.label15.TabIndex = 0;
-            this.label15.Text = "Puesto";
+            this.label15.Text = "Nombre";
             // 
             // frmnuevoempleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.MediumPurple;
             this.ClientSize = new System.Drawing.Size(731, 493);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.panel1);
@@ -533,6 +513,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "frmnuevoempleado";
             this.Text = "frmnuevoempleado";
+            this.Load += new System.EventHandler(this.frmnuevoempleado_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -584,13 +565,11 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.TextBox textBox10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox textBox11;
         private System.Windows.Forms.TextBox textBox12;
         private System.Windows.Forms.TextBox textBox13;
         private System.Windows.Forms.TextBox textBox14;
-        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
