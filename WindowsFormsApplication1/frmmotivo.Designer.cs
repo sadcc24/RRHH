@@ -30,7 +30,13 @@
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnretorno = new System.Windows.Forms.Button();
+            this.btnayuda = new System.Windows.Forms.Button();
+            this.btnactualizar = new System.Windows.Forms.Button();
             this.btncancelar = new System.Windows.Forms.Button();
+            this.btneliminar = new System.Windows.Forms.Button();
+            this.btnmodificar = new System.Windows.Forms.Button();
+            this.btnguardar = new System.Windows.Forms.Button();
+            this.btnnuevo = new System.Windows.Forms.Button();
             this.nombreempleado = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.grdmotivo = new System.Windows.Forms.DataGridView();
@@ -39,12 +45,6 @@
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtmotivo = new System.Windows.Forms.TextBox();
             this.txtdescripcion = new System.Windows.Forms.TextBox();
-            this.btnayuda = new System.Windows.Forms.Button();
-            this.btnactualizar = new System.Windows.Forms.Button();
-            this.btneliminar = new System.Windows.Forms.Button();
-            this.btnmodificar = new System.Windows.Forms.Button();
-            this.btnguardar = new System.Windows.Forms.Button();
-            this.btnnuevo = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdmotivo)).BeginInit();
             this.SuspendLayout();
@@ -77,6 +77,26 @@
             this.btnretorno.UseVisualStyleBackColor = true;
             this.btnretorno.Click += new System.EventHandler(this.button8_Click);
             // 
+            // btnayuda
+            // 
+            this.btnayuda.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.help;
+            this.btnayuda.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnayuda.Location = new System.Drawing.Point(351, 27);
+            this.btnayuda.Name = "btnayuda";
+            this.btnayuda.Size = new System.Drawing.Size(50, 50);
+            this.btnayuda.TabIndex = 6;
+            this.btnayuda.UseVisualStyleBackColor = true;
+            // 
+            // btnactualizar
+            // 
+            this.btnactualizar.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.refresh;
+            this.btnactualizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnactualizar.Location = new System.Drawing.Point(295, 27);
+            this.btnactualizar.Name = "btnactualizar";
+            this.btnactualizar.Size = new System.Drawing.Size(50, 50);
+            this.btnactualizar.TabIndex = 5;
+            this.btnactualizar.UseVisualStyleBackColor = true;
+            // 
             // btncancelar
             // 
             this.btncancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -87,6 +107,48 @@
             this.btncancelar.Text = "Cancelar";
             this.btncancelar.UseVisualStyleBackColor = true;
             this.btncancelar.Click += new System.EventHandler(this.btncancelar_Click);
+            // 
+            // btneliminar
+            // 
+            this.btneliminar.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.eliminar;
+            this.btneliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btneliminar.Location = new System.Drawing.Point(183, 27);
+            this.btneliminar.Name = "btneliminar";
+            this.btneliminar.Size = new System.Drawing.Size(50, 50);
+            this.btneliminar.TabIndex = 3;
+            this.btneliminar.UseVisualStyleBackColor = true;
+            // 
+            // btnmodificar
+            // 
+            this.btnmodificar.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.editar;
+            this.btnmodificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnmodificar.Location = new System.Drawing.Point(127, 27);
+            this.btnmodificar.Name = "btnmodificar";
+            this.btnmodificar.Size = new System.Drawing.Size(50, 50);
+            this.btnmodificar.TabIndex = 2;
+            this.btnmodificar.UseVisualStyleBackColor = true;
+            // 
+            // btnguardar
+            // 
+            this.btnguardar.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.guardar;
+            this.btnguardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnguardar.Location = new System.Drawing.Point(71, 27);
+            this.btnguardar.Name = "btnguardar";
+            this.btnguardar.Size = new System.Drawing.Size(50, 50);
+            this.btnguardar.TabIndex = 1;
+            this.btnguardar.UseVisualStyleBackColor = true;
+            this.btnguardar.Click += new System.EventHandler(this.btnguardar_Click);
+            // 
+            // btnnuevo
+            // 
+            this.btnnuevo.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.nuevo;
+            this.btnnuevo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnnuevo.Location = new System.Drawing.Point(15, 27);
+            this.btnnuevo.Name = "btnnuevo";
+            this.btnnuevo.Size = new System.Drawing.Size(50, 50);
+            this.btnnuevo.TabIndex = 0;
+            this.btnnuevo.UseVisualStyleBackColor = true;
+            this.btnnuevo.Click += new System.EventHandler(this.btnnuevo_Click);
             // 
             // nombreempleado
             // 
@@ -152,67 +214,6 @@
             this.txtdescripcion.Size = new System.Drawing.Size(187, 48);
             this.txtdescripcion.TabIndex = 16;
             // 
-            // btnayuda
-            // 
-            this.btnayuda.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.help;
-            this.btnayuda.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnayuda.Location = new System.Drawing.Point(351, 27);
-            this.btnayuda.Name = "btnayuda";
-            this.btnayuda.Size = new System.Drawing.Size(50, 50);
-            this.btnayuda.TabIndex = 6;
-            this.btnayuda.UseVisualStyleBackColor = true;
-            // 
-            // btnactualizar
-            // 
-            this.btnactualizar.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.refresh;
-            this.btnactualizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnactualizar.Location = new System.Drawing.Point(295, 27);
-            this.btnactualizar.Name = "btnactualizar";
-            this.btnactualizar.Size = new System.Drawing.Size(50, 50);
-            this.btnactualizar.TabIndex = 5;
-            this.btnactualizar.UseVisualStyleBackColor = true;
-            // 
-            // btneliminar
-            // 
-            this.btneliminar.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.eliminar;
-            this.btneliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btneliminar.Location = new System.Drawing.Point(183, 27);
-            this.btneliminar.Name = "btneliminar";
-            this.btneliminar.Size = new System.Drawing.Size(50, 50);
-            this.btneliminar.TabIndex = 3;
-            this.btneliminar.UseVisualStyleBackColor = true;
-            // 
-            // btnmodificar
-            // 
-            this.btnmodificar.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.editar;
-            this.btnmodificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnmodificar.Location = new System.Drawing.Point(127, 27);
-            this.btnmodificar.Name = "btnmodificar";
-            this.btnmodificar.Size = new System.Drawing.Size(50, 50);
-            this.btnmodificar.TabIndex = 2;
-            this.btnmodificar.UseVisualStyleBackColor = true;
-            // 
-            // btnguardar
-            // 
-            this.btnguardar.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.guardar;
-            this.btnguardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnguardar.Location = new System.Drawing.Point(71, 27);
-            this.btnguardar.Name = "btnguardar";
-            this.btnguardar.Size = new System.Drawing.Size(50, 50);
-            this.btnguardar.TabIndex = 1;
-            this.btnguardar.UseVisualStyleBackColor = true;
-            // 
-            // btnnuevo
-            // 
-            this.btnnuevo.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.nuevo;
-            this.btnnuevo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnnuevo.Location = new System.Drawing.Point(15, 27);
-            this.btnnuevo.Name = "btnnuevo";
-            this.btnnuevo.Size = new System.Drawing.Size(50, 50);
-            this.btnnuevo.TabIndex = 0;
-            this.btnnuevo.UseVisualStyleBackColor = true;
-            this.btnnuevo.Click += new System.EventHandler(this.btnnuevo_Click);
-            // 
             // frmmotivo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -226,6 +227,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "frmmotivo";
             this.Text = "frmmotivo";
+            this.Load += new System.EventHandler(this.frmmotivo_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grdmotivo)).EndInit();
             this.ResumeLayout(false);

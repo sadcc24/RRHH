@@ -48,6 +48,9 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Empleado",
+            "Departamento"});
             this.comboBox1.Location = new System.Drawing.Point(247, 90);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox1.Name = "comboBox1";
