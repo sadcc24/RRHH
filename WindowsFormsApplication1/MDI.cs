@@ -12,22 +12,25 @@ namespace WindowsFormsApplication1
 {
     public partial class MDI : Form
     {
-        string user;
-        public MDI(string usuario)
+        string usuario;
+        string empresa;
+        public MDI(string user, string empr)
         {
             InitializeComponent();
-            user = usuario;   
+            usuario = user;
+            empresa = empr;   
         }
 
         private void RRHH_Load(object sender, EventArgs e)
         {
-            toolStripStatusLabel2.Text = user;
+            toolStripStatusLabel2.Text = usuario;
             toolStripStatusLabel4.Text = "Administrador";
+            label1.Text = empresa;
         }
 
         private void consultaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmempleados ventanaP = new frmempleados();
+            frmempleados ventanaP = new frmempleados(empresa);
             ventanaP.MdiParent = this;
             ventanaP.Show();
         }
@@ -90,7 +93,7 @@ namespace WindowsFormsApplication1
 
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show(user + " ¿Está seguro de Cerrar la Aplicacion? ", "Salir", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (MessageBox.Show(usuario + " ¿Está seguro de Cerrar la Aplicacion? ", "Salir", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 Application.Exit();
             }
