@@ -32,6 +32,7 @@
             this.empleadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.solicitudesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nuevoEmpleadoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.nuevoEmpleadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.r1ToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.r2ToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
@@ -70,7 +71,7 @@
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel4 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.nuevoEmpleadoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -116,6 +117,13 @@
             this.solicitudesToolStripMenuItem.Text = "Solicitudes";
             this.solicitudesToolStripMenuItem.Click += new System.EventHandler(this.solicitudesToolStripMenuItem_Click);
             // 
+            // nuevoEmpleadoToolStripMenuItem1
+            // 
+            this.nuevoEmpleadoToolStripMenuItem1.Name = "nuevoEmpleadoToolStripMenuItem1";
+            this.nuevoEmpleadoToolStripMenuItem1.Size = new System.Drawing.Size(165, 22);
+            this.nuevoEmpleadoToolStripMenuItem1.Text = "Nuevo Empleado";
+            this.nuevoEmpleadoToolStripMenuItem1.Click += new System.EventHandler(this.nuevoEmpleadoToolStripMenuItem1_Click);
+            // 
             // nuevoEmpleadoToolStripMenuItem
             // 
             this.nuevoEmpleadoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -128,13 +136,13 @@
             // r1ToolStripMenuItem3
             // 
             this.r1ToolStripMenuItem3.Name = "r1ToolStripMenuItem3";
-            this.r1ToolStripMenuItem3.Size = new System.Drawing.Size(152, 22);
+            this.r1ToolStripMenuItem3.Size = new System.Drawing.Size(87, 22);
             this.r1ToolStripMenuItem3.Text = "R1";
             // 
             // r2ToolStripMenuItem3
             // 
             this.r2ToolStripMenuItem3.Name = "r2ToolStripMenuItem3";
-            this.r2ToolStripMenuItem3.Size = new System.Drawing.Size(152, 22);
+            this.r2ToolStripMenuItem3.Size = new System.Drawing.Size(87, 22);
             this.r2ToolStripMenuItem3.Text = "R2";
             // 
             // reclutamientoToolStripMenuItem
@@ -402,18 +410,24 @@
             this.toolStripStatusLabel4.Size = new System.Drawing.Size(118, 17);
             this.toolStripStatusLabel4.Text = "toolStripStatusLabel4";
             // 
-            // nuevoEmpleadoToolStripMenuItem1
+            // label1
             // 
-            this.nuevoEmpleadoToolStripMenuItem1.Name = "nuevoEmpleadoToolStripMenuItem1";
-            this.nuevoEmpleadoToolStripMenuItem1.Size = new System.Drawing.Size(165, 22);
-            this.nuevoEmpleadoToolStripMenuItem1.Text = "Nuevo Empleado";
-            this.nuevoEmpleadoToolStripMenuItem1.Click += new System.EventHandler(this.nuevoEmpleadoToolStripMenuItem1_Click);
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.label1.Font = new System.Drawing.Font("Century", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.GhostWhite;
+            this.label1.Location = new System.Drawing.Point(12, 42);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(98, 33);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "label1";
             // 
             // MDI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(599, 344);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
@@ -476,6 +490,7 @@
         private System.Windows.Forms.ToolStripMenuItem plantillasPlanillaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem vacacionesToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem nuevoEmpleadoToolStripMenuItem1;
+        private System.Windows.Forms.Label label1;
     }
 }
 

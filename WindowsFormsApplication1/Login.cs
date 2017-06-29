@@ -27,12 +27,16 @@ namespace WindowsFormsApplication1
             int result = new capa_negocio_Empleado().Login(sUser, sContra);
             if (result > 0)
             {
+                DataTable data = new capa_negocio_Empleado().GetAll(sUser);
+                string usuario = (string)data.Rows[0][0];
+                string empresa = (string)data.Rows[0][1];
                 //Esconde este formulario y muestra el formulario de menu
                 this.Hide();
-                MDI ventanaP = new MDI(sUser);
+                MDI ventanaP = new MDI(usuario,empresa);
                 ventanaP.Show();
             }
         }
+
 
         private void Login_Load(object sender, EventArgs e)
         {
