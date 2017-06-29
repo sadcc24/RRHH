@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnretorno = new System.Windows.Forms.Button();
             this.btnayuda = new System.Windows.Forms.Button();
             this.btnactualizar = new System.Windows.Forms.Button();
@@ -39,18 +40,14 @@
             this.btnnuevo = new System.Windows.Forms.Button();
             this.nombreempleado = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.grdmotivo = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtmotivo = new System.Windows.Forms.TextBox();
             this.txtdescripcion = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grdmotivo)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.btnretorno);
             this.groupBox1.Controls.Add(this.btnayuda);
             this.groupBox1.Controls.Add(this.btnactualizar);
@@ -61,16 +58,27 @@
             this.groupBox1.Controls.Add(this.btnnuevo);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(466, 99);
+            this.groupBox1.Size = new System.Drawing.Size(521, 99);
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Menu";
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Location = new System.Drawing.Point(239, 27);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(50, 50);
+            this.button1.TabIndex = 17;
+            this.button1.Text = "Buscar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // btnretorno
             // 
             this.btnretorno.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.menu_principal;
             this.btnretorno.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnretorno.Location = new System.Drawing.Point(407, 27);
+            this.btnretorno.Location = new System.Drawing.Point(463, 27);
             this.btnretorno.Name = "btnretorno";
             this.btnretorno.Size = new System.Drawing.Size(50, 50);
             this.btnretorno.TabIndex = 7;
@@ -81,7 +89,7 @@
             // 
             this.btnayuda.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.help;
             this.btnayuda.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnayuda.Location = new System.Drawing.Point(351, 27);
+            this.btnayuda.Location = new System.Drawing.Point(407, 27);
             this.btnayuda.Name = "btnayuda";
             this.btnayuda.Size = new System.Drawing.Size(50, 50);
             this.btnayuda.TabIndex = 6;
@@ -91,7 +99,7 @@
             // 
             this.btnactualizar.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.refresh;
             this.btnactualizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnactualizar.Location = new System.Drawing.Point(295, 27);
+            this.btnactualizar.Location = new System.Drawing.Point(351, 27);
             this.btnactualizar.Name = "btnactualizar";
             this.btnactualizar.Size = new System.Drawing.Size(50, 50);
             this.btnactualizar.TabIndex = 5;
@@ -100,7 +108,7 @@
             // btncancelar
             // 
             this.btncancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btncancelar.Location = new System.Drawing.Point(239, 27);
+            this.btncancelar.Location = new System.Drawing.Point(295, 27);
             this.btncancelar.Name = "btncancelar";
             this.btncancelar.Size = new System.Drawing.Size(50, 50);
             this.btncancelar.TabIndex = 4;
@@ -117,6 +125,7 @@
             this.btneliminar.Size = new System.Drawing.Size(50, 50);
             this.btneliminar.TabIndex = 3;
             this.btneliminar.UseVisualStyleBackColor = true;
+            this.btneliminar.Click += new System.EventHandler(this.btneliminar_Click_1);
             // 
             // btnmodificar
             // 
@@ -127,6 +136,7 @@
             this.btnmodificar.Size = new System.Drawing.Size(50, 50);
             this.btnmodificar.TabIndex = 2;
             this.btnmodificar.UseVisualStyleBackColor = true;
+            this.btnmodificar.Click += new System.EventHandler(this.btnmodificar_Click);
             // 
             // btnguardar
             // 
@@ -170,33 +180,6 @@
             this.label1.TabIndex = 13;
             this.label1.Text = "Descripción";
             // 
-            // grdmotivo
-            // 
-            this.grdmotivo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grdmotivo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3});
-            this.grdmotivo.Location = new System.Drawing.Point(83, 226);
-            this.grdmotivo.Name = "grdmotivo";
-            this.grdmotivo.Size = new System.Drawing.Size(345, 150);
-            this.grdmotivo.TabIndex = 14;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "cod motivo";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Motivo";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Descripcion";
-            this.Column3.Name = "Column3";
-            // 
             // txtmotivo
             // 
             this.txtmotivo.Enabled = false;
@@ -218,10 +201,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(486, 388);
+            this.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.ClientSize = new System.Drawing.Size(549, 241);
             this.Controls.Add(this.txtdescripcion);
             this.Controls.Add(this.txtmotivo);
-            this.Controls.Add(this.grdmotivo);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.nombreempleado);
             this.Controls.Add(this.groupBox1);
@@ -229,7 +212,6 @@
             this.Text = "frmmotivo";
             this.Load += new System.EventHandler(this.frmmotivo_Load);
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.grdmotivo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -248,11 +230,8 @@
         private System.Windows.Forms.Button btnnuevo;
         private System.Windows.Forms.Label nombreempleado;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView grdmotivo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.TextBox txtmotivo;
         private System.Windows.Forms.TextBox txtdescripcion;
+        private System.Windows.Forms.Button button1;
     }
 }
