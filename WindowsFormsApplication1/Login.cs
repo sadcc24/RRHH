@@ -13,6 +13,7 @@ namespace WindowsFormsApplication1
     
     public partial class Login : Form
     {
+
         public string usuario;
         public Login()
         {
@@ -31,6 +32,20 @@ namespace WindowsFormsApplication1
                 MDI ventanaP = new MDI(sUser);
                 ventanaP.Show();
             }
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
+            
+            //string message = "12345678";
+            //classEncryptD keys = new classEncryptD();
+            //string encr = keys.EncryptString(message);
+            //MessageBox.Show(encr);
+
+            //// later
+            //string desencr = keys.DecryptString(encr);
+            //MessageBox.Show(desencr);
         }
     }
 }
