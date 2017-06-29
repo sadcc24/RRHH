@@ -52,6 +52,7 @@
     <Compile Include="capa_logica_Empleado.cs" />
     <Compile Include="capa_negocio_Empleado.cs" />
     <Compile Include="capa_presentacion_Empleado.cs" />
+    <Compile Include="classEncryptD.cs" />
     <Compile Include="conexionbd_Empleado.cs" />
     <Compile Include="frmnuevoempleado.cs">
       <SubType>Form</SubType>
