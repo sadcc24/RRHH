@@ -7,11 +7,11 @@ using System.Data.SqlClient;
 
 namespace WindowsFormsApplication1
 {
-    class capa_logica
+    class capa_logica_formaciones
     {
         public static SqlConnection SQL_Conexion = new SqlConnection();
 
-        public static int Agregar(capa_presentacion pMotivo)
+        public static int Agregar(capa_presentacion_formaciones pMotivo)
         {
 
             int retorno = 0;
@@ -22,30 +22,30 @@ namespace WindowsFormsApplication1
             return retorno;
         }
 
-        public static List<capa_presentacion.info_capa> info_capacitaciones() {
+        public static List<capa_presentacion_formaciones.info_capa> info_capacitaciones() {
 
-            List<capa_presentacion.info_capa> info_cap = new List<capa_presentacion.info_capa>();
+            List<capa_presentacion_formaciones.info_capa> info_cap = new List<capa_presentacion_formaciones.info_capa>();
             SqlCommand comando = new SqlCommand("select c.idcapacitacion,c.costo,c.nombre,c.descripcion,dc.expositor,t.tipo from CAPACITACION c left join  DETALLECAPACITACION dc on dc.idcapacitacion = c.idcapacitacion left join TIPO t on t.idtipo = dc.idtipo where c.status = 1", conexionbd.ObtenerConexion());
             SqlDataReader dr = comando.ExecuteReader();
 
             while (dr.Read()) {
 
-                info_cap.Add(new capa_presentacion.info_capa() { idcapacitacion = dr["idcapacitacion"].ToString(), nombre_capa = dr["nombre"].ToString(), descripcion_capa = dr["descripcion"].ToString(), area = dr["tipo"].ToString(), expositor = dr["expositor"].ToString(), costo = dr["costo"].ToString() });
+                info_cap.Add(new capa_presentacion_formaciones.info_capa() { idcapacitacion = dr["idcapacitacion"].ToString(), nombre_capa = dr["nombre"].ToString(), descripcion_capa = dr["descripcion"].ToString(), area = dr["tipo"].ToString(), expositor = dr["expositor"].ToString(), costo = dr["costo"].ToString() });
 
             }
 
             return info_cap;
         }
 
-        public static List<capa_presentacion.infotipocapacitacion> info_tipocapacitaciones() {
-            List<capa_presentacion.infotipocapacitacion> infotipo_cap = new List<capa_presentacion.infotipocapacitacion>();
+        public static List<capa_presentacion_formaciones.infotipocapacitacion> info_tipocapacitaciones() {
+            List<capa_presentacion_formaciones.infotipocapacitacion> infotipo_cap = new List<capa_presentacion_formaciones.infotipocapacitacion>();
             SqlCommand comando = new SqlCommand("select * from TIPO where status=1", conexionbd.ObtenerConexion());
             SqlDataReader dr = comando.ExecuteReader();
 
             while (dr.Read())
             {
 
-                infotipo_cap.Add(new capa_presentacion.infotipocapacitacion() { idtipo=dr["idtipo"].ToString(), tipo = dr["tipo"].ToString() });
+                infotipo_cap.Add(new capa_presentacion_formaciones.infotipocapacitacion() { idtipo=dr["idtipo"].ToString(), tipo = dr["tipo"].ToString() });
 
             }
             SQL_Conexion.Close();
@@ -67,6 +67,19 @@ namespace WindowsFormsApplication1
 
             return modificacion;
         }
+
+        public static int eliminar_capacitacion(string id_capacitacion) {
+            int eliminar = 0;
+
+            SqlCommand comando2 = new SqlCommand(" update CAPACITACION set status=0 where idcapacitacion=" + id_capacitacion, conexionbd.ObtenerConexion());
+            eliminar = comando2.ExecuteNonQuery();
+            SQL_Conexion.Close();
+
+
+            return eliminar;
+            ;
+        }
+
         public static int LoginD(string sUser, string sContra)
         {
             int retorno = 0;

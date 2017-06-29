@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApplication1
 {
-    public class capa_presentacion
+    public class capa_presentacion_formaciones
     {
             public int codmotivo { get; set; }
             public string motivo { get; set; }
@@ -30,9 +30,9 @@ namespace WindowsFormsApplication1
         }
 
 
-        public capa_presentacion() { }
+        public capa_presentacion_formaciones() { }
 
-            public capa_presentacion(int pcodmotivo, string pmotivo, string pdescripcion)
+            public capa_presentacion_formaciones(int pcodmotivo, string pmotivo, string pdescripcion)
 
             {
                 this.codmotivo = pcodmotivo;

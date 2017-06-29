@@ -15,7 +15,7 @@ namespace WindowsFormsApplication1
         public frmcapacitaciones()
         {
             InitializeComponent();
-            List<capa_presentacion.info_capa> info_capacitaciones = capa_negocio.capacitaciones();
+            List<capa_presentacion_formaciones.info_capa> info_capacitaciones = capa_negocio_formaciones.capacitaciones();
             
             dgvCapacitaciones.DataSource = info_capacitaciones;
         }
@@ -54,7 +54,7 @@ namespace WindowsFormsApplication1
 
         private void button9_Click(object sender, EventArgs e)
         {
-            List<capa_presentacion.info_capa> info_capacitaciones = capa_negocio.capacitaciones();
+            List<capa_presentacion_formaciones.info_capa> info_capacitaciones = capa_negocio_formaciones.capacitaciones();
             dgvCapacitaciones.DataSource = info_capacitaciones;
         }
     }

@@ -7,9 +7,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1
 {
-     public class capa_negocio
+     public class capa_negocio_formaciones
     {
-        public void Insert_Motivo(capa_presentacion pmotivo)
+        public void Insert_Motivo(capa_presentacion_formaciones pmotivo)
         {
             if (string.IsNullOrWhiteSpace(pmotivo.motivo) || string.IsNullOrWhiteSpace(pmotivo.descripcion))
             {
@@ -18,7 +18,7 @@ namespace WindowsFormsApplication1
             else
             {
 
-                int resultado = capa_logica.Agregar(pmotivo);
+                int resultado = capa_logica_formaciones.Agregar(pmotivo);
 
                 if (resultado > 0)
                 {
@@ -31,20 +31,26 @@ namespace WindowsFormsApplication1
             }
          }
 
-        public static List<capa_presentacion.infotipocapacitacion> infotipocapacitacion() {
-            List<capa_presentacion.infotipocapacitacion> tipocapacitacion = capa_logica.info_tipocapacitaciones();
+        public static List<capa_presentacion_formaciones.infotipocapacitacion> infotipocapacitacion() {
+            List<capa_presentacion_formaciones.infotipocapacitacion> tipocapacitacion = capa_logica_formaciones.info_tipocapacitaciones();
             return tipocapacitacion;
         }
-        public static List<capa_presentacion.info_capa> capacitaciones() {
-            List<capa_presentacion.info_capa> capa = capa_logica.info_capacitaciones();
+        public static List<capa_presentacion_formaciones.info_capa> capacitaciones() {
+            List<capa_presentacion_formaciones.info_capa> capa = capa_logica_formaciones.info_capacitaciones();
             return capa;
         }
 
+        public static int eliminar_capacitacion(string id_capacitacion) {
+            int resultado = 0;
 
+            resultado = capa_logica_formaciones.eliminar_capacitacion(id_capacitacion);
+            
+            return resultado;
+        }
         public static int modificar_capacitacion(string id_capacitacion,string nombre, string descripcion,string expositor,string costo,string area) {
             int result=0;
 
-            result=capa_logica.modificar_capacitacion(id_capacitacion,nombre, descripcion, expositor, costo, area);
+            result=capa_logica_formaciones.modificar_capacitacion(id_capacitacion,nombre, descripcion, expositor, costo, area);
 
             return result;
 
@@ -58,7 +64,7 @@ namespace WindowsFormsApplication1
             }
             else
             {
-                resultado = capa_logica.LoginD(sUser, sContra);
+                resultado = capa_logica_formaciones.LoginD(sUser, sContra);
                 if (resultado > 0)
                 {
                     resultado = 1;
