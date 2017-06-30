@@ -50,13 +50,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="capa_logica_Empleado.cs" />
+    <Compile Include="capa_logica_Reclutamiento.cs" />
     <Compile Include="capa_logica_vacaciones.cs" />
     <Compile Include="capa_negocio_Empleado.cs" />
+    <Compile Include="capa_negocio_Reclutamiento.cs" />
     <Compile Include="capa_negocio_vacaciones.cs" />
     <Compile Include="capa_presentacion_Empleado.cs" />
+    <Compile Include="capa_presentacion_Reclutamiento.cs" />
     <Compile Include="classEncryptD.cs" />
     <Compile Include="capa_presentacion_vacaciones.cs" />
     <Compile Include="conexionbd_Empleado.cs" />
+    <Compile Include="conexionbd_Reclutamiento.cs" />
     <Compile Include="conexionbd_vacaciones.cs" />
     <Compile Include="frmconsultarmotivo.cs">
       <SubType>Form</SubType>
