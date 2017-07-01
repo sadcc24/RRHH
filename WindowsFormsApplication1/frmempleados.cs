@@ -13,11 +13,13 @@ namespace WindowsFormsApplication1
 {
     public partial class frmempleados : Form
     {
+        string empleado;
         public static SqlConnection SQL_Conexion = new SqlConnection();
 
-        public frmempleados()
+        public frmempleados(string empr)
         {
             InitializeComponent();
+            empleado = empr;
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -28,7 +30,7 @@ namespace WindowsFormsApplication1
         private void Form1_Load(object sender, EventArgs e)
         {
             this.Size = new Size(665, 322);
-            carga_gried();
+            label9.Text = empleado;
 
         }
 

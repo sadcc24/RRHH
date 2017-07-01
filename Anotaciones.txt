@@ -1,0 +1,3 @@
+Contraseña 12345 = gMo3uRgQdKaHeFC7n2KDbA==
+
+variables en MDI: empresa, usuario, tipo

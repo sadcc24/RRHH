@@ -7,8 +7,14 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1
 {
-     public class capa_negocio_Empleado
+     class capa_negocio_Empleado
     {
+
+        public System.Data.DataTable GetAll(string sUser)
+        {
+            return capa_logica_Empleado.ObtenerRegistros(sUser);
+        }
+
         public void Insert_Motivo(capa_presentacion_Empleado pmotivo)
         {
             if (string.IsNullOrWhiteSpace(pmotivo.motivo) || string.IsNullOrWhiteSpace(pmotivo.descripcion))

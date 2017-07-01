@@ -30,7 +30,7 @@
         {
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvCandidato = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -51,7 +51,7 @@
             this.button7 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCandidato)).BeginInit();
             this.SuspendLayout();
             // 
             // comboBox1
@@ -71,10 +71,10 @@
             this.label1.TabIndex = 16;
             this.label1.Text = "Filtrar";
             // 
-            // dataGridView1
+            // dgvCandidato
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvCandidato.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCandidato.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
             this.Column3,
@@ -87,10 +87,10 @@
             this.Column7,
             this.Column11,
             this.Column12});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 122);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(738, 236);
-            this.dataGridView1.TabIndex = 14;
+            this.dgvCandidato.Location = new System.Drawing.Point(12, 122);
+            this.dgvCandidato.Name = "dgvCandidato";
+            this.dgvCandidato.Size = new System.Drawing.Size(738, 236);
+            this.dgvCandidato.TabIndex = 14;
             // 
             // Column1
             // 
@@ -219,6 +219,7 @@
             this.button5.Size = new System.Drawing.Size(40, 40);
             this.button5.TabIndex = 18;
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button2
             // 
@@ -245,11 +246,12 @@
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvCandidato);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmcandidatos";
             this.Text = "Candidatos";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.frmcandidatos_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCandidato)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -266,7 +268,7 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvCandidato;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
