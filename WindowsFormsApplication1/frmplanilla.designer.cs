@@ -56,6 +56,7 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.btn_applyNomina = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -97,7 +98,7 @@
             this.Column10,
             this.Column11,
             this.Column12});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 246);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 207);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(837, 199);
             this.dataGridView1.TabIndex = 4;
@@ -278,7 +279,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(829, 117);
+            this.tabPage2.Size = new System.Drawing.Size(829, 89);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Empleado";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -288,16 +289,31 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(829, 117);
+            this.tabPage3.Size = new System.Drawing.Size(829, 89);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Empresas";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // btn_applyNomina
+            // 
+            this.btn_applyNomina.BackColor = System.Drawing.SystemColors.Control;
+            this.btn_applyNomina.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.refresh;
+            this.btn_applyNomina.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btn_applyNomina.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_applyNomina.Location = new System.Drawing.Point(732, 419);
+            this.btn_applyNomina.Name = "btn_applyNomina";
+            this.btn_applyNomina.Size = new System.Drawing.Size(113, 40);
+            this.btn_applyNomina.TabIndex = 33;
+            this.btn_applyNomina.Text = "Generar Poliza";
+            this.btn_applyNomina.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_applyNomina.UseVisualStyleBackColor = false;
             // 
             // frmplanilla
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(861, 457);
+            this.ClientSize = new System.Drawing.Size(861, 471);
+            this.Controls.Add(this.btn_applyNomina);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.dataGridView1);
@@ -344,6 +360,7 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.Button btn_applyNomina;
     }
 }
 

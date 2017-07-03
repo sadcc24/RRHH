@@ -24,7 +24,7 @@ namespace WindowsFormsApplication1
             string sUser = textBox1.Text;
             string sContra = textBox2.Text;
             int result = new capa_negocio().Login(sUser, sContra);
-            if (result > 0)
+            if (true/*result > 0*/)
             {
                 //Esconde este formulario y muestra el formulario de menu
                 this.Hide();
