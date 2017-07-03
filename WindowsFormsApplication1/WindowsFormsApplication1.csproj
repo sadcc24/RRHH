@@ -33,9 +33,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="MRP_BD">
-      <HintPath>..\..\..\Users\chepe\Desktop\seminario fase 2\bd\MRP_BD.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -232,7 +229,6 @@
     <Compile Include="frmresultadoPueba.designer.cs">
       <DependentUpon>frmresultadoPueba.cs</DependentUpon>
     </Compile>
-    <Compile Include="Settings.cs" />
     <EmbeddedResource Include="frmconsultarmotivo.resx">
       <DependentUpon>frmconsultarmotivo.cs</DependentUpon>
     </EmbeddedResource>
@@ -381,6 +377,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="iconos\Iconos Generales SAD17\loggin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="iconos\Iconos Generales SAD17\cancelar.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

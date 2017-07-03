@@ -28,17 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button5 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.button9 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.textBox6 = new System.Windows.Forms.TextBox();
@@ -72,19 +64,18 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // button5
-            // 
-            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button5.Location = new System.Drawing.Point(386, 32);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(50, 50);
-            this.button5.TabIndex = 14;
-            this.button5.UseVisualStyleBackColor = true;
             // 
             // groupBox1
             // 
@@ -94,66 +85,6 @@
             this.groupBox1.TabIndex = 28;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Menú";
-            // 
-            // button6
-            // 
-            this.button6.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.refresh;
-            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button6.Location = new System.Drawing.Point(442, 32);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(50, 50);
-            this.button6.TabIndex = 13;
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // button7
-            // 
-            this.button7.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.help;
-            this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button7.Location = new System.Drawing.Point(498, 32);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(50, 50);
-            this.button7.TabIndex = 12;
-            this.button7.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.eliminar;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button3.Location = new System.Drawing.Point(274, 30);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(50, 50);
-            this.button3.TabIndex = 11;
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.guardar;
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button4.Location = new System.Drawing.Point(330, 32);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(50, 50);
-            this.button4.TabIndex = 10;
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // button2
-            // 
-            this.button2.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.editar;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.Location = new System.Drawing.Point(218, 30);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(50, 50);
-            this.button2.TabIndex = 9;
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Image = global::WindowsFormsApplication1.Properties.Resources.nuevo;
-            this.button1.Location = new System.Drawing.Point(162, 30);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(50, 50);
-            this.button1.TabIndex = 8;
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // groupBox7
             // 
@@ -177,16 +108,6 @@
             this.button9.UseVisualStyleBackColor = true;
             this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.pictureBox1.Location = new System.Drawing.Point(21, 21);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(200, 224);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 47;
-            this.pictureBox1.TabStop = false;
-            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.dateTimePicker1);
@@ -197,7 +118,6 @@
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.textBox4);
             this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.txtestadocandidato);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.textBox1);
             this.groupBox2.Controls.Add(this.label4);
@@ -206,9 +126,6 @@
             this.groupBox2.Controls.Add(this.label24);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.txtcodigocandidato);
-            this.groupBox2.Controls.Add(this.txtestadocivilcandidato);
-            this.groupBox2.Controls.Add(this.txtnacioncandidato);
-            this.groupBox2.Controls.Add(this.txtsexocandidato);
             this.groupBox2.Controls.Add(this.textBox8);
             this.groupBox2.Controls.Add(this.comboBox3);
             this.groupBox2.Controls.Add(this.label16);
@@ -291,10 +208,12 @@
             // 
             // txtestadocandidato
             // 
-            this.txtestadocandidato.Location = new System.Drawing.Point(450, 204);
+            this.txtestadocandidato.Location = new System.Drawing.Point(181, 90);
             this.txtestadocandidato.Name = "txtestadocandidato";
             this.txtestadocandidato.Size = new System.Drawing.Size(18, 20);
             this.txtestadocandidato.TabIndex = 50;
+            this.txtestadocandidato.Visible = false;
+            this.txtestadocandidato.TextChanged += new System.EventHandler(this.txtestadocandidato_TextChanged);
             // 
             // label3
             // 
@@ -328,6 +247,7 @@
             this.comboBox7.Name = "comboBox7";
             this.comboBox7.Size = new System.Drawing.Size(123, 21);
             this.comboBox7.TabIndex = 49;
+            this.comboBox7.SelectedIndexChanged += new System.EventHandler(this.comboBox7_SelectedIndexChanged_1);
             // 
             // label2
             // 
@@ -365,24 +285,30 @@
             // 
             // txtestadocivilcandidato
             // 
-            this.txtestadocivilcandidato.Location = new System.Drawing.Point(450, 173);
+            this.txtestadocivilcandidato.Location = new System.Drawing.Point(133, 90);
             this.txtestadocivilcandidato.Name = "txtestadocivilcandidato";
             this.txtestadocivilcandidato.Size = new System.Drawing.Size(18, 20);
             this.txtestadocivilcandidato.TabIndex = 38;
+            this.txtestadocivilcandidato.Visible = false;
+            this.txtestadocivilcandidato.TextChanged += new System.EventHandler(this.txtestadocivilcandidato_TextChanged);
             // 
             // txtnacioncandidato
             // 
-            this.txtnacioncandidato.Location = new System.Drawing.Point(213, 204);
+            this.txtnacioncandidato.Location = new System.Drawing.Point(157, 90);
             this.txtnacioncandidato.Name = "txtnacioncandidato";
             this.txtnacioncandidato.Size = new System.Drawing.Size(18, 20);
             this.txtnacioncandidato.TabIndex = 37;
+            this.txtnacioncandidato.Visible = false;
+            this.txtnacioncandidato.TextChanged += new System.EventHandler(this.txtnacioncandidato_TextChanged);
             // 
             // txtsexocandidato
             // 
-            this.txtsexocandidato.Location = new System.Drawing.Point(222, 26);
+            this.txtsexocandidato.Location = new System.Drawing.Point(109, 90);
             this.txtsexocandidato.Name = "txtsexocandidato";
             this.txtsexocandidato.Size = new System.Drawing.Size(18, 20);
             this.txtsexocandidato.TabIndex = 31;
+            this.txtsexocandidato.Visible = false;
+            this.txtsexocandidato.TextChanged += new System.EventHandler(this.txtsexocandidato_TextChanged);
             // 
             // textBox8
             // 
@@ -398,6 +324,7 @@
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(125, 21);
             this.comboBox3.TabIndex = 36;
+            this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged_1);
             // 
             // label16
             // 
@@ -415,6 +342,7 @@
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(124, 21);
             this.comboBox2.TabIndex = 35;
+            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged_1);
             // 
             // comboBox1
             // 
@@ -423,6 +351,7 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(125, 21);
             this.comboBox1.TabIndex = 34;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged_2);
             // 
             // label10
             // 
@@ -481,6 +410,92 @@
             this.openFileDialog1.FileName = "openFileDialog1";
             this.openFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog1_FileOk);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(21, 21);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(200, 224);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 47;
+            this.pictureBox1.TabStop = false;
+            // 
+            // button5
+            // 
+            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button5.Image = global::WindowsFormsApplication1.Properties.Resources.cancelar;
+            this.button5.Location = new System.Drawing.Point(386, 32);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(50, 50);
+            this.button5.TabIndex = 14;
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // button6
+            // 
+            this.button6.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.refresh;
+            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button6.Location = new System.Drawing.Point(442, 32);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(50, 50);
+            this.button6.TabIndex = 13;
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // button7
+            // 
+            this.button7.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.help;
+            this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button7.Location = new System.Drawing.Point(498, 32);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(50, 50);
+            this.button7.TabIndex = 12;
+            this.button7.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.eliminar;
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button3.Location = new System.Drawing.Point(274, 30);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(50, 50);
+            this.button3.TabIndex = 11;
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button4
+            // 
+            this.button4.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.guardar;
+            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button4.Location = new System.Drawing.Point(330, 32);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(50, 50);
+            this.button4.TabIndex = 10;
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.editar;
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button2.Location = new System.Drawing.Point(218, 30);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(50, 50);
+            this.button2.TabIndex = 9;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button1
+            // 
+            this.button1.Image = global::WindowsFormsApplication1.Properties.Resources.nuevo;
+            this.button1.Location = new System.Drawing.Point(162, 30);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(50, 50);
+            this.button1.TabIndex = 8;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // frmcandidatonuevo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -494,16 +509,21 @@
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button2);
+            this.Controls.Add(this.txtestadocandidato);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.txtsexocandidato);
+            this.Controls.Add(this.txtestadocivilcandidato);
+            this.Controls.Add(this.txtnacioncandidato);
             this.Name = "frmcandidatonuevo";
             this.Text = "Datos de Candidato";
             this.Load += new System.EventHandler(this.Candidatonuevo_Load);
             this.groupBox7.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -519,39 +539,39 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox7;
         private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtestadocandidato;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox comboBox7;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtcodigocandidato;
-        private System.Windows.Forms.TextBox txtestadocivilcandidato;
-        private System.Windows.Forms.TextBox txtnacioncandidato;
         public System.Windows.Forms.TextBox txtsexocandidato;
-        private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        public System.Windows.Forms.TextBox textBox6;
+        public System.Windows.Forms.TextBox textBox3;
+        public System.Windows.Forms.TextBox textBox5;
+        public System.Windows.Forms.TextBox textBox2;
+        public System.Windows.Forms.TextBox textBox4;
+        public System.Windows.Forms.TextBox txtestadocandidato;
+        public System.Windows.Forms.TextBox textBox1;
+        public System.Windows.Forms.TextBox txtcodigocandidato;
+        public System.Windows.Forms.TextBox txtestadocivilcandidato;
+        public System.Windows.Forms.TextBox txtnacioncandidato;
+        public System.Windows.Forms.TextBox textBox8;
+        public System.Windows.Forms.TextBox textBox7;
+        public System.Windows.Forms.PictureBox pictureBox1;
+        public System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }
