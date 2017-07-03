@@ -280,6 +280,154 @@ namespace WindowsFormsApplication1
             }
 
         }
+        //llenar ComboBox de puesto
+        public void llenarcombobox(string consulta, string parametro, ComboBox cb)
+        {
+            try
+            {
+                SqlCommand cmd = new SqlCommand(consulta, conexionbd_Reclutamiento.ObtenerConexion());
+                SqlDataReader dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    cb.Items.Add(dr[parametro].ToString());
+                }
+                dr.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se lleno el combo" + ex.ToString());
+            }
+        }
+        //Llenar combobox puesto desde textbox
+        public void llenarCB3(TextBox txtb, ComboBox cbb, string st, string parametro)
+        {
+            string cadcon = st + txtb.Text + "'";
+            SqlCommand cm = new SqlCommand(cadcon, conexionbd_Reclutamiento.ObtenerConexion());
+            SqlDataReader leer = cm.ExecuteReader();
+            if (leer.Read() == true)
+            {
+                cbb.Text = leer[parametro].ToString();
+            }
+            else
+            {
+                cbb.Text = "";
+            }
+
+        }
+        //llenar Textbox desde ComboBox
+        public void llenartxt(string st, string parametro, ComboBox cb, TextBox tb)
+        {
+            string cadcon = st + cb.Text + "'";
+            SqlCommand cm = new SqlCommand(cadcon, conexionbd_Reclutamiento.ObtenerConexion());
+
+            SqlDataReader leer = cm.ExecuteReader();
+            if (leer.Read() == true)
+            {
+                tb.Text = leer[parametro].ToString();
+            }
+            else
+            {
+                tb.Text = "";
+            }
+        }
+        //Generar Ide de Puesto
+        public void generarid(TextBox tb, TextBox tb1, TextBox tbt)
+        {
+            SqlCommand cmd = new SqlCommand("select top(1) * from PUESTODETRABAJO order by idpuestodetrabajo desc", conexionbd_Reclutamiento.ObtenerConexion());
+            SqlDataReader leer = cmd.ExecuteReader();
+
+            if (leer.Read() == true)
+            {
+                tb.Text = leer["idpuestodetrabajo"].ToString();
+                tbt.Text = (Convert.ToInt32(tb.Text) + Convert.ToInt32(tb1.Text)).ToString();
+
+            }
+            else
+            {
+                tb.Text = "no";
+            }
+        }
+        //Insertar Puesto Nuevo
+        public bool insertarPuesto(string idpuestodetrabajo, string idempresa, string iddepartamentoempresa, string nombreempresa, string idestadopuesto)
+        {
+            SqlCommand cmd = new SqlCommand("insert into PUESTODETRABAJO(idpuestodetrabajo, iddepartamentoempresa, idestadopuesto, nombrepuesto, idempresa) values (@idpuestodetrabajo, @iddepartamentoempresa, @idestadopuesto, @nombrepuesto, @idempresa)", conexionbd_Reclutamiento.ObtenerConexion());
+            cmd.Parameters.Add("@idpuestodetrabajo", SqlDbType.Int);
+            cmd.Parameters.Add("@iddepartamentoempresa", SqlDbType.Int);
+            cmd.Parameters.Add("@idestadopuesto", SqlDbType.Int);
+
+            cmd.Parameters.Add("@nombrepuesto", SqlDbType.VarChar);
+            cmd.Parameters.Add("@idempresa", SqlDbType.Int);
+
+            cmd.Parameters["@idpuestodetrabajo"].Value = idpuestodetrabajo;
+            cmd.Parameters["@iddepartamentoempresa"].Value = iddepartamentoempresa;
+            cmd.Parameters["@idestadopuesto"].Value = idestadopuesto;
+            cmd.Parameters["@nombrepuesto"].Value = nombreempresa;
+
+            cmd.Parameters["@idempresa"].Value = idempresa;
+
+            int i = cmd.ExecuteNonQuery();
+            if (i > 0)
+            {
+                return true;
+            }
+
+            else
+            {
+                return false;
+            }
+        }
+
+        //Modificar Puesto
+        public bool ModificarPuesto(string idpuestodetrabajo, string idempresa, string iddepartamentoempresa, string nombreempresa, string idestadopuesto)
+        {
+            SqlCommand cmd = new SqlCommand("update PUESTODETRABAJO set iddepartamentoempresa=@iddepartamentoempresa, idestadopuesto=@idestadopuesto, nombrepuesto=@nombrepuesto, idempresa=@idempresa" + " where idpuestodetrabajo=@idpuestodetrabajo", conexionbd_Reclutamiento.ObtenerConexion());
+            cmd.Parameters.Add("@idpuestodetrabajo", SqlDbType.Int);
+            cmd.Parameters.Add("@iddepartamentoempresa", SqlDbType.Int);
+            cmd.Parameters.Add("@idestadopuesto", SqlDbType.Int);
+
+            cmd.Parameters.Add("@nombrepuesto", SqlDbType.VarChar);
+            cmd.Parameters.Add("@idempresa", SqlDbType.Int);
+
+            cmd.Parameters["@idpuestodetrabajo"].Value = idpuestodetrabajo;
+            cmd.Parameters["@iddepartamentoempresa"].Value = iddepartamentoempresa;
+            cmd.Parameters["@idestadopuesto"].Value = idestadopuesto;
+            cmd.Parameters["@nombrepuesto"].Value = nombreempresa;
+
+            cmd.Parameters["@idempresa"].Value = idempresa;
+
+            int i = cmd.ExecuteNonQuery();
+            if (i > 0)
+            {
+                return true;
+            }
+
+            else
+            {
+                return false;
+            }
+        }
+
+//        Borrar Puesto
+        public bool borrarpuesto(string idpuestodetrabajo)
+        {
+            SqlCommand cmd = new SqlCommand("update PUESTODETRABAJO set idestadopuesto=@idestadopuesto" + " where idpuestodetrabajo=@idpuestodetrabajo", conexionbd_Reclutamiento.ObtenerConexion());
+            cmd.Parameters.Add("@idpuestodetrabajo", SqlDbType.Int);
+            cmd.Parameters.Add("@idestadopuesto", SqlDbType.Int);
+
+            cmd.Parameters["@idpuestodetrabajo"].Value = idpuestodetrabajo;
+            cmd.Parameters["@idestadopuesto"].Value = 3;
+
+            int i = cmd.ExecuteNonQuery();
+            if (i > 0)
+            {
+                return true;
+            }
+
+            else
+            {
+                return false;
+            }
+        }
 
 
     }
