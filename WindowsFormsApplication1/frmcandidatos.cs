@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace WindowsFormsApplication1
 {
@@ -58,6 +59,15 @@ namespace WindowsFormsApplication1
             cargardatoscandidato.dateTimePicker1.Text = dgvCandidato.Rows[e.RowIndex].Cells[13].Value.ToString();
             con.verimagen(cargardatoscandidato.pictureBox1, cargardatoscandidato.txtcodigocandidato);
             cargardatoscandidato.Show();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            Process pr = new Process();
+            pr.StartInfo.WorkingDirectory = @"C:\Users\VICTOR RODAS\Documents\GitHub\RRHH\WindowsFormsApplication1\ayuda\";
+            pr.StartInfo.FileName = "Ayuda Candidato.pdf";
+            pr.Start();
+
         }
     }
 }

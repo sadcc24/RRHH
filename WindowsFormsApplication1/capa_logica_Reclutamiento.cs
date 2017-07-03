@@ -18,10 +18,9 @@ namespace WindowsFormsApplication1
         public DataRow dr;
 
         //INSERTAR CANDIDATO
-        public bool insertarimagen(string idcandidato, string idestadocandidato, string idestadocivil, string idsexo, string idnacionalidad, string nombre1, string nombre2, string apellido1, string apellido2, string apellido3, string direccion, string telefono, string nidentificacion, string fechanacimiento, PictureBox fotografia)
+        public bool insertarimagen(string idestadocandidato, string idestadocivil, string idsexo, string idnacionalidad, string nombre1, string nombre2, string apellido1, string apellido2, string apellido3, string direccion, string telefono, string nidentificacion, string fechanacimiento, PictureBox fotografia)
         {
-            SqlCommand cmd = new SqlCommand("insert into CANDIDATO(idcandidato, idestadocandidato, idestadocivil, idsexo, idnacionalidad, nombre1, nombre2, apellido1, apellido2, apellido3, direccion, telefono, nidentificacion, fechanacimiento, fotografia) values (@idcandidato, @idestadocandidato, @idestadocivil, @idsexo, @idnacionalidad, @nombre1, @nombre2, @apellido1, @apellido2, @apellido3, @direccion, @telefono, @nidentificacion, @fechanacimiento, @fotografia)", conexionbd_Reclutamiento.ObtenerConexion());
-            cmd.Parameters.Add("@idcandidato", SqlDbType.Int);
+            SqlCommand cmd = new SqlCommand("insert into CANDIDATO(idestadocandidato, idestadocivil, idsexo, idnacionalidad, nombre1, nombre2, apellido1, apellido2, apellido3, direccion, telefono, dpi, fechanacimiento, fotografia) values (@idestadocandidato, @idestadocivil, @idsexo, @idnacionalidad, @nombre1, @nombre2, @apellido1, @apellido2, @apellido3, @direccion, @telefono, @nidentificacion, @fechanacimiento, @fotografia)", conexionbd_Reclutamiento.ObtenerConexion());
             cmd.Parameters.Add("@idestadocandidato", SqlDbType.Int);
             cmd.Parameters.Add("@idestadocivil", SqlDbType.Int);
             cmd.Parameters.Add("@idsexo", SqlDbType.Int);
@@ -39,7 +38,6 @@ namespace WindowsFormsApplication1
             cmd.Parameters.Add("@fechanacimiento", SqlDbType.Date);
             cmd.Parameters.Add("@fotografia", SqlDbType.Image);
 
-            cmd.Parameters["@idcandidato"].Value = idcandidato;
             cmd.Parameters["@idestadocandidato"].Value = idestadocandidato;
             cmd.Parameters["@idestadocivil"].Value = idestadocivil;
             cmd.Parameters["@idsexo"].Value = idsexo;
@@ -72,7 +70,7 @@ namespace WindowsFormsApplication1
             }
         }
 
-        //consulta de datos CANDIDATO desde grid
+        //Actualizar datos CANDIDATO 
         public bool actualizarimagen(string idcandidato, string idestadocandidato, string idestadocivil, string idsexo, string idnacionalidad, string nombre1, string nombre2, string apellido1, string apellido2, string apellido3, string direccion, string telefono, string nidentificacion, string fechanacimiento, PictureBox fotografia)
         {
             SqlCommand cmd = new SqlCommand("update CANDIDATO set idestadocandidato=@idestadocandidato, idestadocivil=@idestadocivil, idsexo=@idsexo, idnacionalidad=@idnacionalidad, nombre1=@nombre1, nombre2=@nombre2, apellido1=@apellido1, apellido2=@apellido2, apellido3=@apellido3, direccion=@direccion, telefono=@telefono, nidentificacion=@nidentificacion, fechanacimiento=@fechanacimiento, fotografia=@fotografia" + " where idcandidato=@idcandidato", conexionbd_Reclutamiento.ObtenerConexion());

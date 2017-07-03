@@ -7,8 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics;
 
 namespace WindowsFormsApplication1
 {
@@ -116,7 +116,7 @@ namespace WindowsFormsApplication1
 
         private void button4_Click(object sender, EventArgs e)
         {
-            if (ob.insertarimagen(this.txtcodigocandidato.Text, this.txtestadocandidato.Text, this.txtestadocivilcandidato.Text, this.txtsexocandidato.Text, this.txtnacioncandidato.Text, this.textBox1.Text, this.textBox2.Text, this.textBox4.Text, this.textBox3.Text, this.textBox8.Text, this.textBox6.Text, this.textBox7.Text, this.textBox5.Text, this.dateTimePicker1.Text, this.pictureBox1))
+            if (ob.insertarimagen(this.txtestadocandidato.Text, this.txtestadocivilcandidato.Text, this.txtsexocandidato.Text, this.txtnacioncandidato.Text, this.textBox1.Text, this.textBox2.Text, this.textBox4.Text, this.textBox3.Text, this.textBox8.Text, this.textBox6.Text, this.textBox7.Text, this.textBox5.Text, this.dateTimePicker1.Text, this.pictureBox1))
             {
                 MessageBox.Show("Datos Ingresados con Exito");
             }
@@ -269,6 +269,15 @@ namespace WindowsFormsApplication1
         private void txtestadocandidato_TextChanged(object sender, EventArgs e)
         {
             ob.llenarCB2(this.txtestadocandidato, this.comboBox7, "select descipcion from ESTADOCANDIDATO where idestadocandidato ='");
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Process pr = new Process();
+            pr.StartInfo.WorkingDirectory = @"C:\Users\VICTOR RODAS\Documents\GitHub\RRHH\WindowsFormsApplication1\ayuda\";
+            pr.StartInfo.FileName = "Ayuda Candidato Nuevo.pdf";
+            pr.Start();
+            
         }
     }
 }
