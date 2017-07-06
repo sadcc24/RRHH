@@ -22,6 +22,7 @@ namespace WindowsFormsApplication1
 
         public class showPagoDescuentos
         {
+            public string id { get; set; }
             public string descripcion { get; set; }
             public string porcentaje { get; set; }
             public string tipoPago { get; set; }
@@ -42,25 +43,39 @@ namespace WindowsFormsApplication1
 
         public class showEmpleados
         {
+            public string idempleado { get; set; }
             public string nombre_empresa { get; set; }
             public string nombre1 { get; set; }
             public string nombre2 { get; set; }
             public string apellido1 { get; set; }
             public string apellido2 { get; set; }
+            public string cuenta { get; set; }
         }
 
+        //Estructura para detalle de pagos y descuentos
+        public class percepcionEmpleado
+        {
+            public string idpercepcion { get; set; }
+        }
 
-        //public class showPagoDescuentos
-        //{
-        //    public string idbonificacion { get; set; }
-        //    public string idtipobonificacion { get; set; }
-        //    public string idtipopago { get; set; }
-        //    public string id { get; set; }
-        //    public string id_sede { get; set; }
-        //    public string descripcion { get; set; }
-        //    public string porcentaje { get; set; }
-        //    public string defaultt { get; set; }
-        //    public string estado { get; set; }
-        //}
+        public class empleadoPerDedc
+        {
+            public string idempleado { get; set; }
+        }
+
+        public class deduccionEmpleado
+        {
+            public string iddeduccion { get; set; }
+        }
+
+        public class StringValue
+        {
+            public StringValue(string s)
+            {
+                _value = s;
+            }
+            public string Value { get { return _value; } set { _value = value; } }
+            string _value;
+        }
     }
 }

@@ -145,6 +145,7 @@
             this.btn_editar.Size = new System.Drawing.Size(40, 40);
             this.btn_editar.TabIndex = 32;
             this.btn_editar.UseVisualStyleBackColor = true;
+            this.btn_editar.Click += new System.EventHandler(this.btn_editar_Click);
             // 
             // btn_guardar
             // 

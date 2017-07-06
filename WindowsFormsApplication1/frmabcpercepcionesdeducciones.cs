@@ -12,6 +12,9 @@ namespace WindowsFormsApplication1
 {
     public partial class ABCPercepcionesDeducciones : Form
     {
+        public int idbonificacion = 0;
+        public int iddescuento = 0;
+
         public ABCPercepcionesDeducciones()
         {
             InitializeComponent();
@@ -73,11 +76,37 @@ namespace WindowsFormsApplication1
             }
         }
 
+        private void btn_editar_Click(object sender, EventArgs e)
+        {
+            int resultado = 0;
+            int tipo = Convert.ToInt32(txt_tipo.SelectedValue.ToString());
+            string descripcion = txt_descripcion.Text;
+            string porcentaje = txt_porcentaje.Text;
+            int tipoPago = Convert.ToInt32(txt_tipoPago.SelectedValue.ToString());
+
+            if (tipo == 1)
+            {//Percepciones
+                resultado = capa_negocio_planillas.updatePercepciones(idbonificacion, descripcion, porcentaje, tipoPago);
+            }
+            if (tipo == 2)
+            {//Deducciones
+                resultado = capa_negocio_planillas.updateDeducciones(iddescuento, descripcion, porcentaje, tipoPago);
+            }
+
+            if (resultado == 1)
+            {
+                MessageBox.Show("Registro Modificado con Éxito");
+                showPagoDescuentos();
+            }
+        }
+
         private void grid_percepciones_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             DataGridViewRow row = grid_percepciones.Rows[e.RowIndex];
+            //grid_percepciones.Columns["descripcion"].Visible = false;
 
             txt_tipo.Text = "Percepciones";
+            idbonificacion = Convert.ToInt32(row.Cells["id"].Value.ToString());
             txt_descripcion.Text = row.Cells["descripcion"].Value.ToString();
             txt_porcentaje.Text = row.Cells["porcentaje"].Value.ToString();
             txt_tipoPago.Text = row.Cells["tipoPago"].Value.ToString();
@@ -88,6 +117,7 @@ namespace WindowsFormsApplication1
             DataGridViewRow row = grid_deducciones.Rows[e.RowIndex];
 
             txt_tipo.Text = "Deducciones";
+            iddescuento = Convert.ToInt32(row.Cells["id"].Value.ToString());
             txt_descripcion.Text = row.Cells["descripcion"].Value.ToString();
             txt_porcentaje.Text = row.Cells["porcentaje"].Value.ToString();
             txt_tipoPago.Text = row.Cells["tipoPago"].Value.ToString();

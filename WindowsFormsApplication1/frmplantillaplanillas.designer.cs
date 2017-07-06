@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.grid_deducciones = new System.Windows.Forms.DataGridView();
+            this.chk = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.label4 = new System.Windows.Forms.Label();
-            this.list_deducciones = new System.Windows.Forms.CheckedListBox();
             this.grid_empleados = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.list_percepciones = new System.Windows.Forms.CheckedListBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.btn_findDept = new System.Windows.Forms.Button();
@@ -66,7 +66,10 @@
             this.btn_nuevo = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
             this.btn_applyNomina = new System.Windows.Forms.Button();
+            this.grid_percepciones = new System.Windows.Forms.DataGridView();
+            this.chk2 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grid_deducciones)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grid_empleados)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -74,18 +77,35 @@
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grid_percepciones)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.grid_deducciones);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.list_deducciones);
             this.groupBox1.Location = new System.Drawing.Point(12, 217);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(324, 178);
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Deducciones";
+            // 
+            // grid_deducciones
+            // 
+            this.grid_deducciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grid_deducciones.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.chk});
+            this.grid_deducciones.Location = new System.Drawing.Point(54, 45);
+            this.grid_deducciones.Name = "grid_deducciones";
+            this.grid_deducciones.Size = new System.Drawing.Size(206, 109);
+            this.grid_deducciones.TabIndex = 25;
+            // 
+            // chk
+            // 
+            this.chk.HeaderText = "Check";
+            this.chk.Name = "chk";
+            this.chk.Width = 50;
             // 
             // label4
             // 
@@ -95,14 +115,6 @@
             this.label4.Size = new System.Drawing.Size(176, 13);
             this.label4.TabIndex = 24;
             this.label4.Text = "Seleccione Deducciones  a Aplicar:";
-            // 
-            // list_deducciones
-            // 
-            this.list_deducciones.FormattingEnabled = true;
-            this.list_deducciones.Location = new System.Drawing.Point(33, 45);
-            this.list_deducciones.Name = "list_deducciones";
-            this.list_deducciones.Size = new System.Drawing.Size(250, 109);
-            this.list_deducciones.TabIndex = 16;
             // 
             // grid_empleados
             // 
@@ -114,8 +126,8 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.grid_percepciones);
             this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.list_percepciones);
             this.groupBox2.Location = new System.Drawing.Point(367, 217);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(327, 178);
@@ -131,14 +143,6 @@
             this.label5.Size = new System.Drawing.Size(175, 13);
             this.label5.TabIndex = 24;
             this.label5.Text = "Seleccione Percepciones a Aplicar:";
-            // 
-            // list_percepciones
-            // 
-            this.list_percepciones.FormattingEnabled = true;
-            this.list_percepciones.Location = new System.Drawing.Point(46, 45);
-            this.list_percepciones.Name = "list_percepciones";
-            this.list_percepciones.Size = new System.Drawing.Size(250, 109);
-            this.list_percepciones.TabIndex = 16;
             // 
             // tabControl1
             // 
@@ -452,6 +456,25 @@
             this.btn_applyNomina.Text = "Aplicar Nomina";
             this.btn_applyNomina.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_applyNomina.UseVisualStyleBackColor = false;
+            this.btn_applyNomina.Click += new System.EventHandler(this.btn_applyNomina_Click);
+            // 
+            // grid_percepciones
+            // 
+            this.grid_percepciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grid_percepciones.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.chk2});
+            this.grid_percepciones.Location = new System.Drawing.Point(55, 45);
+            this.grid_percepciones.Name = "grid_percepciones";
+            this.grid_percepciones.Size = new System.Drawing.Size(211, 109);
+            this.grid_percepciones.TabIndex = 25;
+            // 
+            // chk2
+            // 
+            this.chk2.HeaderText = "Check";
+            this.chk2.Name = "chk2";
+            this.chk2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.chk2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.chk2.Width = 50;
             // 
             // frmplantillaplanillas
             // 
@@ -470,6 +493,7 @@
             this.Load += new System.EventHandler(this.Form3_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grid_deducciones)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grid_empleados)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
@@ -481,6 +505,7 @@
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
             this.groupBox3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.grid_percepciones)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -489,11 +514,9 @@
         #endregion
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView grid_empleados;
-        private System.Windows.Forms.CheckedListBox list_deducciones;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.CheckedListBox list_percepciones;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
@@ -525,5 +548,9 @@
         private System.Windows.Forms.Button btn_findComp;
         private System.Windows.Forms.Button btn_applyNomina;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.DataGridView grid_deducciones;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn chk;
+        private System.Windows.Forms.DataGridView grid_percepciones;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn chk2;
     }
 }

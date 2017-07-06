@@ -82,5 +82,74 @@ namespace WindowsFormsApplication1
 
             return response;
         }
+
+        public static int updatePercepciones(int idbonificacion, string descripcion, string porcentaje, int tipoPago)
+        {
+            int response = 0;
+
+            if (string.IsNullOrWhiteSpace(descripcion))
+            {
+                MessageBox.Show("La Descripción es Obligatoria", "Completar Campos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                response = capa_logica_planillas.updatePercepciones(idbonificacion, descripcion, porcentaje, tipoPago);
+            }
+
+            return response;
+        }
+
+        public static int updateDeducciones(int iddescuento, string descripcion, string porcentaje, int tipoPago)
+        {
+            int response = 0;
+
+            if (string.IsNullOrWhiteSpace(descripcion))
+            {
+                MessageBox.Show("La Descripción es Obligatoria", "Completar Campos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                response = capa_logica_planillas.updateDeducciones(iddescuento, descripcion, porcentaje, tipoPago);
+            }
+
+            return response;
+        }
+
+        public static int saveEmpleadoPercepcion(List<capa_presentacion_planillas.percepcionEmpleado> listPercepiones, List<capa_presentacion_planillas.empleadoPerDedc> empleadoPercepcion)
+        {
+            int response = 0;
+
+            /*if (string.IsNullOrWhiteSpace(listPercepiones))
+            {
+                MessageBox.Show("La Descripción es Obligatoria", "Completar Campos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {*/
+            foreach (var percepcion in listPercepiones)
+            {
+                foreach (var empleado in empleadoPercepcion)
+                {
+                    response = capa_logica_planillas.saveEmpleadoPercepcion(percepcion.idpercepcion, empleado.idempleado);
+                }
+            }
+            //}
+
+            return response;
+        }
+
+        public static int saveEmpleadoDeduccion(List<capa_presentacion_planillas.deduccionEmpleado> lisDeducciones, List<capa_presentacion_planillas.empleadoPerDedc> empleados)
+        {
+            int response = 0;
+
+            foreach (var deduccion in lisDeducciones)
+            {
+                foreach (var empleado in empleados)
+                {
+                    response = capa_logica_planillas.saveEmpleadoDeduccion(deduccion.iddeduccion, empleado.idempleado);
+                }
+            }
+
+            return response;
+        }
     }
 }

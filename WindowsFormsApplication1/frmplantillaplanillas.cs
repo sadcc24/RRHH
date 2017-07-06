@@ -28,13 +28,11 @@ namespace WindowsFormsApplication1
             List<capa_presentacion_planillas.ListPercepciones> showListPercepciones = capa_negocio_planillas.showListPercepciones();
             List<capa_presentacion_planillas.ListDeducciones> showListDeducciones = capa_negocio_planillas.showListDeducciones();
 
-            list_percepciones.DataSource = showListPercepciones;
-            list_percepciones.ValueMember = "idbonificacion";
-            list_percepciones.DisplayMember = "descripcion";
+            grid_deducciones.DataSource = showListDeducciones;
+            grid_deducciones.Columns["iddescuento"].Visible = false;
 
-            list_deducciones.DataSource = showListDeducciones;
-            list_deducciones.ValueMember = "iddescuento";
-            list_deducciones.DisplayMember = "descripcion";
+            grid_percepciones.DataSource = showListPercepciones;
+            grid_percepciones.Columns["idbonificacion"].Visible = false;
         }
 
         private void btn_nuevo_Click(object sender, EventArgs e)
@@ -51,8 +49,165 @@ namespace WindowsFormsApplication1
         private void btn_findEmp_Click(object sender, EventArgs e)
         {
             List<capa_presentacion_planillas.showEmpleados> showEmpleados = capa_negocio_planillas.showEmpleados();
+            List<string[]> empleados = new List<string[]>();
+            List<string> empList = new List<string>();
+            string[] em = { };
+            string empleadoAux = "";
 
-            grid_empleados.DataSource = showEmpleados;
+            empleadoAux = showEmpleados[0].idempleado;
+            empList.Add(showEmpleados[0].idempleado);
+            empList.Add(showEmpleados[0].nombre1);
+            empList.Add(showEmpleados[0].nombre2);
+            empList.Add(showEmpleados[0].apellido1);
+            empList.Add(showEmpleados[0].apellido2);
+            foreach (var empleado in showEmpleados)
+            {
+                if (empleadoAux == empleado.idempleado)
+                {
+                    empList.Add(empleado.cuenta);
+                }
+                else
+                {
+                    empleadoAux = empleado.idempleado;
+                    em = empList.ToArray();
+                    empleados.Add(em);
+                }
+            }
+
+            em = empList.ToArray();
+            empleados.Add(em);
+
+            DataTable table = ConvertListToDataTable(empleados);
+            grid_empleados.DataSource = table;
+        }
+
+        static DataTable ConvertListToDataTable(List<string[]> list)
+        {
+            // New table.
+            DataTable table = new DataTable();
+
+            // Get max columns.
+            int columns = 0;
+            foreach (var array in list)
+            {
+                if (array.Length > columns)
+                {
+                    columns = array.Length;
+                }
+            }
+
+            // Add columns.
+            for (int i = 0; i < columns; i++)
+            {
+                table.Columns.Add();
+            }
+
+            // Add rows.
+            foreach (var array in list)
+            {
+                table.Rows.Add(array);
+            }
+
+            return table;
+        }
+
+        private void btn_applyNomina_Click(object sender, EventArgs e)
+        {
+            int resultado = 0;
+            List<capa_presentacion_planillas.percepcionEmpleado> listPercepiones = new List<capa_presentacion_planillas.percepcionEmpleado>();
+            List<capa_presentacion_planillas.deduccionEmpleado> listDeducciones = new List<capa_presentacion_planillas.deduccionEmpleado>();
+            List<capa_presentacion_planillas.empleadoPerDedc> empleadoPerDedc = new List<capa_presentacion_planillas.empleadoPerDedc>();
+
+            //PERCEPCIONES
+            bool isChecked = false;
+            foreach (DataGridViewRow row in grid_percepciones.Rows)
+            {
+                foreach (DataGridViewCell cell in row.Cells)
+                {
+                    int index = cell.ColumnIndex;
+                    if (index == 0)
+                    {
+                        if (cell.Value != null)
+                        {
+                            if ((bool)cell.Value)
+                            {
+                                isChecked = true;
+                            }
+                        }
+                    }
+                    if (index == 1)
+                    {
+                        if (isChecked)
+                        {
+                            listPercepiones.Add(new capa_presentacion_planillas.percepcionEmpleado() { idpercepcion = cell.Value.ToString() });
+                            isChecked = false;
+                        }
+                    }
+                }
+            }
+
+            //DEDUCCIONES
+            isChecked = false;
+            foreach (DataGridViewRow row in grid_deducciones.Rows)
+            {
+                foreach (DataGridViewCell cell in row.Cells)
+                {
+                    int index = cell.ColumnIndex;
+                    if (index == 0)
+                    {
+                        if (cell.Value != null)
+                        {
+                            if ((bool)cell.Value)
+                            {
+                                isChecked = true;
+                            }
+                        }
+                    }
+                    if (index == 1)
+                    {
+                        if (isChecked)
+                        {
+                            listDeducciones.Add(new capa_presentacion_planillas.deduccionEmpleado() { iddeduccion = cell.Value.ToString() });
+                            isChecked = false;
+                        }
+                    }
+                }
+            }
+
+            //Empleados
+            foreach (DataGridViewRow row in grid_empleados.Rows)
+            {
+                foreach (DataGridViewCell cell in row.Cells)
+                {
+                    int index = cell.ColumnIndex;
+                    if (index == 0)
+                    {
+                        if (cell.Value != null)
+                        {
+                            empleadoPerDedc.Add(new capa_presentacion_planillas.empleadoPerDedc() { idempleado = cell.Value.ToString() });
+                        }
+                    }
+                }
+            }
+
+            if (listPercepiones.Count > 0)
+            {
+                resultado = capa_negocio_planillas.saveEmpleadoPercepcion(listPercepiones, empleadoPerDedc);
+            }
+            if (listDeducciones.Count > 0)
+            {
+                resultado = capa_negocio_planillas.saveEmpleadoDeduccion(listDeducciones, empleadoPerDedc);
+            }
+
+            if (resultado == 1)
+            {
+                MessageBox.Show("Transacción Exitosa");
+                btn_findEmp_Click(null, null);
+            }
+            else
+            {
+                MessageBox.Show("Transacción Fallida, intente Nuevamente");
+            }
         }
     }
 }
