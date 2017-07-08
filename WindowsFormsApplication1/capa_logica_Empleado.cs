@@ -24,12 +24,39 @@ namespace WindowsFormsApplication1
                 return retorno;
             }
 
-        public void cargagrid()
+        public static DataTable GetEmpleadoGrid()
         {
-
+            DataTable dtRegistros = new DataTable();//Tabla de datos
+            try
+            {//Llamada de Conexion y Query
+                SqlCommand comando = new SqlCommand(string.Format("exec gridEmpleado;"), conexionbd_Empleado.ObtenerConexion());
+                SqlDataAdapter SqlDAdAdaptador = new SqlDataAdapter();
+                SqlDAdAdaptador.SelectCommand = comando;
+                SqlDAdAdaptador.Fill(dtRegistros);//Llena la tabla dtRegistros
+                SQL_Conexion.Close();
+            }
+            catch (Exception Ex)
+            {
+            }
+            return dtRegistros;
         }
 
-
+        public static DataTable GetEmpleadoDatos(string idemp)
+        {
+            DataTable dtRegistros = new DataTable();//Tabla de datos
+            try
+            {//Llamada de Conexion y Query
+                SqlCommand comando = new SqlCommand(string.Format("exec EmpleadoDatos '" + idemp+"';"), conexionbd_Empleado.ObtenerConexion());
+                SqlDataAdapter SqlDAdAdaptador = new SqlDataAdapter();
+                SqlDAdAdaptador.SelectCommand = comando;
+                SqlDAdAdaptador.Fill(dtRegistros);//Llena la tabla dtRegistros
+                SQL_Conexion.Close();
+            }
+            catch (Exception Ex)
+            {
+            }
+            return dtRegistros;
+        }
         public static int LoginD(string sUser, string sContra)
         {
 
@@ -37,7 +64,11 @@ namespace WindowsFormsApplication1
             string ecrypt = classEncryptD.Encrypt(sContra);
 
             int retorno = 0;
-                    SqlCommand comando2 = new SqlCommand("Select usuario from USUARIO_1 WHERE usuario='" + sUser + "'And password ='" + ecrypt + "'", conexionbd_Empleado.ObtenerConexion());
+            //string insert = "INSERT INTO DetalleLaboral (idempleado,idempresa,sueldo,aumento,puesto,jornada,departamento,feciniciolaboral)VALUES('4','1','','','Desarrollador','8 horas','Tecnologia','2017-07-02');";
+            //SqlCommand comando3 = new SqlCommand(insert, conexionbd_Empleado.ObtenerConexion());
+            //Object obj2 = comando3.ExecuteScalar();
+            //SQL_Conexion.Close();
+            SqlCommand comando2 = new SqlCommand("Select usuario from USUARIO_1 WHERE usuario='" + sUser + "'And password ='" + ecrypt + "'", conexionbd_Empleado.ObtenerConexion());
                     Object obj = comando2.ExecuteScalar();
                     if (obj == null)
                     {
@@ -61,7 +92,7 @@ namespace WindowsFormsApplication1
             DataTable dtRegistros = new DataTable();//Tabla de datos
             try
             {//Llamada de Conexion y Query
-                SqlCommand comando = new SqlCommand(string.Format("SELECT c.usuario , b.nombre_empresa FROM EMPLEADO A INNER JOIN Empresa B ON A.idempresa = B.idempresa INNER JOIN USUARIO_1 C ON C.codusuario = A.codusuario WHERE C.usuario = '" + sUser + "';"), conexionbd_Empleado.ObtenerConexion());
+                SqlCommand comando = new SqlCommand(string.Format("exec TomaDatosLogin '" + sUser + "';"), conexionbd_Empleado.ObtenerConexion());
                 SqlDataAdapter SqlDAdAdaptador = new SqlDataAdapter();
                 SqlDAdAdaptador.SelectCommand = comando;
                 SqlDAdAdaptador.Fill(dtRegistros);//Llena la tabla dtRegistros
@@ -73,10 +104,10 @@ namespace WindowsFormsApplication1
             return dtRegistros;
         }
 
-        public static int InsertaEmpleado()
+        public static int InsertaEmpleado(int Estado, string CodUsuario, int Empresa, string sueldo, string aumento, string puesto, string jornada, string departamento, string feciniciolaboral, string nombre1, string nombre2, string apellido1, string apellido2, string apellido3, string nacionalidad, string sexo, string fechanacimiento, string direccion, int telefono, string identificacion)
     {
         int retorno = 0;
-        SqlCommand comando = new SqlCommand("EXEC InsertaEmpleado", conexionbd_Empleado.ObtenerConexion());
+        SqlCommand comando = new SqlCommand("exec InsertaEmpleado "+Estado+",'"+CodUsuario+"','"+Empresa+"','"+sueldo+"','"+aumento+"','"+puesto+"','"+jornada+"','"+departamento+"','"+feciniciolaboral+"','"+nombre1+"','"+nombre2+"','"+apellido1+"','"+apellido2+"','"+apellido3+"','"+nacionalidad+"','"+sexo+"','"+fechanacimiento+"','"+direccion+"',"+telefono+",'"+identificacion+"'", conexionbd_Empleado.ObtenerConexion());
         retorno = comando.ExecuteNonQuery();
         return retorno;
     }

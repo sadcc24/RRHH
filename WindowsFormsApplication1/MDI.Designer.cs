@@ -60,6 +60,8 @@
             this.capacitacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.nuevaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.asignacionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultaToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.evaluacionDeDesempeñoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.r1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -71,7 +73,10 @@
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel4 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.toolStripStatusLabel5 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabel6 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabel7 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabel8 = new System.Windows.Forms.ToolStripStatusLabel();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -88,7 +93,7 @@
             this.salirToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(599, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(844, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -325,10 +330,27 @@
             // 
             // nuevaToolStripMenuItem
             // 
+            this.nuevaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.asignacionToolStripMenuItem,
+            this.consultaToolStripMenuItem3});
             this.nuevaToolStripMenuItem.Name = "nuevaToolStripMenuItem";
             this.nuevaToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
             this.nuevaToolStripMenuItem.Text = "Asignacion";
             this.nuevaToolStripMenuItem.Click += new System.EventHandler(this.nuevaToolStripMenuItem_Click);
+            // 
+            // asignacionToolStripMenuItem
+            // 
+            this.asignacionToolStripMenuItem.Name = "asignacionToolStripMenuItem";
+            this.asignacionToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
+            this.asignacionToolStripMenuItem.Text = "Asignacion";
+            this.asignacionToolStripMenuItem.Click += new System.EventHandler(this.asignacionToolStripMenuItem_Click);
+            // 
+            // consultaToolStripMenuItem3
+            // 
+            this.consultaToolStripMenuItem3.Name = "consultaToolStripMenuItem3";
+            this.consultaToolStripMenuItem3.Size = new System.Drawing.Size(133, 22);
+            this.consultaToolStripMenuItem3.Text = "Consulta";
+            this.consultaToolStripMenuItem3.Click += new System.EventHandler(this.consultaToolStripMenuItem3_Click);
             // 
             // evaluacionDeDesempeñoToolStripMenuItem
             // 
@@ -379,10 +401,14 @@
             this.toolStripStatusLabel1,
             this.toolStripStatusLabel2,
             this.toolStripStatusLabel3,
-            this.toolStripStatusLabel4});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 322);
+            this.toolStripStatusLabel4,
+            this.toolStripStatusLabel5,
+            this.toolStripStatusLabel6,
+            this.toolStripStatusLabel7,
+            this.toolStripStatusLabel8});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 215);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(599, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(844, 22);
             this.statusStrip1.TabIndex = 2;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -410,26 +436,42 @@
             this.toolStripStatusLabel4.Size = new System.Drawing.Size(118, 17);
             this.toolStripStatusLabel4.Text = "toolStripStatusLabel4";
             // 
-            // label1
+            // toolStripStatusLabel5
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.label1.Font = new System.Drawing.Font("Century", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.GhostWhite;
-            this.label1.Location = new System.Drawing.Point(12, 42);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(98, 33);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "label1";
+            this.toolStripStatusLabel5.Name = "toolStripStatusLabel5";
+            this.toolStripStatusLabel5.Size = new System.Drawing.Size(58, 17);
+            this.toolStripStatusLabel5.Text = "Empresa: ";
+            this.toolStripStatusLabel5.Click += new System.EventHandler(this.toolStripStatusLabel5_Click);
+            // 
+            // toolStripStatusLabel6
+            // 
+            this.toolStripStatusLabel6.Name = "toolStripStatusLabel6";
+            this.toolStripStatusLabel6.Size = new System.Drawing.Size(118, 17);
+            this.toolStripStatusLabel6.Text = "toolStripStatusLabel6";
+            // 
+            // toolStripStatusLabel7
+            // 
+            this.toolStripStatusLabel7.Name = "toolStripStatusLabel7";
+            this.toolStripStatusLabel7.Size = new System.Drawing.Size(57, 17);
+            this.toolStripStatusLabel7.Text = "Moneda: ";
+            // 
+            // toolStripStatusLabel8
+            // 
+            this.toolStripStatusLabel8.Name = "toolStripStatusLabel8";
+            this.toolStripStatusLabel8.Size = new System.Drawing.Size(118, 17);
+            this.toolStripStatusLabel8.Text = "toolStripStatusLabel8";
             // 
             // MDI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(599, 344);
-            this.Controls.Add(this.label1);
+            this.BackColor = System.Drawing.Color.MediumPurple;
+            this.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.logo1;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(844, 237);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MDI";
@@ -490,7 +532,12 @@
         private System.Windows.Forms.ToolStripMenuItem plantillasPlanillaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem vacacionesToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem nuevoEmpleadoToolStripMenuItem1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel5;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel6;
+        private System.Windows.Forms.ToolStripMenuItem asignacionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem consultaToolStripMenuItem3;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel7;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel8;
     }
 }
 

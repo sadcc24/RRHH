@@ -15,6 +15,15 @@ namespace WindowsFormsApplication1
             return capa_logica_Empleado.ObtenerRegistros(sUser);
         }
 
+        public System.Data.DataTable GetEmpleadoGrid()
+        {
+            return capa_logica_Empleado.GetEmpleadoGrid();
+        }
+        public System.Data.DataTable GetEmpleadoDatos(string idemp)
+        {
+            return capa_logica_Empleado.GetEmpleadoDatos(idemp);
+        }
+
         public void Insert_Motivo(capa_presentacion_Empleado pmotivo)
         {
             if (string.IsNullOrWhiteSpace(pmotivo.motivo) || string.IsNullOrWhiteSpace(pmotivo.descripcion))
@@ -58,7 +67,8 @@ namespace WindowsFormsApplication1
             return resultado;
         }
 
-        public int InsertaEmpleado()
+
+        public int InsertaEmpleado(int Estado, string CodUsuario, int Empresa, string sueldo, string aumento, string puesto, string jornada, string departamento, string feciniciolaboral, string nombre1, string nombre2, string apellido1, string apellido2, string apellido3, string nacionalidad, string sexo, string fechanacimiento, string direccion, int telefono, string identificacion)
         {
             int resultado = 0;
             //if (string.IsNullOrWhiteSpace(sUser) || string.IsNullOrWhiteSpace(sContra))
@@ -67,7 +77,7 @@ namespace WindowsFormsApplication1
             //}
             //else
             //{
-            resultado = capa_logica_Empleado.InsertaEmpleado();
+            resultado = capa_logica_Empleado.InsertaEmpleado(Estado, CodUsuario, Empresa, sueldo, aumento, puesto, jornada, departamento, feciniciolaboral, nombre1, nombre2, apellido1, apellido2, apellido3, nacionalidad, sexo, fechanacimiento, direccion, telefono, identificacion);
                 if (resultado > 0)
                 {
                     resultado = 1;

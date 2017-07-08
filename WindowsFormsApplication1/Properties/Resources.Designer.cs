@@ -173,6 +173,16 @@ namespace WindowsFormsApplication1.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap logo1 {
+            get {
+                object obj = ResourceManager.GetObject("logo1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap menu_principal {
             get {
                 object obj = ResourceManager.GetObject("menu principal", resourceCulture);

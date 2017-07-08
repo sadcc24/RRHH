@@ -28,10 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvCapacitaciones = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
@@ -39,23 +37,21 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCapacitaciones)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dgvCapacitaciones
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 80);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(732, 319);
-            this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dgvCapacitaciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCapacitaciones.Location = new System.Drawing.Point(12, 80);
+            this.dgvCapacitaciones.Name = "dgvCapacitaciones";
+            this.dgvCapacitaciones.Size = new System.Drawing.Size(732, 319);
+            this.dgvCapacitaciones.TabIndex = 0;
+            this.dgvCapacitaciones.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.button9);
-            this.panel1.Controls.Add(this.button8);
             this.panel1.Controls.Add(this.button7);
             this.panel1.Controls.Add(this.button6);
             this.panel1.Controls.Add(this.button5);
@@ -65,33 +61,13 @@
             this.panel1.Controls.Add(this.button3);
             this.panel1.Location = new System.Drawing.Point(12, 24);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(369, 40);
+            this.panel1.Size = new System.Drawing.Size(290, 40);
             this.panel1.TabIndex = 8;
-            // 
-            // button9
-            // 
-            this.button9.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.refresh;
-            this.button9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button9.Location = new System.Drawing.Point(325, 3);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(41, 34);
-            this.button9.TabIndex = 11;
-            this.button9.UseVisualStyleBackColor = true;
-            // 
-            // button8
-            // 
-            this.button8.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.editar;
-            this.button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button8.Location = new System.Drawing.Point(242, 3);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(41, 34);
-            this.button8.TabIndex = 10;
-            this.button8.UseVisualStyleBackColor = true;
             // 
             // button7
             // 
             this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button7.Location = new System.Drawing.Point(282, 3);
+            this.button7.Location = new System.Drawing.Point(245, 3);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(41, 34);
             this.button7.TabIndex = 9;
@@ -107,16 +83,18 @@
             this.button6.Size = new System.Drawing.Size(41, 34);
             this.button6.TabIndex = 8;
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button5
             // 
-            this.button5.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.guardar;
+            this.button5.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.nuevo;
             this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button5.Location = new System.Drawing.Point(202, 3);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(41, 34);
             this.button5.TabIndex = 7;
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button4
             // 
@@ -159,16 +137,18 @@
             this.button3.TabIndex = 5;
             this.button3.UseVisualStyleBackColor = true;
             // 
-            // capacitaciones
+            // frmcapacitaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(778, 411);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.dataGridView1);
-            this.Name = "capacitaciones";
+            this.Controls.Add(this.dgvCapacitaciones);
+            this.Name = "frmcapacitaciones";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Capacitaciones";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.frmcapacitaciones_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCapacitaciones)).EndInit();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -176,10 +156,8 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvCapacitaciones;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button5;

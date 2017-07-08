@@ -50,10 +50,23 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="capa_logica_Empleado.cs" />
+    <Compile Include="capa_logica_formaciones.cs" />
+    <Compile Include="capa_logica_vacaciones.cs" />
     <Compile Include="capa_negocio_Empleado.cs" />
+    <Compile Include="capa_negocio_formaciones.cs" />
+    <Compile Include="capa_negocio_vacaciones.cs" />
     <Compile Include="capa_presentacion_Empleado.cs" />
+    <Compile Include="capa_presentacion_formaciones.cs" />
+    <Compile Include="capa_presentacion_vacaciones.cs" />
     <Compile Include="classEncryptD.cs" />
+    <Compile Include="conexionbd.cs" />
     <Compile Include="conexionbd_Empleado.cs" />
+    <Compile Include="frmconsultarmotivo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmconsultarmotivo.Designer.cs">
+      <DependentUpon>frmconsultarmotivo.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmnuevoempleado.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -218,6 +231,9 @@
     <Compile Include="frmresultadoPueba.designer.cs">
       <DependentUpon>frmresultadoPueba.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="frmconsultarmotivo.resx">
+      <DependentUpon>frmconsultarmotivo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmnuevoempleado.resx">
       <DependentUpon>frmnuevoempleado.cs</DependentUpon>
     </EmbeddedResource>
@@ -363,6 +379,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="iconos\Iconos Generales SAD17\loggin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo1.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -12,20 +12,30 @@ namespace WindowsFormsApplication1
 {
     public partial class MDI : Form
     {
-        string usuario;
-        string empresa;
-        public MDI(string user, string empr)
+        public int idempleado;
+        public int idempresa;
+        public string usuario;
+        public string rol;
+        public string empresa;
+        public string nombre_moneda;
+        public MDI(int idemp, string empr, int idempre, string user, string ro, string mon)
         {
             InitializeComponent();
+            idempleado = idemp;
+            idempresa = idempre;
+            empresa = empr;
             usuario = user;
-            empresa = empr;   
+            rol = ro;
+            nombre_moneda = mon;  
         }
 
         private void RRHH_Load(object sender, EventArgs e)
         {
+
             toolStripStatusLabel2.Text = usuario;
-            toolStripStatusLabel4.Text = "Administrador";
-            label1.Text = empresa;
+            toolStripStatusLabel4.Text = rol;
+            toolStripStatusLabel6.Text = empresa;
+            toolStripStatusLabel8.Text = nombre_moneda;
         }
 
         private void consultaToolStripMenuItem_Click(object sender, EventArgs e)
@@ -126,16 +136,16 @@ namespace WindowsFormsApplication1
 
         private void consultaToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            frmcapacitaciones ventanaP = new frmcapacitaciones();
+            frmcapacitaciones ventanaP = new frmcapacitaciones(usuario);
             ventanaP.MdiParent = this;
             ventanaP.Show();
         }
 
         private void nuevaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            asignacion_capacitaciones ventanaP = new asignacion_capacitaciones();
-            ventanaP.MdiParent = this;
-            ventanaP.Show();
+            //asignacion_capacitaciones ventanaP = new asignacion_capacitaciones();
+            //ventanaP.MdiParent = this;
+            //ventanaP.Show();
         }
 
         private void evaluacionDeDesempeñoToolStripMenuItem_Click(object sender, EventArgs e)
@@ -151,6 +161,23 @@ namespace WindowsFormsApplication1
             ventanaP.MdiParent = this;
             ventanaP.Show();
             
+        }
+
+        private void toolStripStatusLabel5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void asignacionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            asignacion_capacitaciones ventanaP = new asignacion_capacitaciones("0","0",usuario);
+            ventanaP.MdiParent = this;
+            ventanaP.Show();
+        }
+
+        private void consultaToolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
