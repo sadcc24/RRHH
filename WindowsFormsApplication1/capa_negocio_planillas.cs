@@ -21,6 +21,12 @@ namespace WindowsFormsApplication1
             return cbx_tipoPago;
         }
 
+        public static List<capa_presentacion_planillas.cbx_bondesc> cbx_bondesc()
+        {
+            List<capa_presentacion_planillas.cbx_bondesc> cbx_bondesc = capa_logica_planillas.cbx_bondesc();
+            return cbx_bondesc;
+        }
+
         public static List<capa_presentacion_planillas.showPagoDescuentos> showPercepciones()
         {
             List<capa_presentacion_planillas.showPagoDescuentos> showPercepciones = capa_logica_planillas.showPercepciones();
@@ -43,6 +49,12 @@ namespace WindowsFormsApplication1
         {
             List<capa_presentacion_planillas.ListDeducciones> showDeducciones = capa_logica_planillas.showListDeducciones();
             return showDeducciones;
+        }
+
+        public static List<capa_presentacion_planillas.showEmpleadosSinNomina> showEmpleadosSinNomina()
+        {
+            List<capa_presentacion_planillas.showEmpleadosSinNomina> showEmpleados = capa_logica_planillas.showEmpleadosSinNomina();
+            return showEmpleados;
         }
 
         public static List<capa_presentacion_planillas.showEmpleados> showEmpleados()
@@ -133,6 +145,18 @@ namespace WindowsFormsApplication1
                 }
             }
             //}
+
+            return response;
+        }
+
+        public static int undoEmpleadosNomina(List<capa_presentacion_planillas.empleadoPerDedc> undoEmpleadosNomina)
+        {
+            int response = 0;
+
+            foreach (var empleado in undoEmpleadosNomina)
+            {
+                response = capa_logica_planillas.undoEmpleadosNomina(empleado.idempleado);
+            }
 
             return response;
         }

@@ -20,6 +20,12 @@ namespace WindowsFormsApplication1
             public string descripcion { get; set; }
         }
 
+        public class cbx_bondesc
+        {
+            public string idbondesc { get; set; }
+            public string descripcion { get; set; }
+        }
+
         public class showPagoDescuentos
         {
             public string id { get; set; }
@@ -49,7 +55,19 @@ namespace WindowsFormsApplication1
             public string nombre2 { get; set; }
             public string apellido1 { get; set; }
             public string apellido2 { get; set; }
+            public string tipo { get; set; }
             public string cuenta { get; set; }
+            public string descripcion { get; set; }
+        }
+
+        public class showEmpleadosSinNomina
+        {
+            public string idempleado { get; set; }
+            public string nombre_empresa { get; set; }
+            public string nombre1 { get; set; }
+            public string nombre2 { get; set; }
+            public string apellido1 { get; set; }
+            public string apellido2 { get; set; }
         }
 
         //Estructura para detalle de pagos y descuentos

@@ -36,6 +36,16 @@ namespace WindowsFormsApplication1
             return cbx_tipoPago;
         }
 
+        public static List<capa_presentacion_planillas.cbx_bondesc> cbx_bondesc()
+        {
+            List<capa_presentacion_planillas.cbx_bondesc> cbx_bondesc = new List<capa_presentacion_planillas.cbx_bondesc>();
+
+            cbx_bondesc.Add(new capa_presentacion_planillas.cbx_bondesc() { idbondesc = "1", descripcion = "Nomina Aplicada" });
+            cbx_bondesc.Add(new capa_presentacion_planillas.cbx_bondesc() { idbondesc = "2", descripcion = "Nomina sin Aplicar" });
+
+            return cbx_bondesc;
+        }
+
         public static List<capa_presentacion_planillas.ListPercepciones> showListPercepciones()
         {
             List<capa_presentacion_planillas.ListPercepciones> listPercepciones = new List<capa_presentacion_planillas.ListPercepciones>();
@@ -221,21 +231,51 @@ namespace WindowsFormsApplication1
         public static List<capa_presentacion_planillas.showEmpleados> showEmpleados()
         {
             List<capa_presentacion_planillas.showEmpleados> showEmpleados = new List<capa_presentacion_planillas.showEmpleados>();
-            string sqlTet = "SELECT e.idempleado, emp.nombre_empresa, e.nombre1, e.nombre2, e.apellido1, e.apellido2, bon.descripcion " +
-                            "FROM detallepersonal e " +
-                            "JOIN empresa emp ON emp.idempresa = e.idempresa " +
-                            "LEFT JOIN detallebonemp per ON per.idempleado = e.idempleado " +
-                            "LEFT JOIN bonificaciones bon ON bon.idbonificacion = per.idbonificacion " +
-                            "LEFT JOIN detalledescemp demp ON demp.idempleado = e.idempleado " +
-                            "LEFT JOIN descuentos desct ON desct.iddescuento = demp.iddescuento " +
-                            "ORDER BY e.idempleado";
+            string sqlTet = " SELECT e.idempleado, emp.nombre_empresa, e.nombre1, e.nombre2, e.apellido1, e.apellido2, 1 AS tipo, bon.idbonificacion AS cuenta, bon.descripcion " +
+                            " FROM detallepersonal e " +
+                            " JOIN empresa emp ON emp.idempresa = e.idempresa " +
+                            " JOIN detallebonemp bper ON bper.idempleado = e.idempleado " +
+                            " JOIN bonificaciones bon ON bon.idbonificacion = bper.idbonificacion " +
+                            " WHERE bper.estado = 1" +
+                            " UNION " +
+                            " SELECT e.idempleado, emp.nombre_empresa, e.nombre1, e.nombre2, e.apellido1, e.apellido2, 2 AS tipo, desct.iddescuento AS cuenta, desct.descripcion" +
+                            " FROM detallepersonal e " +
+                            " JOIN empresa emp ON emp.idempresa = e.idempresa " +
+                            " JOIN detalledescemp demp ON demp.idempleado = e.idempleado " +
+                            " JOIN descuentos desct ON desct.iddescuento = demp.iddescuento" +
+                            " WHERE demp.estado = 1 " +
+                            " ORDER BY e.idempleado, tipo ASC ";
 
             SqlCommand cmd = new SqlCommand(sqlTet, conexionbd.ObtenerConexion());
             SqlDataReader dr = cmd.ExecuteReader();
 
             while (dr.Read())
             {
-                showEmpleados.Add(new capa_presentacion_planillas.showEmpleados() { idempleado = dr["idempleado"].ToString(), nombre_empresa = dr["nombre_empresa"].ToString(), nombre1 = dr["nombre1"].ToString(), nombre2 = dr["nombre2"].ToString(), apellido1 = dr["apellido1"].ToString(), apellido2 = dr["apellido2"].ToString(), cuenta = dr["descripcion"].ToString() });
+                showEmpleados.Add(new capa_presentacion_planillas.showEmpleados() { idempleado = dr["idempleado"].ToString(), nombre_empresa = dr["nombre_empresa"].ToString(), nombre1 = dr["nombre1"].ToString(), nombre2 = dr["nombre2"].ToString(), apellido1 = dr["apellido1"].ToString(), apellido2 = dr["apellido2"].ToString(), tipo = dr["tipo"].ToString(), cuenta = dr["cuenta"].ToString(), descripcion = dr["descripcion"].ToString() });
+            }
+
+            return showEmpleados;
+        }
+
+        public static List<capa_presentacion_planillas.showEmpleadosSinNomina> showEmpleadosSinNomina()
+        {
+            List<capa_presentacion_planillas.showEmpleadosSinNomina> showEmpleados = new List<capa_presentacion_planillas.showEmpleadosSinNomina>();
+            string sqlTet = "SELECT e.idempleado, emp.nombre_empresa, e.nombre1, e.nombre2, e.apellido1, e.apellido2, emp.nombre_empresa " +
+                            "FROM detallepersonal e " +
+                            "JOIN empresa emp ON emp.idempresa = e.idempresa " +
+                             "WHERE idempleado not in ( " +
+                                "SELECT idempleado FROM detallebonemp WHERE estado = 1 " +
+                             ") " +
+                             "AND idempleado NOT IN ( " +
+                                "SELECT idempleado FROM detalledescemp WHERE estado = 1" +
+                             ") ";
+
+            SqlCommand cmd = new SqlCommand(sqlTet, conexionbd.ObtenerConexion());
+            SqlDataReader dr = cmd.ExecuteReader();
+
+            while (dr.Read())
+            {
+                showEmpleados.Add(new capa_presentacion_planillas.showEmpleadosSinNomina() { idempleado = dr["idempleado"].ToString(), nombre_empresa = dr["nombre_empresa"].ToString(), nombre1 = dr["nombre1"].ToString(), nombre2 = dr["nombre2"].ToString(), apellido1 = dr["apellido1"].ToString(), apellido2 = dr["apellido2"].ToString() });
             }
 
             return showEmpleados;
@@ -255,6 +295,26 @@ namespace WindowsFormsApplication1
             cmd.Parameters.Add("@percepcion", SqlDbType.Int);
 
             cmd.Parameters["@percepcion"].Value = Convert.ToInt32(percepcion);
+            cmd.Parameters["@empleado"].Value = Convert.ToInt32(empleado);
+
+            response = cmd.ExecuteNonQuery();
+
+            return response;
+        }
+
+        public static int undoEmpleadosNomina(string empleado)
+        {
+            int response = 0;
+            string sqlString = "UPDATE detallebonemp SET " +
+                                "estado = 0 " +
+                                "WHERE idempleado = @empleado; " +
+                                "UPDATE detalledescemp SET " +
+                                "estado = 0 " +
+                                "WHERE idempleado = @empleado;";
+
+            SqlCommand cmd = new SqlCommand(sqlString, conexionbd.ObtenerConexion());
+
+            cmd.Parameters.Add("@empleado", SqlDbType.Int);
             cmd.Parameters["@empleado"].Value = Convert.ToInt32(empleado);
 
             response = cmd.ExecuteNonQuery();
