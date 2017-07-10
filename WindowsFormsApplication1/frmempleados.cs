@@ -14,18 +14,18 @@ namespace WindowsFormsApplication1
     public partial class frmempleados : Form
     {
         public string idempleado;
-        string empleado;
+        string empresa;
         public static SqlConnection SQL_Conexion = new SqlConnection();
 
         public frmempleados(string empr)
         {
             InitializeComponent();
-            empleado = empr;
+            empresa = empr;
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            this.Size = new Size(665,606);
+            this.Size = new Size(665, 674);
             string idempleado = dataGridView1[8, dataGridView1.CurrentCell.RowIndex].Value.ToString();
             DataTable data = new capa_negocio_Empleado().GetEmpleadoDatos(idempleado);
             
@@ -46,23 +46,27 @@ namespace WindowsFormsApplication1
             txtIniciolaboral.Text = (string)data.Rows[0][14];
             txtPuesto.Text = (string)data.Rows[0][15];
             txtDepartamento.Text = (string)data.Rows[0][16];
-            string estado = (string)data.Rows[0][16];
-            if (estado == "1")
+            int estado = (int)data.Rows[0][17];
+            txtEmpresa.Text = (string)data.Rows[0][18];
+            if (estado == 1)
             {
                 radioButton1.Checked = true;
             }
-            else
+            if (estado == 2)
             {
                 radioButton2.Checked = true;
             }
-                
+            if (estado == 3)
+            {
+                radioButton3.Checked = true;
+            }
 
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            this.Size = new Size(665, 322);
-            label9.Text = empleado;
+            this.Size = new Size(665, 409);
+            label9.Text = empresa;
             carga_gried();
         }
 
@@ -91,7 +95,7 @@ namespace WindowsFormsApplication1
 
         private void button7_Click(object sender, EventArgs e)
         {
-            this.Size = new Size(665, 322);
+            this.Size = new Size(665, 409);
             txtJornada.Clear();
             txtSueldo.Clear();
             txtAumento.Clear();

@@ -57,6 +57,57 @@ namespace WindowsFormsApplication1
             }
             return dtRegistros;
         }
+
+        public static DataTable obtieneRol()
+        {
+            DataTable dtRegistros = new DataTable();//Tabla de datos
+            try
+            {//Llamada de Conexion y Query
+                SqlCommand comando = new SqlCommand(string.Format("select idrol, rol from ROL;"), conexionbd_Empleado.ObtenerConexion());
+                SqlDataAdapter SqlDAdAdaptador = new SqlDataAdapter();
+                SqlDAdAdaptador.SelectCommand = comando;
+                SqlDAdAdaptador.Fill(dtRegistros);//Llena la tabla dtRegistros
+                SQL_Conexion.Close();
+            }
+            catch (Exception Ex)
+            {
+            }
+            return dtRegistros;
+           
+        }
+
+        public static DataTable obtieneDepto()
+        {
+            DataTable dtRegistros = new DataTable();//Tabla de datos
+            try
+            {//Llamada de Conexion y Query
+                SqlCommand comando = new SqlCommand(string.Format("select cast(iddepartamentoempresa as int) as id,nombredeptoempresa from DEPARTAMENTOEMPRESA;;"), conexionbd_Empleado.ObtenerConexion());
+                SqlDataAdapter SqlDAdAdaptador = new SqlDataAdapter();
+                SqlDAdAdaptador.SelectCommand = comando;
+                SqlDAdAdaptador.Fill(dtRegistros);//Llena la tabla dtRegistros
+                SQL_Conexion.Close();
+            }
+            catch (Exception Ex)
+            {
+            }
+            return dtRegistros;
+        }
+        public static DataTable obtienePuesto(string depto)
+        {
+            DataTable dtRegistros = new DataTable();//Tabla de datos
+            try
+            {//Llamada de Conexion y Query
+                SqlCommand comando = new SqlCommand(string.Format("select idpuestodetrabajo, nombrepuesto from PUESTODETRABAJO where iddepartamentoempresa ='"+depto+"';"), conexionbd_Empleado.ObtenerConexion());
+                SqlDataAdapter SqlDAdAdaptador = new SqlDataAdapter();
+                SqlDAdAdaptador.SelectCommand = comando;
+                SqlDAdAdaptador.Fill(dtRegistros);//Llena la tabla dtRegistros
+                SQL_Conexion.Close();
+            }
+            catch (Exception Ex)
+            {
+            }
+            return dtRegistros;
+        }
         public static int LoginD(string sUser, string sContra)
         {
 
@@ -104,10 +155,10 @@ namespace WindowsFormsApplication1
             return dtRegistros;
         }
 
-        public static int InsertaEmpleado(int Estado, string CodUsuario, int Empresa, string sueldo, string aumento, string puesto, string jornada, string departamento, string feciniciolaboral, string nombre1, string nombre2, string apellido1, string apellido2, string apellido3, string nacionalidad, string sexo, string fechanacimiento, string direccion, int telefono, string identificacion)
+        public static int InsertaEmpleado( int? experiencia, int? estudio,int Estado, int CodUsuario, int Empresa, int rol,decimal sueldo, decimal aumento, string puesto, string jornada, string feciniciolaboral, string nombre1, string nombre2, string apellido1, string apellido2, string apellido3, string nacionalidad, string sexo, string fechanacimiento, string direccion, int telefono, string identificacion, string fotografia)
     {
         int retorno = 0;
-        SqlCommand comando = new SqlCommand("exec InsertaEmpleado "+Estado+",'"+CodUsuario+"','"+Empresa+"','"+sueldo+"','"+aumento+"','"+puesto+"','"+jornada+"','"+departamento+"','"+feciniciolaboral+"','"+nombre1+"','"+nombre2+"','"+apellido1+"','"+apellido2+"','"+apellido3+"','"+nacionalidad+"','"+sexo+"','"+fechanacimiento+"','"+direccion+"',"+telefono+",'"+identificacion+"'", conexionbd_Empleado.ObtenerConexion());
+        SqlCommand comando = new SqlCommand("exec InsertaEmpleado " + Estado+ ",'"+ CodUsuario+ "','"+ Empresa+ "','" +rol+ "','" +sueldo +"','"+aumento+"','"+puesto+"','"+jornada+"','"+feciniciolaboral+ "','" + experiencia + "','" + estudio + "','" + nombre1+"','"+nombre2+"','"+apellido1+"','"+apellido2+"','"+apellido3+"','"+nacionalidad+"','"+sexo+"','"+fechanacimiento+"','"+direccion+"',"+telefono+",'"+identificacion+"','"+ fotografia+"';", conexionbd_Empleado.ObtenerConexion());
         retorno = comando.ExecuteNonQuery();
         return retorno;
     }

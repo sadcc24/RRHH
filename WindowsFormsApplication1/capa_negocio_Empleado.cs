@@ -15,6 +15,18 @@ namespace WindowsFormsApplication1
             return capa_logica_Empleado.ObtenerRegistros(sUser);
         }
 
+        public System.Data.DataTable obtieneRol()
+        {
+            return capa_logica_Empleado.obtieneRol();
+        }
+        public System.Data.DataTable obtieneDepto()
+        {
+            return capa_logica_Empleado.obtieneDepto();
+        }
+        public System.Data.DataTable obtienePuesto(string dep)
+        {
+            return capa_logica_Empleado.obtienePuesto(dep);
+        }
         public System.Data.DataTable GetEmpleadoGrid()
         {
             return capa_logica_Empleado.GetEmpleadoGrid();
@@ -68,7 +80,7 @@ namespace WindowsFormsApplication1
         }
 
 
-        public int InsertaEmpleado(int Estado, string CodUsuario, int Empresa, string sueldo, string aumento, string puesto, string jornada, string departamento, string feciniciolaboral, string nombre1, string nombre2, string apellido1, string apellido2, string apellido3, string nacionalidad, string sexo, string fechanacimiento, string direccion, int telefono, string identificacion)
+        public int InsertaEmpleado(int? experiencia, int? estudio,int Estado, int CodUsuario, int Empresa,int rol, decimal sueldo, decimal aumento, string puesto, string jornada, string feciniciolaboral, string nombre1, string nombre2, string apellido1, string apellido2, string apellido3, string nacionalidad, string sexo, string fechanacimiento, string direccion, int telefono, string identificacion, string fotografia)
         {
             int resultado = 0;
             //if (string.IsNullOrWhiteSpace(sUser) || string.IsNullOrWhiteSpace(sContra))
@@ -77,7 +89,7 @@ namespace WindowsFormsApplication1
             //}
             //else
             //{
-            resultado = capa_logica_Empleado.InsertaEmpleado(Estado, CodUsuario, Empresa, sueldo, aumento, puesto, jornada, departamento, feciniciolaboral, nombre1, nombre2, apellido1, apellido2, apellido3, nacionalidad, sexo, fechanacimiento, direccion, telefono, identificacion);
+            resultado = capa_logica_Empleado.InsertaEmpleado(experiencia,estudio, Estado, CodUsuario, Empresa,rol, sueldo, aumento, puesto, jornada, feciniciolaboral, nombre1, nombre2, apellido1, apellido2, apellido3, nacionalidad, sexo, fechanacimiento, direccion, telefono, identificacion, fotografia);
                 if (resultado > 0)
                 {
                     resultado = 1;

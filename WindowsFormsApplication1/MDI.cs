@@ -157,7 +157,7 @@ namespace WindowsFormsApplication1
 
         private void nuevoEmpleadoToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            frmnuevoempleado ventanaP = new frmnuevoempleado();
+            frmnuevoempleado ventanaP = new frmnuevoempleado(empresa, idempresa);
             ventanaP.MdiParent = this;
             ventanaP.Show();
             
