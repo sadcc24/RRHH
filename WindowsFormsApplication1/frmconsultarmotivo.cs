@@ -34,6 +34,7 @@ namespace WindowsFormsApplication1
 
         private void button2_Click(object sender, EventArgs e)
         {
+
             if (dgvbuscar.SelectedRows.Count == 1)
             {
                 int codmotivo = Convert.ToInt32(dgvbuscar.CurrentRow.Cells[0].Value);
@@ -44,7 +45,6 @@ namespace WindowsFormsApplication1
             else
                 MessageBox.Show("debe de seleccionar una fila");
         }
-
         private void frmconsultarmotivo_Load(object sender, EventArgs e)
         {
 

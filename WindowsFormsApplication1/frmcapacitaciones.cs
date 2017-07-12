@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Navegador;
 
 namespace WindowsFormsApplication1
 {
@@ -24,19 +25,22 @@ namespace WindowsFormsApplication1
 
         private void button4_Click(object sender, EventArgs e)
         {
-
+            clasnegocio cnegocio = new clasnegocio();
+            cnegocio.funUltimo(dgvCapacitaciones);
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             string idcapacitacion, nombre, descripcion, expositor, costo, tipo;
-            idcapacitacion = dgvCapacitaciones[0, dgvCapacitaciones.CurrentCell.RowIndex].Value.ToString(); nombre = dgvCapacitaciones[1, dgvCapacitaciones.CurrentCell.RowIndex].Value.ToString();
+            idcapacitacion = dgvCapacitaciones[0, dgvCapacitaciones.CurrentCell.RowIndex].Value.ToString();
+            nombre = dgvCapacitaciones[1, dgvCapacitaciones.CurrentCell.RowIndex].Value.ToString();
             descripcion = dgvCapacitaciones[2, dgvCapacitaciones.CurrentCell.RowIndex].Value.ToString();
             expositor = dgvCapacitaciones[4, dgvCapacitaciones.CurrentCell.RowIndex].Value.ToString();
             tipo = dgvCapacitaciones[3, dgvCapacitaciones.CurrentCell.RowIndex].Value.ToString();
             costo = dgvCapacitaciones[5, dgvCapacitaciones.CurrentCell.RowIndex].Value.ToString();
 
             Detalle_Capacitacion capa = new Detalle_Capacitacion(idcapacitacion, nombre, descripcion, expositor, tipo, costo,usuario);
+            
             capa.MdiParent = this.MdiParent;
             capa.Show();
             this.Close();
@@ -74,6 +78,24 @@ namespace WindowsFormsApplication1
             capa.MdiParent = this.MdiParent;
             capa.Show();
             this.Close();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            clasnegocio cnegocio = new clasnegocio();
+            cnegocio.funSiguiente(dgvCapacitaciones);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            clasnegocio cnegocio = new clasnegocio();
+            cnegocio.funAnterior(dgvCapacitaciones);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            clasnegocio cnegocio = new clasnegocio();
+            cnegocio.funPrimero(dgvCapacitaciones);
         }
     }
 }

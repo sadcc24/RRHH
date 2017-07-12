@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace WindowsFormsApplication1
 {
@@ -16,6 +17,7 @@ namespace WindowsFormsApplication1
         int empresaidmdi;
         string depto;
         string puesto;
+        byte[] arr;
         public frmnuevoempleado(string emp, int idemp)
         {
             InitializeComponent();
@@ -24,52 +26,64 @@ namespace WindowsFormsApplication1
         }
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            int Estado = 0;
-            if (radioButton1.Checked == true){ Estado = 1; }
-            if (radioButton2.Checked == true){ Estado = 2; }
-            if (radioButton3.Checked == true){ Estado = 3; }
-            int CodUsuario =1;
-            int Empresa = empresaidmdi;
-
-            int rol = Convert.ToInt32(comboBox1.SelectedValue);
-            decimal sueldo = Convert.ToDecimal(txtSueldo.Text);
-            decimal aumento = Convert.ToDecimal(txtAumento.Text);
-            puesto = cmbPuesto.SelectedValue.ToString();
-            string jornada = txtJornada.Text;
-            string feciniciolaboral = dateTimePicker1.Text;
-            string nombre1 = txtnombre1.Text;
-            string nombre2 = txtnombre2.Text;
-            string apellido1 = txtApellido1.Text;
-            string apellido2 = txtApellido2.Text;
-            string apellido3 = txtApellido3.Text;
-            string nacionalidad = txtNacionalidad.Text;
-            string sexo = txtSexo.Text;
-            string fechanacimiento = dateTimePicker2.Text;
-            string direccion = txtDireccion.Text;
-            int telefono= Convert.ToInt32(txtTelefono.Text);
-            string identificacion = txtIdentificacion.Text;
-            string fotografia = "";
-            int? experiencia = 1;
-            int? estudio = 1;
-
-            if (MessageBox.Show("Desea crear el Empleado: "+nombre1+" ?", "Empleado", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            try
             {
-                int result = new capa_negocio_Empleado().InsertaEmpleado(experiencia, estudio,Estado, CodUsuario, Empresa, rol,sueldo, aumento, puesto, jornada, feciniciolaboral, nombre1, nombre2, apellido1, apellido2, apellido3, nacionalidad, sexo, fechanacimiento, direccion, telefono, identificacion, fotografia);
-                if (result > 0)
+                if (txtApellido1.Text == "" || txtApellido2.Text == "" || txtApellido3.Text == "" || txtAumento.Text == "" || txtDireccion.Text == "" || txtDireccion.Text == "" || txtIdentificacion.Text == "" || txtJornada.Text == "" || txtNacionalidad.Text == "" || txtnombre1.Text == "" || txtnombre2.Text == "" || txtSueldo.Text == "" || txtTelefono.Text == "")
                 {
-                    MessageBox.Show("Empleado " +nombre1+ " Creado Correctamente", "Empleado");
+                    MessageBox.Show("Existe uno o mas campos Vacios");
                 }
                 else
                 {
-                    MessageBox.Show("Ocurrio un error al crear el Empleado " + nombre1, "Empleado");
+                        #region llena variables
+                    int Estado = 0;
+                    if (radioButton1.Checked == true){ Estado = 1; }
+                    if (radioButton2.Checked == true){ Estado = 2; }
+                    if (radioButton3.Checked == true){ Estado = 3; }
+                    int CodUsuario =1;
+                    int Empresa = empresaidmdi;
+
+                    int rol = Convert.ToInt32(comboBox1.SelectedValue);
+                    string sueldo = txtSueldo.Text;
+                    string aumento = txtAumento.Text;
+                    puesto = cmbPuesto.SelectedValue.ToString();
+                    string jornada = txtJornada.Text;
+                    string feciniciolaboral = dateTimePicker1.Text;
+                    string nombre1 = txtnombre1.Text;
+                    string nombre2 = txtnombre2.Text;
+                    string apellido1 = txtApellido1.Text;
+                    string apellido2 = txtApellido2.Text;
+                    string apellido3 = txtApellido3.Text;
+                    string nacionalidad = txtNacionalidad.Text;
+                    string sexo = cmbSexo.Text;
+                    string fechanacimiento = dateTimePicker2.Text;
+                    string direccion = txtDireccion.Text;
+                    int telefono= Convert.ToInt32(txtTelefono.Text);
+                    string identificacion = txtIdentificacion.Text;
+                    int? experiencia = 1;
+                    int? estudio = 1;
+                            #endregion
+                        if (MessageBox.Show("Desea crear el Empleado: " + nombre1 + " ?", "Empleado", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                        {
+                            int result = new capa_negocio_Empleado().InsertaEmpleado(experiencia, estudio, Estado, CodUsuario, Empresa, rol, sueldo, aumento, puesto, jornada, feciniciolaboral, nombre1, nombre2, apellido1, apellido2, apellido3, nacionalidad, sexo, fechanacimiento, direccion, telefono, identificacion, arr);
+                            if (result > 0)
+                            {
+                                MessageBox.Show("Empleado " + nombre1 + " Creado Correctamente", "Empleado");
+                            }
+                            else
+                            {
+                                MessageBox.Show("Ocurrio un error al crear el Empleado " + nombre1, "Empleado");
+                            }
+                        }
+                        else
+                        {
+
+                        }
                 }
             }
-            else
+            catch(Exception ex)
             {
-
+                MessageBox.Show("Ocurrio un error en el Software o BD:" +ex.ToString(), "Empleado");
             }
-
-            
         }
 
 
@@ -85,6 +99,10 @@ namespace WindowsFormsApplication1
 
         private void frmnuevoempleado_Load(object sender, EventArgs e)
         {
+            cmbSexo.Text = "Seleccione";
+            cmbDepto.Text = "Seleccione";
+            cmbPuesto.Text = "Seleccione";
+            comboBox1.Text = "Seleccione";
             radioButton1.Checked = true;
             dateTimePicker1.Format = DateTimePickerFormat.Custom;
             dateTimePicker1.CustomFormat = "yyyy-MM-dd";
@@ -111,5 +129,47 @@ namespace WindowsFormsApplication1
             cmbPuesto.DisplayMember = "nombrepuesto";
 
         }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            txtApellido1.Clear();
+            txtApellido2.Clear();
+            txtApellido2.Clear();
+            txtAumento.Clear();
+            txtDireccion.Clear();
+            txtIdentificacion.Clear();
+            txtJornada.Clear();
+            txtNacionalidad.Clear();
+            txtnombre1.Clear();
+            txtnombre2.Clear();
+            cmbSexo.Text = "Seleccione";
+            cmbDepto.Text = "Seleccione";
+            cmbPuesto.Text = "Seleccione";
+            comboBox1.Text = "Seleccione";
+            txtSueldo.Clear();
+            txtTelefono.Clear();
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog open = new OpenFileDialog();
+            // image filters
+            open.Filter = "Image Files(*.jpeg;)|*.jpeg;";
+            if (open.ShowDialog() == DialogResult.OK)
+            {
+                pictureBox1.Image =  Image.FromFile(open.FileName);
+                System.IO.MemoryStream ms = new System.IO.MemoryStream();
+
+                pictureBox1.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+                arr = ms.GetBuffer();
+
+            }
+        }
+
     }
 }

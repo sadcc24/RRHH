@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace WindowsFormsApplication1
 {
@@ -15,8 +16,9 @@ namespace WindowsFormsApplication1
         public frmaprobacionsolicitud()
         {
             InitializeComponent();
+            dgvsolicitud.DataSource = capa_logica_vacaciones.Obtenerdatossolicitud(comboBox1.Text);
         }
-
+        public capa_presentacion_solicitud solicitudseleccionada { get; set; }
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
@@ -24,15 +26,49 @@ namespace WindowsFormsApplication1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            informacion_solicitud frminfo = new informacion_solicitud();
-            frminfo.Show();
-            this.Close();
+            //informacion_solicitud frminfo = new informacion_solicitud();
+            //frminfo.Show();
+            //this.Close();
         }
 
         private void btnretorno_Click(object sender, EventArgs e)
         {
-           
-            this.Close(); 
+
+            this.Close();
+        }
+
+        private void btnAyuda_Click(object sender, EventArgs e)
+        {
+            Process proceso = new Process();
+            proceso.StartInfo.FileName = @"C:\Users\chepe\Desktop\recursos humanos\RRHH\WindowsFormsApplication1\manuales\MANUALDEAYUDA-aprobacion.pdf";
+            proceso.Start();
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            dgvsolicitud.DataSource = capa_logica_vacaciones.Buscarsolicitud(comboBox1.Text);
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            if (dgvsolicitud.SelectedRows.Count == 1)
+            {
+                int codsolicitud = Convert.ToInt32(dgvsolicitud.CurrentRow.Cells[0].Value);
+                capa_presentacion_solicitud solicitud = capa_logica_vacaciones.Obtenersolicitud(codsolicitud);
+
+                informacion_solicitud frm = new informacion_solicitud(solicitud);
+                frm.Show();
+
+
+                this.Close();
+            }
+            else
+                MessageBox.Show("debe de seleccionar una fila");
+        }
+
+        private void frmaprobacionsolicitud_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

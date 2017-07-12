@@ -30,18 +30,17 @@
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.btnretorno = new System.Windows.Forms.Button();
-            this.btnayuda = new System.Windows.Forms.Button();
-            this.btnactualizar = new System.Windows.Forms.Button();
             this.btncancelar = new System.Windows.Forms.Button();
-            this.btneliminar = new System.Windows.Forms.Button();
-            this.btnmodificar = new System.Windows.Forms.Button();
-            this.btnguardar = new System.Windows.Forms.Button();
-            this.btnnuevo = new System.Windows.Forms.Button();
             this.nombreempleado = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtmotivo = new System.Windows.Forms.TextBox();
             this.txtdescripcion = new System.Windows.Forms.TextBox();
+            this.btnretorno = new System.Windows.Forms.Button();
+            this.btnayuda = new System.Windows.Forms.Button();
+            this.btneliminar = new System.Windows.Forms.Button();
+            this.btnmodificar = new System.Windows.Forms.Button();
+            this.btnguardar = new System.Windows.Forms.Button();
+            this.btnnuevo = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,7 +49,6 @@
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.btnretorno);
             this.groupBox1.Controls.Add(this.btnayuda);
-            this.groupBox1.Controls.Add(this.btnactualizar);
             this.groupBox1.Controls.Add(this.btncancelar);
             this.groupBox1.Controls.Add(this.btneliminar);
             this.groupBox1.Controls.Add(this.btnmodificar);
@@ -74,6 +72,55 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // btncancelar
+            // 
+            this.btncancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btncancelar.Location = new System.Drawing.Point(295, 27);
+            this.btncancelar.Name = "btncancelar";
+            this.btncancelar.Size = new System.Drawing.Size(50, 50);
+            this.btncancelar.TabIndex = 4;
+            this.btncancelar.Text = "Cancelar";
+            this.btncancelar.UseVisualStyleBackColor = true;
+            this.btncancelar.Click += new System.EventHandler(this.btncancelar_Click);
+            // 
+            // nombreempleado
+            // 
+            this.nombreempleado.AutoSize = true;
+            this.nombreempleado.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nombreempleado.Location = new System.Drawing.Point(105, 134);
+            this.nombreempleado.Name = "nombreempleado";
+            this.nombreempleado.Size = new System.Drawing.Size(54, 19);
+            this.nombreempleado.TabIndex = 12;
+            this.nombreempleado.Text = "Motivo";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(105, 193);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(85, 19);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "Descripción";
+            // 
+            // txtmotivo
+            // 
+            this.txtmotivo.Enabled = false;
+            this.txtmotivo.Location = new System.Drawing.Point(201, 135);
+            this.txtmotivo.Name = "txtmotivo";
+            this.txtmotivo.Size = new System.Drawing.Size(276, 20);
+            this.txtmotivo.TabIndex = 15;
+            this.txtmotivo.TextChanged += new System.EventHandler(this.txtmotivo_TextChanged);
+            // 
+            // txtdescripcion
+            // 
+            this.txtdescripcion.Enabled = false;
+            this.txtdescripcion.Location = new System.Drawing.Point(201, 164);
+            this.txtdescripcion.Multiline = true;
+            this.txtdescripcion.Name = "txtdescripcion";
+            this.txtdescripcion.Size = new System.Drawing.Size(276, 74);
+            this.txtdescripcion.TabIndex = 16;
+            // 
             // btnretorno
             // 
             this.btnretorno.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.menu_principal;
@@ -94,27 +141,6 @@
             this.btnayuda.Size = new System.Drawing.Size(50, 50);
             this.btnayuda.TabIndex = 6;
             this.btnayuda.UseVisualStyleBackColor = true;
-            // 
-            // btnactualizar
-            // 
-            this.btnactualizar.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.refresh;
-            this.btnactualizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnactualizar.Location = new System.Drawing.Point(351, 27);
-            this.btnactualizar.Name = "btnactualizar";
-            this.btnactualizar.Size = new System.Drawing.Size(50, 50);
-            this.btnactualizar.TabIndex = 5;
-            this.btnactualizar.UseVisualStyleBackColor = true;
-            // 
-            // btncancelar
-            // 
-            this.btncancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btncancelar.Location = new System.Drawing.Point(295, 27);
-            this.btncancelar.Name = "btncancelar";
-            this.btncancelar.Size = new System.Drawing.Size(50, 50);
-            this.btncancelar.TabIndex = 4;
-            this.btncancelar.Text = "Cancelar";
-            this.btncancelar.UseVisualStyleBackColor = true;
-            this.btncancelar.Click += new System.EventHandler(this.btncancelar_Click);
             // 
             // btneliminar
             // 
@@ -160,48 +186,11 @@
             this.btnnuevo.UseVisualStyleBackColor = true;
             this.btnnuevo.Click += new System.EventHandler(this.btnnuevo_Click);
             // 
-            // nombreempleado
-            // 
-            this.nombreempleado.AutoSize = true;
-            this.nombreempleado.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nombreempleado.Location = new System.Drawing.Point(105, 134);
-            this.nombreempleado.Name = "nombreempleado";
-            this.nombreempleado.Size = new System.Drawing.Size(54, 19);
-            this.nombreempleado.TabIndex = 12;
-            this.nombreempleado.Text = "Motivo";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(105, 193);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(85, 19);
-            this.label1.TabIndex = 13;
-            this.label1.Text = "Descripción";
-            // 
-            // txtmotivo
-            // 
-            this.txtmotivo.Enabled = false;
-            this.txtmotivo.Location = new System.Drawing.Point(201, 135);
-            this.txtmotivo.Name = "txtmotivo";
-            this.txtmotivo.Size = new System.Drawing.Size(276, 20);
-            this.txtmotivo.TabIndex = 15;
-            // 
-            // txtdescripcion
-            // 
-            this.txtdescripcion.Enabled = false;
-            this.txtdescripcion.Location = new System.Drawing.Point(201, 164);
-            this.txtdescripcion.Multiline = true;
-            this.txtdescripcion.Name = "txtdescripcion";
-            this.txtdescripcion.Size = new System.Drawing.Size(276, 74);
-            this.txtdescripcion.TabIndex = 16;
-            // 
             // frmmotivo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.MediumPurple;
+            this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.ClientSize = new System.Drawing.Size(583, 250);
             this.Controls.Add(this.txtdescripcion);
             this.Controls.Add(this.txtmotivo);
@@ -223,7 +212,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnretorno;
         private System.Windows.Forms.Button btnayuda;
-        private System.Windows.Forms.Button btnactualizar;
         private System.Windows.Forms.Button btncancelar;
         private System.Windows.Forms.Button btneliminar;
         private System.Windows.Forms.Button btnmodificar;

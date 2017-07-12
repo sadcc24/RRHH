@@ -30,25 +30,20 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnAyuda = new System.Windows.Forms.Button();
-            this.btnEditar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnActualizar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
-            this.btnAdelantefin = new System.Windows.Forms.Button();
-            this.btnAtrasfin = new System.Windows.Forms.Button();
-            this.btnAtras = new System.Windows.Forms.Button();
-            this.btnAdelante = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.label9 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cmbSexo = new System.Windows.Forms.ComboBox();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.txtTelefono = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.txtNacionalidad = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.txtSexo = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -66,6 +61,9 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.cmbPuesto = new System.Windows.Forms.ComboBox();
             this.cmbDepto = new System.Windows.Forms.ComboBox();
             this.label18 = new System.Windows.Forms.Label();
@@ -77,12 +75,9 @@
             this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -93,110 +88,45 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.btnAyuda);
-            this.panel1.Controls.Add(this.btnEditar);
             this.panel1.Controls.Add(this.btnCancelar);
-            this.panel1.Controls.Add(this.btnActualizar);
             this.panel1.Controls.Add(this.btnGuardar);
-            this.panel1.Controls.Add(this.btnAdelantefin);
-            this.panel1.Controls.Add(this.btnAtrasfin);
-            this.panel1.Controls.Add(this.btnAtras);
-            this.panel1.Controls.Add(this.btnAdelante);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(375, 40);
+            this.panel1.Size = new System.Drawing.Size(136, 40);
             this.panel1.TabIndex = 14;
             // 
             // btnAyuda
             // 
             this.btnAyuda.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.help;
             this.btnAyuda.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnAyuda.Location = new System.Drawing.Point(322, 3);
+            this.btnAyuda.Location = new System.Drawing.Point(85, 4);
             this.btnAyuda.Name = "btnAyuda";
             this.btnAyuda.Size = new System.Drawing.Size(41, 34);
             this.btnAyuda.TabIndex = 11;
             this.btnAyuda.UseVisualStyleBackColor = true;
             this.btnAyuda.Click += new System.EventHandler(this.btnAyuda_Click);
             // 
-            // btnEditar
-            // 
-            this.btnEditar.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.editar;
-            this.btnEditar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnEditar.Location = new System.Drawing.Point(242, 3);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(41, 34);
-            this.btnEditar.TabIndex = 10;
-            this.btnEditar.UseVisualStyleBackColor = true;
-            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
-            // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(282, 3);
+            this.btnCancelar.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.cancelar;
+            this.btnCancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCancelar.Location = new System.Drawing.Point(45, 4);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(41, 34);
             this.btnCancelar.TabIndex = 9;
-            this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
-            // 
-            // btnActualizar
-            // 
-            this.btnActualizar.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.refresh;
-            this.btnActualizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnActualizar.Location = new System.Drawing.Point(2, 3);
-            this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(41, 34);
-            this.btnActualizar.TabIndex = 8;
-            this.btnActualizar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnGuardar
             // 
             this.btnGuardar.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.guardar;
             this.btnGuardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnGuardar.Location = new System.Drawing.Point(202, 3);
+            this.btnGuardar.Location = new System.Drawing.Point(5, 4);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(41, 34);
             this.btnGuardar.TabIndex = 7;
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
-            // 
-            // btnAdelantefin
-            // 
-            this.btnAdelantefin.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.go_to_last;
-            this.btnAdelantefin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnAdelantefin.Location = new System.Drawing.Point(162, 3);
-            this.btnAdelantefin.Name = "btnAdelantefin";
-            this.btnAdelantefin.Size = new System.Drawing.Size(41, 34);
-            this.btnAdelantefin.TabIndex = 6;
-            this.btnAdelantefin.UseVisualStyleBackColor = true;
-            // 
-            // btnAtrasfin
-            // 
-            this.btnAtrasfin.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.go_to_first;
-            this.btnAtrasfin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnAtrasfin.Location = new System.Drawing.Point(42, 3);
-            this.btnAtrasfin.Name = "btnAtrasfin";
-            this.btnAtrasfin.Size = new System.Drawing.Size(41, 34);
-            this.btnAtrasfin.TabIndex = 3;
-            this.btnAtrasfin.UseVisualStyleBackColor = true;
-            // 
-            // btnAtras
-            // 
-            this.btnAtras.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.anterior;
-            this.btnAtras.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnAtras.Location = new System.Drawing.Point(82, 3);
-            this.btnAtras.Name = "btnAtras";
-            this.btnAtras.Size = new System.Drawing.Size(41, 34);
-            this.btnAtras.TabIndex = 4;
-            this.btnAtras.UseVisualStyleBackColor = true;
-            // 
-            // btnAdelante
-            // 
-            this.btnAdelante.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.go_next;
-            this.btnAdelante.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnAdelante.Location = new System.Drawing.Point(122, 3);
-            this.btnAdelante.Name = "btnAdelante";
-            this.btnAdelante.Size = new System.Drawing.Size(41, 34);
-            this.btnAdelante.TabIndex = 5;
-            this.btnAdelante.UseVisualStyleBackColor = true;
             // 
             // panel2
             // 
@@ -245,7 +175,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(12, 55);
+            this.label9.Location = new System.Drawing.Point(175, 17);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(136, 29);
             this.label9.TabIndex = 13;
@@ -253,12 +183,12 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cmbSexo);
             this.groupBox1.Controls.Add(this.dateTimePicker2);
             this.groupBox1.Controls.Add(this.txtTelefono);
             this.groupBox1.Controls.Add(this.label17);
             this.groupBox1.Controls.Add(this.txtNacionalidad);
             this.groupBox1.Controls.Add(this.label16);
-            this.groupBox1.Controls.Add(this.txtSexo);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label6);
@@ -281,6 +211,27 @@
             this.groupBox1.TabIndex = 15;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Empleado";
+            // 
+            // cmbSexo
+            // 
+            this.cmbSexo.FormattingEnabled = true;
+            this.cmbSexo.Items.AddRange(new object[] {
+            "Masculino\t",
+            "Femenino"});
+            this.cmbSexo.Location = new System.Drawing.Point(126, 184);
+            this.cmbSexo.Name = "cmbSexo";
+            this.cmbSexo.Size = new System.Drawing.Size(164, 21);
+            this.cmbSexo.TabIndex = 23;
+            this.cmbSexo.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.CustomFormat = "yyyyMMdd";
+            this.dateTimePicker2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.dateTimePicker2.Location = new System.Drawing.Point(126, 143);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(164, 20);
+            this.dateTimePicker2.TabIndex = 23;
             // 
             // txtTelefono
             // 
@@ -313,13 +264,6 @@
             this.label16.Size = new System.Drawing.Size(69, 13);
             this.label16.TabIndex = 19;
             this.label16.Text = "Nacionalidad";
-            // 
-            // txtSexo
-            // 
-            this.txtSexo.Location = new System.Drawing.Point(126, 185);
-            this.txtSexo.Name = "txtSexo";
-            this.txtSexo.Size = new System.Drawing.Size(164, 20);
-            this.txtSexo.TabIndex = 18;
             // 
             // label8
             // 
@@ -453,6 +397,8 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.label11);
+            this.groupBox2.Controls.Add(this.comboBox1);
             this.groupBox2.Controls.Add(this.dateTimePicker1);
             this.groupBox2.Controls.Add(this.cmbPuesto);
             this.groupBox2.Controls.Add(this.cmbDepto);
@@ -472,10 +418,36 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Detalles Laborales";
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(10, 43);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(62, 13);
+            this.label11.TabIndex = 22;
+            this.label11.Text = "Tipo de Rol";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(118, 35);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(164, 21);
+            this.comboBox1.TabIndex = 19;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.CustomFormat = "yyyyMMdd";
+            this.dateTimePicker1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.dateTimePicker1.Location = new System.Drawing.Point(118, 155);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(164, 20);
+            this.dateTimePicker1.TabIndex = 20;
+            // 
             // cmbPuesto
             // 
             this.cmbPuesto.FormattingEnabled = true;
-            this.cmbPuesto.Location = new System.Drawing.Point(118, 202);
+            this.cmbPuesto.Location = new System.Drawing.Point(118, 215);
             this.cmbPuesto.Name = "cmbPuesto";
             this.cmbPuesto.Size = new System.Drawing.Size(164, 21);
             this.cmbPuesto.TabIndex = 21;
@@ -483,7 +455,7 @@
             // cmbDepto
             // 
             this.cmbDepto.FormattingEnabled = true;
-            this.cmbDepto.Location = new System.Drawing.Point(118, 171);
+            this.cmbDepto.Location = new System.Drawing.Point(118, 184);
             this.cmbDepto.Name = "cmbDepto";
             this.cmbDepto.Size = new System.Drawing.Size(164, 21);
             this.cmbDepto.TabIndex = 20;
@@ -492,7 +464,7 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(10, 179);
+            this.label18.Location = new System.Drawing.Point(10, 192);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(74, 13);
             this.label18.TabIndex = 10;
@@ -501,7 +473,7 @@
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(8, 90);
+            this.label19.Location = new System.Drawing.Point(8, 103);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(40, 13);
             this.label19.TabIndex = 8;
@@ -509,21 +481,21 @@
             // 
             // txtAumento
             // 
-            this.txtAumento.Location = new System.Drawing.Point(118, 112);
+            this.txtAumento.Location = new System.Drawing.Point(118, 125);
             this.txtAumento.Name = "txtAumento";
             this.txtAumento.Size = new System.Drawing.Size(164, 20);
             this.txtAumento.TabIndex = 6;
             // 
             // txtSueldo
             // 
-            this.txtSueldo.Location = new System.Drawing.Point(118, 83);
+            this.txtSueldo.Location = new System.Drawing.Point(118, 96);
             this.txtSueldo.Name = "txtSueldo";
             this.txtSueldo.Size = new System.Drawing.Size(164, 20);
             this.txtSueldo.TabIndex = 5;
             // 
             // txtJornada
             // 
-            this.txtJornada.Location = new System.Drawing.Point(118, 54);
+            this.txtJornada.Location = new System.Drawing.Point(118, 67);
             this.txtJornada.Name = "txtJornada";
             this.txtJornada.Size = new System.Drawing.Size(164, 20);
             this.txtJornada.TabIndex = 4;
@@ -531,7 +503,7 @@
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(10, 210);
+            this.label20.Location = new System.Drawing.Point(10, 223);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(40, 13);
             this.label20.TabIndex = 3;
@@ -540,7 +512,7 @@
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(8, 148);
+            this.label21.Location = new System.Drawing.Point(8, 161);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(103, 13);
             this.label21.TabIndex = 2;
@@ -549,7 +521,7 @@
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(8, 120);
+            this.label22.Location = new System.Drawing.Point(8, 133);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(49, 13);
             this.label22.TabIndex = 1;
@@ -558,19 +530,11 @@
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(8, 61);
+            this.label23.Location = new System.Drawing.Point(8, 74);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(83, 13);
             this.label23.TabIndex = 0;
             this.label23.Text = "Jornada Laboral";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(440, 15);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(197, 112);
-            this.pictureBox1.TabIndex = 16;
-            this.pictureBox1.TabStop = false;
             // 
             // button1
             // 
@@ -589,40 +553,22 @@
             this.button2.TabIndex = 18;
             this.button2.Text = "Selecciona Fotografia";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // comboBox1
+            // pictureBox1
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(317, 133);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 19;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.CustomFormat = "yyyyMMdd";
-            this.dateTimePicker1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.dateTimePicker1.Location = new System.Drawing.Point(118, 142);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(164, 20);
-            this.dateTimePicker1.TabIndex = 20;
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.CustomFormat = "yyyyMMdd";
-            this.dateTimePicker2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.dateTimePicker2.Location = new System.Drawing.Point(126, 143);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(164, 20);
-            this.dateTimePicker2.TabIndex = 23;
+            this.pictureBox1.Location = new System.Drawing.Point(440, 15);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(197, 112);
+            this.pictureBox1.TabIndex = 16;
+            this.pictureBox1.TabStop = false;
             // 
             // frmnuevoempleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.MediumPurple;
-            this.ClientSize = new System.Drawing.Size(649, 635);
-            this.Controls.Add(this.comboBox1);
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.ClientSize = new System.Drawing.Size(649, 440);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox1);
@@ -651,14 +597,8 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnAyuda;
-        private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.Button btnGuardar;
-        private System.Windows.Forms.Button btnAdelantefin;
-        private System.Windows.Forms.Button btnAtrasfin;
-        private System.Windows.Forms.Button btnAtras;
-        private System.Windows.Forms.Button btnAdelante;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton1;
@@ -668,7 +608,6 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.TextBox txtNacionalidad;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox txtSexo;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
@@ -704,5 +643,7 @@
         private System.Windows.Forms.ComboBox cmbDepto;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.ComboBox cmbSexo;
+        private System.Windows.Forms.Label label11;
     }
 }

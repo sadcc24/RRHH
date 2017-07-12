@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
+using System.Windows.Forms;
 
 namespace WindowsFormsApplication1
 {
@@ -20,7 +22,6 @@ namespace WindowsFormsApplication1
                 this.codmotivo = pcodmotivo;
                 this.motivo = pmotivo;
                 this.descripcion = pdescripcion;
-               
             }
       }
 }

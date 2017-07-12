@@ -55,7 +55,7 @@ namespace WindowsFormsApplication1
             try
             {
 
-                SqlDataAdapter SQL_da = new SqlDataAdapter("select distinct B.idempresa,B.nombre_empresa from EMPLEADO A inner join Empresa B on a.idempresa = b.idempresa inner join USUARIO_1 C on a.codusuario = c.codusuario where c.usuario ='" + usuario + "';", conexionbd_Empleado.ObtenerConexion());
+                SqlDataAdapter SQL_da = new SqlDataAdapter("select distinct B.idempresa,B.nombre_empresa from EMPLEADO A inner join Empresa B on a.idempresa = b.idempresa inner join USUARIO_1 C on a.codusuario = c.codusuario where c.usuario ='" + usuario + "';", conexionbd.ObtenerConexion());
                 DataTable DT_dat = new DataTable();
                 SQL_da.Fill(DT_dat);
                 foreach (DataRow row in DT_dat.Rows)

@@ -39,7 +39,7 @@
             // 
             // txtmotivo
             // 
-            this.txtmotivo.Location = new System.Drawing.Point(123, 34);
+            this.txtmotivo.Location = new System.Drawing.Point(191, 34);
             this.txtmotivo.Name = "txtmotivo";
             this.txtmotivo.Size = new System.Drawing.Size(187, 20);
             this.txtmotivo.TabIndex = 17;
@@ -49,7 +49,7 @@
             // 
             this.nombreempleado.AutoSize = true;
             this.nombreempleado.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nombreempleado.Location = new System.Drawing.Point(27, 33);
+            this.nombreempleado.Location = new System.Drawing.Point(95, 33);
             this.nombreempleado.Name = "nombreempleado";
             this.nombreempleado.Size = new System.Drawing.Size(54, 19);
             this.nombreempleado.TabIndex = 16;
@@ -57,7 +57,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(168, 60);
+            this.button1.Location = new System.Drawing.Point(236, 60);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 18;
@@ -68,14 +68,14 @@
             // dgvbuscar
             // 
             this.dgvbuscar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvbuscar.Location = new System.Drawing.Point(12, 89);
+            this.dgvbuscar.Location = new System.Drawing.Point(80, 89);
             this.dgvbuscar.Name = "dgvbuscar";
             this.dgvbuscar.Size = new System.Drawing.Size(330, 131);
             this.dgvbuscar.TabIndex = 19;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(12, 226);
+            this.button2.Location = new System.Drawing.Point(80, 226);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(57, 50);
             this.button2.TabIndex = 20;
@@ -87,7 +87,7 @@
             // 
             this.btnretorno.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.menu_principal;
             this.btnretorno.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnretorno.Location = new System.Drawing.Point(292, 226);
+            this.btnretorno.Location = new System.Drawing.Point(360, 226);
             this.btnretorno.Name = "btnretorno";
             this.btnretorno.Size = new System.Drawing.Size(50, 50);
             this.btnretorno.TabIndex = 21;
@@ -98,8 +98,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.MediumPurple;
-            this.ClientSize = new System.Drawing.Size(354, 288);
+            this.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.ClientSize = new System.Drawing.Size(451, 288);
             this.Controls.Add(this.btnretorno);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.dgvbuscar);

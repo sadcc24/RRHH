@@ -21,6 +21,38 @@ namespace WindowsFormsApplication1
             public string costo { get; set; }
         }
 
+
+        public class area
+        {
+             public string id { get; set; }
+            public string Nombre_Area { get; set; }
+            public string Descripcion { get; set; }
+
+
+        }
+
+        public class asignacion {
+            public string id { get; set; }
+            public string nombre { get; set; }
+            public string Asignaciones { get; set; }
+        }
+
+        public class detaasig
+        {
+            public string id { get; set; }
+            public string Inicio { get; set; }
+            public string Fin { get; set; }
+            public string horario { get; set; }
+            public string Asignados { get; set; }
+        }
+         
+        public class infodetasig {
+            public string Empleado { get; set; }
+            public string Departamento { get; set; }
+            public string Puesto { get; set; }
+          
+        }
+
         public class infotipocapacitacion
         {
             public string idtipo { get; set; }
@@ -40,6 +72,44 @@ namespace WindowsFormsApplication1
             public string idempleado { get; set; }
             public string empleado { get; set; }
 
+        }
+
+        public class empleadosdep
+        {
+            public string idempleado { get; set; }
+            public string empleado { get; set; }
+
+        }
+
+
+        public class evaluacionesdesempeñconsulta
+        {
+            public string id { get; set; }
+            public string Empleado { get; set; }
+            public string Nombre_Empresa { get; set; }
+            public string Departamento { get; set; }
+            public string Periodo { get; set; }
+            public string Resultado { get; set; }
+            public string Fecha { get; set; }
+
+
+        }
+
+        public class metrica {
+            public string id { get; set; }
+            public string Metrica { get; set; }
+            public string Descripcion { get; set; }
+            public string Empresa { get; set; }
+            public string Departamento { get; set; }
+
+          
+        }
+
+
+        public class periodo {
+            public string id { get; set; }
+            public string Periodo { get; set; }
+                                               
         }
 
 

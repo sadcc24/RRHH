@@ -103,5 +103,10 @@ namespace WindowsFormsApplication1
            MessageBox.Show("Se cancelo la eliminacion", "Eliminacion Cancelada", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
           
         }
+
+        private void txtmotivo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

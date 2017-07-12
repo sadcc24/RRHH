@@ -30,6 +30,7 @@
         {
             this.dgvCapacitaciones = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnAyuda = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
@@ -52,6 +53,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnAyuda);
             this.panel1.Controls.Add(this.button7);
             this.panel1.Controls.Add(this.button6);
             this.panel1.Controls.Add(this.button5);
@@ -61,8 +63,18 @@
             this.panel1.Controls.Add(this.button3);
             this.panel1.Location = new System.Drawing.Point(12, 24);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(290, 40);
+            this.panel1.Size = new System.Drawing.Size(329, 40);
             this.panel1.TabIndex = 8;
+            // 
+            // btnAyuda
+            // 
+            this.btnAyuda.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.help;
+            this.btnAyuda.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAyuda.Location = new System.Drawing.Point(285, 3);
+            this.btnAyuda.Name = "btnAyuda";
+            this.btnAyuda.Size = new System.Drawing.Size(41, 34);
+            this.btnAyuda.TabIndex = 11;
+            this.btnAyuda.UseVisualStyleBackColor = true;
             // 
             // button7
             // 
@@ -116,6 +128,7 @@
             this.button1.Size = new System.Drawing.Size(41, 34);
             this.button1.TabIndex = 3;
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -126,6 +139,7 @@
             this.button2.Size = new System.Drawing.Size(41, 34);
             this.button2.TabIndex = 4;
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -136,6 +150,7 @@
             this.button3.Size = new System.Drawing.Size(41, 34);
             this.button3.TabIndex = 5;
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // frmcapacitaciones
             // 
@@ -165,5 +180,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnAyuda;
     }
 }

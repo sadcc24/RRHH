@@ -77,6 +77,7 @@ namespace WindowsFormsApplication1
                 if (asignacion == 1)
                 {
                     MessageBox.Show("Asignacion Exitosa", "Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    btnGuardar.Enabled=false;
                 }
                 else
                 {

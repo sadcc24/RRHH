@@ -33,8 +33,28 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DevExpress.Charts.v15.2.Core, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.DataAccess.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v15.2.Core, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v15.2.Core, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v15.2.Core, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v15.2.Core, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v15.2.Core, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v15.2.UI, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGauges.v15.2.Core, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v15.2.Extensions, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="MRP_BD">
       <HintPath>..\..\..\Users\chepe\Desktop\seminario fase 2\bd\MRP_BD.dll</HintPath>
+    </Reference>
+    <Reference Include="Navegador">
+      <HintPath>..\..\..\Navegador.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -49,6 +69,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="candidatos.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="candidatos.Designer.cs">
+      <DependentUpon>candidatos.cs</DependentUpon>
+    </Compile>
     <Compile Include="capa_logica_Empleado.cs" />
     <Compile Include="capa_logica_formaciones.cs" />
     <Compile Include="capa_logica_vacaciones.cs" />
@@ -60,18 +86,95 @@
     <Compile Include="capa_presentacion_vacaciones.cs" />
     <Compile Include="classEncryptD.cs" />
     <Compile Include="conexionbd.cs" />
-    <Compile Include="conexionbd_Empleado.cs" />
+    <Compile Include="contrato.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="contrato.Designer.cs">
+      <DependentUpon>contrato.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmabcmetrica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmabcmetrica.Designer.cs">
+      <DependentUpon>frmabcmetrica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmabcperiodos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmabcperiodos.Designer.cs">
+      <DependentUpon>frmabcperiodos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmconsultaarea.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmconsultaarea.Designer.cs">
+      <DependentUpon>frmconsultaarea.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmconsultaasignaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmconsultaasignaciones.Designer.cs">
+      <DependentUpon>frmconsultaasignaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmconsultaevaluacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmconsultaevaluacion.Designer.cs">
+      <DependentUpon>frmconsultaevaluacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmconsultafestivos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmconsultafestivos.Designer.cs">
+      <DependentUpon>frmconsultafestivos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmconsultametrica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmconsultametrica.Designer.cs">
+      <DependentUpon>frmconsultametrica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmconsultaperiodo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmconsultaperiodo.Designer.cs">
+      <DependentUpon>frmconsultaperiodo.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmconsultarmotivo.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmconsultarmotivo.Designer.cs">
       <DependentUpon>frmconsultarmotivo.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmcreacionarea.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmcreacionarea.Designer.cs">
+      <DependentUpon>frmcreacionarea.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmfestivos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmfestivos.Designer.cs">
+      <DependentUpon>frmfestivos.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmnuevoempleado.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmnuevoempleado.Designer.cs">
       <DependentUpon>frmnuevoempleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmperiodo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmperiodo.Designer.cs">
+      <DependentUpon>frmperiodo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmperiodos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmperiodos.Designer.cs">
+      <DependentUpon>frmperiodos.cs</DependentUpon>
     </Compile>
     <Compile Include="frmplanilla.cs">
       <SubType>Form</SubType>
@@ -157,6 +260,36 @@
     <Compile Include="frmevaluaciondesempeño.designer.cs">
       <DependentUpon>frmevaluaciondesempeño.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmReporteActivos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReporteActivos.Designer.cs">
+      <DependentUpon>frmReporteActivos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReporteCandidatos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReporteCandidatos.Designer.cs">
+      <DependentUpon>frmReporteCandidatos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmreporteinactivo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmreporteinactivo.Designer.cs">
+      <DependentUpon>frmreporteinactivo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmtipousuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmtipousuario.Designer.cs">
+      <DependentUpon>frmtipousuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUsuario.Designer.cs">
+      <DependentUpon>frmUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmvacacionesplanilla.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -186,6 +319,12 @@
     </Compile>
     <Compile Include="frmmotivo.designer.cs">
       <DependentUpon>frmmotivo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmvista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmvista.Designer.cs">
+      <DependentUpon>frmvista.cs</DependentUpon>
     </Compile>
     <Compile Include="informacion solicitud.cs">
       <SubType>Form</SubType>
@@ -231,11 +370,77 @@
     <Compile Include="frmresultadoPueba.designer.cs">
       <DependentUpon>frmresultadoPueba.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reporte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporte.Designer.cs">
+      <DependentUpon>Reporte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reporteactivos.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reporteactivos.Designer.cs">
+      <DependentUpon>reporteactivos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reporteinactivo.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reporteinactivo.Designer.cs">
+      <DependentUpon>reporteinactivo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XtraReport1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReport1.Designer.cs">
+      <DependentUpon>XtraReport1.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="candidatos.resx">
+      <DependentUpon>candidatos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="contrato.resx">
+      <DependentUpon>contrato.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmabcmetrica.resx">
+      <DependentUpon>frmabcmetrica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmabcperiodos.resx">
+      <DependentUpon>frmabcperiodos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmconsultaarea.resx">
+      <DependentUpon>frmconsultaarea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmconsultaasignaciones.resx">
+      <DependentUpon>frmconsultaasignaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmconsultaevaluacion.resx">
+      <DependentUpon>frmconsultaevaluacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmconsultafestivos.resx">
+      <DependentUpon>frmconsultafestivos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmconsultametrica.resx">
+      <DependentUpon>frmconsultametrica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmconsultaperiodo.resx">
+      <DependentUpon>frmconsultaperiodo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmconsultarmotivo.resx">
       <DependentUpon>frmconsultarmotivo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmcreacionarea.resx">
+      <DependentUpon>frmcreacionarea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmfestivos.resx">
+      <DependentUpon>frmfestivos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmnuevoempleado.resx">
       <DependentUpon>frmnuevoempleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmperiodo.resx">
+      <DependentUpon>frmperiodo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmperiodos.resx">
+      <DependentUpon>frmperiodos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmplanilla.resx">
       <DependentUpon>frmplanilla.cs</DependentUpon>
@@ -279,6 +484,21 @@
     <EmbeddedResource Include="frmevaluaciondesempeño.resx">
       <DependentUpon>frmevaluaciondesempeño.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmReporteActivos.resx">
+      <DependentUpon>frmReporteActivos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReporteCandidatos.resx">
+      <DependentUpon>frmReporteCandidatos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmreporteinactivo.resx">
+      <DependentUpon>frmreporteinactivo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmtipousuario.resx">
+      <DependentUpon>frmtipousuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUsuario.resx">
+      <DependentUpon>frmUsuario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmvacacionesplanilla.resx">
       <DependentUpon>frmvacacionesplanilla.cs</DependentUpon>
     </EmbeddedResource>
@@ -294,6 +514,9 @@
     <EmbeddedResource Include="frmmotivo.resx">
       <DependentUpon>frmmotivo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmvista.resx">
+      <DependentUpon>frmvista.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="informacion solicitud.resx">
       <DependentUpon>informacion solicitud.cs</DependentUpon>
     </EmbeddedResource>
@@ -303,6 +526,7 @@
     <EmbeddedResource Include="MDI.resx">
       <DependentUpon>MDI.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -324,6 +548,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmresultadoPueba.resx">
       <DependentUpon>frmresultadoPueba.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporte.resx">
+      <DependentUpon>Reporte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reporteactivos.resx">
+      <DependentUpon>reporteactivos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reporteinactivo.resx">
+      <DependentUpon>reporteinactivo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReport1.resx">
+      <DependentUpon>XtraReport1.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -382,6 +618,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\logo1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="iconos\Iconos Generales SAD17\cancelar.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
