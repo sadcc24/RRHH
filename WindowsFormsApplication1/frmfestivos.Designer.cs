@@ -134,6 +134,7 @@
             // button1
             // 
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Image = global::WindowsFormsApplication1.Properties.Resources.buscar;
             this.button1.Location = new System.Drawing.Point(239, 27);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(50, 50);
@@ -161,9 +162,11 @@
             this.btnayuda.Size = new System.Drawing.Size(50, 50);
             this.btnayuda.TabIndex = 6;
             this.btnayuda.UseVisualStyleBackColor = true;
+            this.btnayuda.Click += new System.EventHandler(this.btnayuda_Click);
             // 
             // btncancelar
             // 
+            this.btncancelar.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.cancelar;
             this.btncancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btncancelar.Location = new System.Drawing.Point(295, 27);
             this.btncancelar.Name = "btncancelar";

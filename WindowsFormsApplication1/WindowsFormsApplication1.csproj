@@ -77,12 +77,18 @@
     </Compile>
     <Compile Include="capa_logica_Empleado.cs" />
     <Compile Include="capa_logica_formaciones.cs" />
+    <Compile Include="capa_logica_planillas.cs" />
+    <Compile Include="capa_logica_Reclutamiento.cs" />
     <Compile Include="capa_logica_vacaciones.cs" />
     <Compile Include="capa_negocio_Empleado.cs" />
     <Compile Include="capa_negocio_formaciones.cs" />
+    <Compile Include="capa_negocio_planillas.cs" />
+    <Compile Include="capa_negocio_Reclutamiento.cs" />
     <Compile Include="capa_negocio_vacaciones.cs" />
     <Compile Include="capa_presentacion_Empleado.cs" />
     <Compile Include="capa_presentacion_formaciones.cs" />
+    <Compile Include="capa_presentacion_planillas.cs" />
+    <Compile Include="capa_presentacion_Reclutamienot.cs" />
     <Compile Include="capa_presentacion_vacaciones.cs" />
     <Compile Include="classEncryptD.cs" />
     <Compile Include="conexionbd.cs" />
@@ -98,11 +104,35 @@
     <Compile Include="frmabcmetrica.Designer.cs">
       <DependentUpon>frmabcmetrica.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmabcpercepcionesdeducciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmabcpercepcionesdeducciones.Designer.cs">
+      <DependentUpon>frmabcpercepcionesdeducciones.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmabcperiodos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmabcperiodos.Designer.cs">
       <DependentUpon>frmabcperiodos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBancocv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBancocv.Designer.cs">
+      <DependentUpon>frmBancocv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmbusqueda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmbusqueda.Designer.cs">
+      <DependentUpon>frmbusqueda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmbusquedaentrevista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmbusquedaentrevista.Designer.cs">
+      <DependentUpon>frmbusquedaentrevista.cs</DependentUpon>
     </Compile>
     <Compile Include="frmconsultaarea.cs">
       <SubType>Form</SubType>
@@ -151,6 +181,24 @@
     </Compile>
     <Compile Include="frmcreacionarea.Designer.cs">
       <DependentUpon>frmcreacionarea.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmdetallebanco.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmdetallebanco.Designer.cs">
+      <DependentUpon>frmdetallebanco.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEstudios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEstudios.Designer.cs">
+      <DependentUpon>frmEstudios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmExperienciaLaboral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmExperienciaLaboral.Designer.cs">
+      <DependentUpon>frmExperienciaLaboral.cs</DependentUpon>
     </Compile>
     <Compile Include="frmfestivos.cs">
       <SubType>Form</SubType>
@@ -403,8 +451,20 @@
     <EmbeddedResource Include="frmabcmetrica.resx">
       <DependentUpon>frmabcmetrica.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmabcpercepcionesdeducciones.resx">
+      <DependentUpon>frmabcpercepcionesdeducciones.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmabcperiodos.resx">
       <DependentUpon>frmabcperiodos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBancocv.resx">
+      <DependentUpon>frmBancocv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmbusqueda.resx">
+      <DependentUpon>frmbusqueda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmbusquedaentrevista.resx">
+      <DependentUpon>frmbusquedaentrevista.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmconsultaarea.resx">
       <DependentUpon>frmconsultaarea.cs</DependentUpon>
@@ -429,6 +489,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmcreacionarea.resx">
       <DependentUpon>frmcreacionarea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmdetallebanco.resx">
+      <DependentUpon>frmdetallebanco.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEstudios.resx">
+      <DependentUpon>frmEstudios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmExperienciaLaboral.resx">
+      <DependentUpon>frmExperienciaLaboral.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmfestivos.resx">
       <DependentUpon>frmfestivos.cs</DependentUpon>

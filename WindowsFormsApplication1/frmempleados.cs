@@ -356,7 +356,7 @@ namespace WindowsFormsApplication1
 
         private void btnAyuda_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start(@"c:\ayuda.pdf");
+            System.Diagnostics.Process.Start(Environment.CurrentDirectory + @"\frmempleados-criss.pdf");
         }
 
         private void button2_Click(object sender, EventArgs e)

@@ -75,7 +75,6 @@
             this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
@@ -536,18 +535,9 @@
             this.label23.TabIndex = 0;
             this.label23.Text = "Jornada Laboral";
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(460, 133);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 35);
-            this.button1.TabIndex = 17;
-            this.button1.Text = "Toma Fotografia";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(552, 133);
+            this.button2.Location = new System.Drawing.Point(500, 133);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 35);
             this.button2.TabIndex = 18;
@@ -570,7 +560,6 @@
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(649, 440);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
@@ -578,7 +567,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label9);
             this.Name = "frmnuevoempleado";
-            this.Text = "frmnuevoempleado";
+            this.Text = "Nuevo Empleado";
             this.Load += new System.EventHandler(this.frmnuevoempleado_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
@@ -636,7 +625,6 @@
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ComboBox cmbPuesto;

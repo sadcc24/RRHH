@@ -94,12 +94,12 @@
             // 
             // btncancelar
             // 
+            this.btncancelar.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.cancelar;
             this.btncancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btncancelar.Location = new System.Drawing.Point(130, 27);
             this.btncancelar.Name = "btncancelar";
             this.btncancelar.Size = new System.Drawing.Size(50, 50);
             this.btncancelar.TabIndex = 4;
-            this.btncancelar.Text = "Cancelar";
             this.btncancelar.UseVisualStyleBackColor = true;
             this.btncancelar.Click += new System.EventHandler(this.btncancelar_Click);
             // 

@@ -70,8 +70,8 @@ namespace WindowsFormsApplication1
             return eliminar;
         }
 
-        public static List<capa_presentacion_formaciones.asignacion> consulta_info() {
-            List<capa_presentacion_formaciones.asignacion> asig = capa_logica_formaciones.consulta_asignacion();
+        public static List<capa_presentacion_formaciones.asignacion> consulta_info(string idempresa) {
+            List<capa_presentacion_formaciones.asignacion> asig = capa_logica_formaciones.consulta_asignacion(idempresa);
             return asig;
         }
 
@@ -81,8 +81,8 @@ namespace WindowsFormsApplication1
             return infodet;
         }
 
-        public static List<capa_presentacion_formaciones.detaasig> detasi(string idcapacitacion) {
-            List<capa_presentacion_formaciones.detaasig> dasignc = capa_logica_formaciones.consultadetasi(idcapacitacion); ;
+        public static List<capa_presentacion_formaciones.detaasig> detasi(string idcapacitacion,string idempresa) {
+            List<capa_presentacion_formaciones.detaasig> dasignc = capa_logica_formaciones.consultadetasi(idcapacitacion,idempresa); ;
             return dasignc;
         }
 

@@ -130,5 +130,10 @@ namespace WindowsFormsApplication1
             clasnegocio cnegocio = new clasnegocio();
             cnegocio.funPrimero(dataGridView1);
         }
+
+        private void btnAyuda_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start(Environment.CurrentDirectory + @"\frmUsuario-criss.pdf");
+        }
     }
 }

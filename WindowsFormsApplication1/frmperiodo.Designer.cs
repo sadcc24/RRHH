@@ -33,9 +33,9 @@
             this.nombreempleado = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.btncancelar = new System.Windows.Forms.Button();
             this.btnretorno = new System.Windows.Forms.Button();
             this.btnayuda = new System.Windows.Forms.Button();
+            this.btncancelar = new System.Windows.Forms.Button();
             this.btneliminar = new System.Windows.Forms.Button();
             this.btnmodificar = new System.Windows.Forms.Button();
             this.btnguardar = new System.Windows.Forms.Button();
@@ -92,25 +92,14 @@
             // 
             // button1
             // 
+            this.button1.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.buscar;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.Location = new System.Drawing.Point(239, 27);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(50, 50);
             this.button1.TabIndex = 8;
-            this.button1.Text = "Buscar";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // btncancelar
-            // 
-            this.btncancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btncancelar.Location = new System.Drawing.Point(295, 27);
-            this.btncancelar.Name = "btncancelar";
-            this.btncancelar.Size = new System.Drawing.Size(50, 50);
-            this.btncancelar.TabIndex = 4;
-            this.btncancelar.Text = "Cancelar";
-            this.btncancelar.UseVisualStyleBackColor = true;
-            this.btncancelar.Click += new System.EventHandler(this.btncancelar_Click);
             // 
             // btnretorno
             // 
@@ -132,6 +121,18 @@
             this.btnayuda.Size = new System.Drawing.Size(50, 50);
             this.btnayuda.TabIndex = 6;
             this.btnayuda.UseVisualStyleBackColor = true;
+            this.btnayuda.Click += new System.EventHandler(this.btnayuda_Click);
+            // 
+            // btncancelar
+            // 
+            this.btncancelar.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.cancelar;
+            this.btncancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btncancelar.Location = new System.Drawing.Point(295, 27);
+            this.btncancelar.Name = "btncancelar";
+            this.btncancelar.Size = new System.Drawing.Size(50, 50);
+            this.btncancelar.TabIndex = 4;
+            this.btncancelar.UseVisualStyleBackColor = true;
+            this.btncancelar.Click += new System.EventHandler(this.btncancelar_Click);
             // 
             // btneliminar
             // 

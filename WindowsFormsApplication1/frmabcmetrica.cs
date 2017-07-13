@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace WindowsFormsApplication1
 {
     public partial class frmabcmetrica : Form
@@ -127,6 +128,11 @@ namespace WindowsFormsApplication1
         private void frmabcmetrica_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnAyuda_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start(Environment.CurrentDirectory + @"\Creación,Modificación,Eliminaciónmetrica-mike.pdf");
         }
     }
 }

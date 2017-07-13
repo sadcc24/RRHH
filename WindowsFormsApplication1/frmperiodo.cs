@@ -108,6 +108,11 @@ namespace WindowsFormsApplication1
         {
             this.Close();
         }
+
+        private void btnayuda_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start(Environment.CurrentDirectory + @"\MANUALDEAYUDA-periodos.pdf");
+        }
     }
  }
 

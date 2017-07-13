@@ -82,5 +82,10 @@ namespace WindowsFormsApplication1
             clasnegocio cnegocio = new clasnegocio();
             cnegocio.funPrimero(dgvperiodo);
         }
+
+        private void btnAyuda_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start(Environment.CurrentDirectory + @"\ConsultaPeriodo-mike.pdf");
+        }
     }
 }

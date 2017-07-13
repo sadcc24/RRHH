@@ -251,7 +251,7 @@ namespace WindowsFormsApplication1
                 departamento = "0";
             }
             List<capa_presentacion_formaciones.empleadosdep> empdep = new List<capa_presentacion_formaciones.empleadosdep>();
-            SqlCommand comando = new SqlCommand("select e.idempleado,e.idempresa,CONCAT(dp.nombre1,' ',dp.nombre2,' ',dp.apellido1,' ', dp.apellido2) as nombre from EMPLEADO e left join DetallePersonal dp on e.idempleado = dp.idempleado join DetalleLaboral dl on dl.idempleado=e.idempleado where e.idempresa = "+idempresa+" and dl.departamento = "+departamento, conexionbd.ObtenerConexion());
+            SqlCommand comando = new SqlCommand("select e.idempleado,e.idempresa,CONCAT(dp.nombre1,' ',dp.nombre2,' ',dp.apellido1,' ', dp.apellido2) as nombre from EMPLEADO e left join DetallePersonal dp on e.idempleado = dp.idempleado join DetalleLaboral dl on dl.idempleado=e.idempleado join PUESTOdeTRABAJO pt on pt.idpuestodetrabajo=dl.idpuestodetrabajo join departamentoempresa demp on demp.iddepartamentoempresa = pt.iddepartamentoempresa  where e.idempresa = "+idempresa+ " and pt.iddepartamentoempresa = " + departamento, conexionbd.ObtenerConexion());
             SqlDataReader dr = comando.ExecuteReader();
 
             while (dr.Read())
@@ -316,7 +316,7 @@ namespace WindowsFormsApplication1
         public static int consutaidmetrica() {
             int id=0;
 
-            SqlCommand comando = new SqlCommand("select max(idmetrica) as codigo from METRICA", conexionbd.ObtenerConexion());
+            SqlCommand comando = new SqlCommand("select isnull(max(idmetrica),0) as codigo from METRICA", conexionbd.ObtenerConexion());
             SqlDataReader dr = comando.ExecuteReader();
 
             while (dr.Read())
@@ -369,7 +369,7 @@ namespace WindowsFormsApplication1
                 SQL_Conexion.Close();
 
 
-                SqlCommand comando = new SqlCommand("select e.idempleado,e.idempresa,dl.departamento from empleado e left join DetalleLaboral dl on e.idempleado = dl.idempleado where dl.departamento = "+departamento+" and e.estado = 1 and e.idempresa = "+empresa_asig, conexionbd.ObtenerConexion());
+                SqlCommand comando = new SqlCommand("select e.idempleado,e.idempresa,demp.nombredeptoempresa from empleado e left join DetalleLaboral dl on e.idempleado = dl.idempleado left join PUESTOdeTRABAJO pt on pt.idpuestodetrabajo = dl.idpuestodetrabajo left  join departamentoempresa demp on demp.iddepartamentoempresa = pt.iddepartamentoempresa where pt.iddepartamentoempresa = " + departamento+ " and e.idestado = 1 and e.idempresa = " + empresa_asig, conexionbd.ObtenerConexion());
                 SqlDataReader dr = comando.ExecuteReader();
 
                 while (dr.Read())
@@ -391,11 +391,11 @@ namespace WindowsFormsApplication1
             return rasignacion;
         }
 
-        public static List<capa_presentacion_formaciones.asignacion> consulta_asignacion() {
+        public static List<capa_presentacion_formaciones.asignacion> consulta_asignacion(string idempresa) {
 
             List<capa_presentacion_formaciones.asignacion> asig = new List<capa_presentacion_formaciones.asignacion>();
 
-            SqlCommand comando = new SqlCommand("select c.idcapacitacion,c.nombre,COUNT(distinct dc.idasignacion) as asignaciones from CAPACITACION c join ASIGNACION_CAPACITACION a on c.idcapacitacion = a.idcapacitacion join DETALLEASIGNACION_CAPACITACION dc on dc.idasignacion = a.idasignacion where dc.idempresa = 1 group by c.nombre, c.idcapacitacion", conexionbd.ObtenerConexion());
+            SqlCommand comando = new SqlCommand("select c.idcapacitacion,c.nombre,COUNT(distinct dc.idasignacion) as asignaciones from CAPACITACION c join ASIGNACION_CAPACITACION a on c.idcapacitacion = a.idcapacitacion join DETALLEASIGNACION_CAPACITACION dc on dc.idasignacion = a.idasignacion where dc.idempresa = "+idempresa+" group by c.nombre, c.idcapacitacion", conexionbd.ObtenerConexion());
             SqlDataReader dr = comando.ExecuteReader();
 
             while (dr.Read())
@@ -410,11 +410,11 @@ namespace WindowsFormsApplication1
         }
 
 
-        public static List<capa_presentacion_formaciones.detaasig> consultadetasi(string idcapacitacion) {
+        public static List<capa_presentacion_formaciones.detaasig> consultadetasi(string idcapacitacion,string idempresa) {
 
             List<capa_presentacion_formaciones.detaasig> detasig = new List<capa_presentacion_formaciones.detaasig>();
 
-            SqlCommand comando = new SqlCommand("select dc.idasignacion,convert(varchar(10), cast(AC.fecha_inicio as date), 103) as fechainicio , convert(varchar(10), cast(AC.fecha_fin as date), 103) as fechafin ,AC.horario,count(dc.idempleado) as empleados from ASIGNACION_CAPACITACION AC join DETALLEASIGNACION_CAPACITACION DC on  AC.idasignacion = DC.idasignacion WHERE AC.idcapacitacion = " + idcapacitacion+" and DC.idempresa = 1 group by DC.idasignacion, AC.fecha_inicio, AC.fecha_fin, AC.horario", conexionbd.ObtenerConexion());
+            SqlCommand comando = new SqlCommand("select dc.idasignacion,convert(varchar(10), cast(AC.fecha_inicio as date), 103) as fechainicio , convert(varchar(10), cast(AC.fecha_fin as date), 103) as fechafin ,AC.horario,count(dc.idempleado) as empleados from ASIGNACION_CAPACITACION AC join DETALLEASIGNACION_CAPACITACION DC on  AC.idasignacion = DC.idasignacion WHERE AC.idcapacitacion = " + idcapacitacion+" and DC.idempresa = "+idempresa+" group by DC.idasignacion, AC.fecha_inicio, AC.fecha_fin, AC.horario", conexionbd.ObtenerConexion());
             SqlDataReader dr = comando.ExecuteReader();
 
             string fecha = "";
@@ -436,7 +436,7 @@ namespace WindowsFormsApplication1
         public static List<capa_presentacion_formaciones.evaluacionesdesempeñconsulta> consultaevaluacion(string idempresa) {
             List < capa_presentacion_formaciones.evaluacionesdesempeñconsulta > consulta=new List<capa_presentacion_formaciones.evaluacionesdesempeñconsulta>();
 
-            SqlCommand comando = new SqlCommand("select distinct ed.idevaluacion,concat(dp.nombre1,' ',dp.nombre2+' ', dp.apellido1+' '+dp.apellido2) as nombre, e.nombre_empresa,deptoemp.nombredeptoempresa ,p.periodo, CONCAT(convert(varchar(10), cast(ed.fechainicio as date), 103),' - ', convert(varchar(10), cast(ed.fechafin as date), 103)) as fecha, ed.totalevaluacion from EVALUACIONDESEMPEÑO ed join DetallePersonal dp on dp.idempleado = ed.idempleado  join PERIODO p on p.idperiodo = ed.idperiodo join EMPRESA e on e.idempresa = ed.idempresa join DetalleLaboral dl on dl.idempleado = dl.idempleado join DEPARTAMENTOEMPRESA deptoemp on deptoemp.iddepartamentoempresa = dl.departamento where e.idempresa = "+idempresa+" and ed.estatuseva = 1", conexionbd.ObtenerConexion());
+            SqlCommand comando = new SqlCommand("select distinct ed.idevaluacion,concat(dp.nombre1,' ',dp.nombre2+' ', dp.apellido1+' '+dp.apellido2) as nombre, e.nombre_empresa,deptoemp.nombredeptoempresa ,p.periodo, CONCAT(convert(varchar(10), cast(ed.fechainicio as date), 103),' - ', convert(varchar(10), cast(ed.fechafin as date), 103)) as fecha, ed.totalevaluacion from EVALUACIONDESEMPEÑO ed join DetallePersonal dp on dp.idempleado = ed.idempleado  join PERIODO p on p.idperiodo = ed.idperiodo join EMPRESA e on e.idempresa = ed.idempresa join DetalleLaboral dl on dl.idempleado = dl.idempleado join PUESTOdeTRABAJO pt on pt.idpuestodetrabajo=dl.idpuestodetrabajo  join departamentoempresa deptoemp on deptoemp.iddepartamentoempresa = pt.iddepartamentoempresa  where e.idempresa = "+idempresa+" and ed.estatuseva = 1", conexionbd.ObtenerConexion());
             SqlDataReader dr = comando.ExecuteReader();
 
             
@@ -488,13 +488,13 @@ namespace WindowsFormsApplication1
         public static List<capa_presentacion_formaciones.infodetasig> infodetalleasignacion(string idcapacitacion) {
             List<capa_presentacion_formaciones.infodetasig> infodeas = new List<capa_presentacion_formaciones.infodetasig>();
 
-            SqlCommand comando = new SqlCommand("select CONCAT(dp.nombre1,' ', nombre2,' ',apellido1,' ',apellido2)as nombre,de.nombredeptoempresa as departamento, dl.puesto from ASIGNACION_CAPACITACION ac join DETALLEASIGNACION_CAPACITACION dc ON ac.idasignacion = dc.idasignacion join DetallePersonal dp on dp.idempleado = dc.idempleado join detallelaboral dl on dl.idempleado = dc.idempleado join departamentoempresa de on de.iddepartamentoempresa = dl.departamento where dc.idasignacion = "+ idcapacitacion, conexionbd.ObtenerConexion());
+            SqlCommand comando = new SqlCommand("select CONCAT(dp.nombre1,' ', nombre2,' ',apellido1,' ',apellido2)as nombre,demp.nombredeptoempresa as departamento, pt.nombrepuesto from ASIGNACION_CAPACITACION ac join DETALLEASIGNACION_CAPACITACION dc ON ac.idasignacion = dc.idasignacion join DetallePersonal dp on dp.idempleado = dc.idempleado join detallelaboral dl on dl.idempleado = dc.idempleado join PUESTOdeTRABAJO pt on pt.idpuestodetrabajo = dl.idpuestodetrabajo join departamentoempresa demp on demp.iddepartamentoempresa = pt.iddepartamentoempresa where dc.idasignacion = "+ idcapacitacion, conexionbd.ObtenerConexion());
             SqlDataReader dr = comando.ExecuteReader();
 
             while (dr.Read())
             {
 
-                infodeas.Add(new capa_presentacion_formaciones.infodetasig() {Empleado=dr["nombre"].ToString(),Departamento=dr["departamento"].ToString(), Puesto=dr["puesto"].ToString()  });
+                infodeas.Add(new capa_presentacion_formaciones.infodetasig() {Empleado=dr["nombre"].ToString(),Departamento=dr["departamento"].ToString(), Puesto=dr["nombrepuesto"].ToString()  });
 
             }
             SQL_Conexion.Close();

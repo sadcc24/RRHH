@@ -75,5 +75,10 @@ namespace WindowsFormsApplication1
             clasnegocio cnegocio = new clasnegocio();
             cnegocio.funPrimero(dgvmetrica);
         }
+
+        private void btnAyuda_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start(Environment.CurrentDirectory + @"\ConsultaMétricas-mike.pdf");
+        }
     }
 }

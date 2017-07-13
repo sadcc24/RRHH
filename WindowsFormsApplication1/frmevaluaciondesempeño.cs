@@ -221,5 +221,10 @@ namespace WindowsFormsApplication1
 
 
         }
+
+        private void btnAyuda_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start(Environment.CurrentDirectory + @"\Creación,Modificación,EliminaciónEvaluacióndesempeño-mike.pdf");
+        }
     }
 }

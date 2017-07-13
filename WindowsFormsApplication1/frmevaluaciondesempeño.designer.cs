@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.btnAyuda = new System.Windows.Forms.Button();
+            this.btnBorrar = new System.Windows.Forms.Button();
+            this.btnModificar = new System.Windows.Forms.Button();
             this.Departamento = new System.Windows.Forms.Label();
             this.txtfechaeva = new System.Windows.Forms.TextBox();
             this.cbdepartamento = new System.Windows.Forms.ComboBox();
@@ -42,7 +46,11 @@
             this.label7 = new System.Windows.Forms.Label();
             this.dtpfechafin = new System.Windows.Forms.DateTimePicker();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.txttotalevaluacion = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.txttotalmetrica = new System.Windows.Forms.TextBox();
@@ -55,14 +63,6 @@
             this.cbmetrica = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.btnGuardar = new System.Windows.Forms.Button();
-            this.btnAyuda = new System.Windows.Forms.Button();
-            this.btnBorrar = new System.Windows.Forms.Button();
-            this.btnModificar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -78,6 +78,48 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(256, 57);
             this.panel1.TabIndex = 15;
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.guardar;
+            this.btnGuardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnGuardar.Location = new System.Drawing.Point(8, 0);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(56, 51);
+            this.btnGuardar.TabIndex = 3;
+            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
+            // btnAyuda
+            // 
+            this.btnAyuda.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.help;
+            this.btnAyuda.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAyuda.Location = new System.Drawing.Point(191, 3);
+            this.btnAyuda.Name = "btnAyuda";
+            this.btnAyuda.Size = new System.Drawing.Size(56, 51);
+            this.btnAyuda.TabIndex = 2;
+            this.btnAyuda.UseVisualStyleBackColor = true;
+            this.btnAyuda.Click += new System.EventHandler(this.btnAyuda_Click);
+            // 
+            // btnBorrar
+            // 
+            this.btnBorrar.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.eliminar;
+            this.btnBorrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnBorrar.Location = new System.Drawing.Point(132, 3);
+            this.btnBorrar.Name = "btnBorrar";
+            this.btnBorrar.Size = new System.Drawing.Size(56, 51);
+            this.btnBorrar.TabIndex = 1;
+            this.btnBorrar.UseVisualStyleBackColor = true;
+            // 
+            // btnModificar
+            // 
+            this.btnModificar.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.editar;
+            this.btnModificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnModificar.Location = new System.Drawing.Point(70, 3);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(56, 51);
+            this.btnModificar.TabIndex = 0;
+            this.btnModificar.UseVisualStyleBackColor = true;
             // 
             // Departamento
             // 
@@ -219,6 +261,17 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Metricas";
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.Red;
+            this.label12.Location = new System.Drawing.Point(169, 278);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(251, 40);
+            this.label12.TabIndex = 54;
+            this.label12.Text = "*1-100 punteo ordinario\r\n100-200 punteo extraordinario\r\n";
+            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.button1);
@@ -228,6 +281,37 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(188, 57);
             this.panel2.TabIndex = 53;
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.guardar;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Location = new System.Drawing.Point(8, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(56, 51);
+            this.button1.TabIndex = 3;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.help;
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button2.Location = new System.Drawing.Point(128, 3);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(56, 51);
+            this.button2.TabIndex = 2;
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.editar;
+            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button4.Location = new System.Drawing.Point(68, 3);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(56, 51);
+            this.button4.TabIndex = 0;
+            this.button4.UseVisualStyleBackColor = true;
             // 
             // txttotalevaluacion
             // 
@@ -342,89 +426,6 @@
             this.label2.Size = new System.Drawing.Size(65, 20);
             this.label2.TabIndex = 41;
             this.label2.Text = "Metrica ";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.Red;
-            this.label12.Location = new System.Drawing.Point(169, 278);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(251, 40);
-            this.label12.TabIndex = 54;
-            this.label12.Text = "*1-100 punteo ordinario\r\n100-200 punteo extraordinario\r\n";
-            // 
-            // button1
-            // 
-            this.button1.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.guardar;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Location = new System.Drawing.Point(8, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(56, 51);
-            this.button1.TabIndex = 3;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.help;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.Location = new System.Drawing.Point(128, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(56, 51);
-            this.button2.TabIndex = 2;
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.editar;
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button4.Location = new System.Drawing.Point(68, 3);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(56, 51);
-            this.button4.TabIndex = 0;
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.guardar;
-            this.btnGuardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnGuardar.Location = new System.Drawing.Point(8, 0);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(56, 51);
-            this.btnGuardar.TabIndex = 3;
-            this.btnGuardar.UseVisualStyleBackColor = true;
-            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
-            // 
-            // btnAyuda
-            // 
-            this.btnAyuda.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.help;
-            this.btnAyuda.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnAyuda.Location = new System.Drawing.Point(191, 3);
-            this.btnAyuda.Name = "btnAyuda";
-            this.btnAyuda.Size = new System.Drawing.Size(56, 51);
-            this.btnAyuda.TabIndex = 2;
-            this.btnAyuda.UseVisualStyleBackColor = true;
-            // 
-            // btnBorrar
-            // 
-            this.btnBorrar.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.eliminar;
-            this.btnBorrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnBorrar.Location = new System.Drawing.Point(132, 3);
-            this.btnBorrar.Name = "btnBorrar";
-            this.btnBorrar.Size = new System.Drawing.Size(56, 51);
-            this.btnBorrar.TabIndex = 1;
-            this.btnBorrar.UseVisualStyleBackColor = true;
-            // 
-            // btnModificar
-            // 
-            this.btnModificar.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.editar;
-            this.btnModificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnModificar.Location = new System.Drawing.Point(70, 3);
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(56, 51);
-            this.btnModificar.TabIndex = 0;
-            this.btnModificar.UseVisualStyleBackColor = true;
             // 
             // evaluacion_desempeño
             // 

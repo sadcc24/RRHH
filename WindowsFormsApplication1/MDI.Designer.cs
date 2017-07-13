@@ -51,6 +51,7 @@
             this.r1ToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.r2ToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bancoCVToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.vacacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultaToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.solicitudDeVacacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -94,6 +95,7 @@
             this.toolStripStatusLabel6 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel7 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel8 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.manualGeneralToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -216,7 +218,8 @@
             this.agregarCandidatoToolStripMenuItem,
             this.asignacionDeEntrevistaToolStripMenuItem,
             this.reportesToolStripMenuItem2,
-            this.ayudaToolStripMenuItem});
+            this.ayudaToolStripMenuItem,
+            this.bancoCVToolStripMenuItem});
             this.reclutamientoToolStripMenuItem.Name = "reclutamientoToolStripMenuItem";
             this.reclutamientoToolStripMenuItem.Size = new System.Drawing.Size(96, 20);
             this.reclutamientoToolStripMenuItem.Text = "Reclutamiento";
@@ -284,6 +287,13 @@
             this.ayudaToolStripMenuItem.Name = "ayudaToolStripMenuItem";
             this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(212, 22);
             this.ayudaToolStripMenuItem.Text = "Ayuda";
+            // 
+            // bancoCVToolStripMenuItem
+            // 
+            this.bancoCVToolStripMenuItem.Name = "bancoCVToolStripMenuItem";
+            this.bancoCVToolStripMenuItem.Size = new System.Drawing.Size(212, 22);
+            this.bancoCVToolStripMenuItem.Text = "Banco CV";
+            this.bancoCVToolStripMenuItem.Click += new System.EventHandler(this.bancoCVToolStripMenuItem_Click);
             // 
             // vacacionesToolStripMenuItem
             // 
@@ -541,6 +551,8 @@
             // 
             // ayudaToolStripMenuItem1
             // 
+            this.ayudaToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.manualGeneralToolStripMenuItem});
             this.ayudaToolStripMenuItem1.Name = "ayudaToolStripMenuItem1";
             this.ayudaToolStripMenuItem1.Size = new System.Drawing.Size(53, 20);
             this.ayudaToolStripMenuItem1.Text = "Ayuda";
@@ -618,6 +630,13 @@
             this.toolStripStatusLabel8.Name = "toolStripStatusLabel8";
             this.toolStripStatusLabel8.Size = new System.Drawing.Size(118, 17);
             this.toolStripStatusLabel8.Text = "toolStripStatusLabel8";
+            // 
+            // manualGeneralToolStripMenuItem
+            // 
+            this.manualGeneralToolStripMenuItem.Name = "manualGeneralToolStripMenuItem";
+            this.manualGeneralToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.manualGeneralToolStripMenuItem.Text = "Manual General";
+            this.manualGeneralToolStripMenuItem.Click += new System.EventHandler(this.manualGeneralToolStripMenuItem_Click);
             // 
             // MDI
             // 
@@ -713,6 +732,8 @@
         private System.Windows.Forms.ToolStripMenuItem tipoDeUsuarioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem empleadosInactivosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem candidatosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem bancoCVToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem manualGeneralToolStripMenuItem;
     }
 }
 

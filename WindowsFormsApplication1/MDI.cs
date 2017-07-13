@@ -152,9 +152,7 @@ namespace WindowsFormsApplication1
 
         private void evaluacionDeDesempeñoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            evaluacion_desempeño ventanaP = new evaluacion_desempeño(idempresa);
-            ventanaP.MdiParent = this;
-            ventanaP.Show();
+            
         }
 
         private void nuevoEmpleadoToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -301,6 +299,17 @@ namespace WindowsFormsApplication1
             frmReporteCandidatos ventanaP = new frmReporteCandidatos();
             ventanaP.MdiParent = this;
             ventanaP.Show();
+        }
+
+        private void bancoCVToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmBancocv banco = new frmBancocv();
+            banco.Show();
+        }
+
+        private void manualGeneralToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start(Environment.CurrentDirectory + @"\ManualesAyudaRRHH.pdf");
         }
     }
 }

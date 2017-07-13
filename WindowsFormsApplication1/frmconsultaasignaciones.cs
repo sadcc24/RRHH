@@ -18,7 +18,7 @@ namespace WindowsFormsApplication1
         {
             InitializeComponent();
             usuario = user;
-            List<capa_presentacion_formaciones.asignacion> asig = capa_negocio_formaciones.consulta_info();
+            List<capa_presentacion_formaciones.asignacion> asig = capa_negocio_formaciones.consulta_info(usuario);
 
             dgvasignaciones.DataSource = asig;
 
@@ -35,7 +35,7 @@ namespace WindowsFormsApplication1
             asignaciones = dgvasignaciones[2, dgvasignaciones.CurrentCell.RowIndex].Value.ToString();
 
         
-            List<capa_presentacion_formaciones.detaasig> detasig = capa_negocio_formaciones.detasi(idcapacitacion);
+            List<capa_presentacion_formaciones.detaasig> detasig = capa_negocio_formaciones.detasi(idcapacitacion,usuario);
             dgvdet2.DataSource = detasig;
             dgvdet2.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             dgvdet2.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
@@ -57,7 +57,8 @@ namespace WindowsFormsApplication1
 
         private void button6_Click(object sender, EventArgs e)
         {
-            List<capa_presentacion_formaciones.asignacion> asig = capa_negocio_formaciones.consulta_info();
+            string idempresa = usuario;
+            List<capa_presentacion_formaciones.asignacion> asig = capa_negocio_formaciones.consulta_info(idempresa);
             dgvasignaciones.DataSource = asig;
             dgvasignaciones.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             dgvasignaciones.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
@@ -118,6 +119,11 @@ namespace WindowsFormsApplication1
         {
             clasnegocio cnegocio = new clasnegocio();
             cnegocio.funPrimero(dgvdet2);
+        }
+
+        private void btnAyuda_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start(Environment.CurrentDirectory + @"\ConsultaAsignacionCapacitaciones-mike.pdf");
         }
     }
 }

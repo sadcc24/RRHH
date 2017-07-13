@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+
 using Navegador;
 namespace WindowsFormsApplication1
 
@@ -162,7 +163,7 @@ namespace WindowsFormsApplication1
 
         private void btnAyuda_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start(@"c:\ayuda.pdf");
+            System.Diagnostics.Process.Start(Environment.CurrentDirectory + @"\frmaceptacion-criss.pdf");
         }
     }
 }

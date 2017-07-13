@@ -97,5 +97,10 @@ namespace WindowsFormsApplication1
             clasnegocio cnegocio = new clasnegocio();
             cnegocio.funPrimero(dgvCapacitaciones);
         }
+
+        private void btnAyuda_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start(Environment.CurrentDirectory + @"\AyudaConsultaCapacitacion-mike.pdf");
+        }
     }
 }

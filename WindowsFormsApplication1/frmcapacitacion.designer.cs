@@ -139,6 +139,7 @@
             this.btnAyuda.Size = new System.Drawing.Size(56, 51);
             this.btnAyuda.TabIndex = 3;
             this.btnAyuda.UseVisualStyleBackColor = true;
+            this.btnAyuda.Click += new System.EventHandler(this.btnAyuda_Click);
             // 
             // btnBorrar
             // 

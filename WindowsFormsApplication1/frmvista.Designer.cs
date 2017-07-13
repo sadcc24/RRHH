@@ -35,6 +35,8 @@
             this.dfechafin = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.btnAyuda = new System.Windows.Forms.Button();
+            this.btnretorno = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -103,11 +105,35 @@
             this.label3.TabIndex = 32;
             this.label3.Text = "a";
             // 
+            // btnAyuda
+            // 
+            this.btnAyuda.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.help;
+            this.btnAyuda.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAyuda.Location = new System.Drawing.Point(458, 58);
+            this.btnAyuda.Name = "btnAyuda";
+            this.btnAyuda.Size = new System.Drawing.Size(41, 41);
+            this.btnAyuda.TabIndex = 33;
+            this.btnAyuda.UseVisualStyleBackColor = true;
+            this.btnAyuda.Click += new System.EventHandler(this.btnAyuda_Click);
+            // 
+            // btnretorno
+            // 
+            this.btnretorno.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.menu_principal;
+            this.btnretorno.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnretorno.Location = new System.Drawing.Point(505, 58);
+            this.btnretorno.Name = "btnretorno";
+            this.btnretorno.Size = new System.Drawing.Size(40, 41);
+            this.btnretorno.TabIndex = 34;
+            this.btnretorno.UseVisualStyleBackColor = true;
+            this.btnretorno.Click += new System.EventHandler(this.btnretorno_Click);
+            // 
             // frmvista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(604, 267);
+            this.Controls.Add(this.btnretorno);
+            this.Controls.Add(this.btnAyuda);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dfechainicio);
@@ -133,5 +159,7 @@
         private System.Windows.Forms.DateTimePicker dfechafin;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnAyuda;
+        private System.Windows.Forms.Button btnretorno;
     }
 }

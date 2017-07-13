@@ -26,5 +26,15 @@ namespace WindowsFormsApplication1
         {
 
         }
+
+        private void btnretorno_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnAyuda_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start(Environment.CurrentDirectory + @"\MANUALDEAYUDA-vistavacaciones.pdf");
+        }
     }
 }

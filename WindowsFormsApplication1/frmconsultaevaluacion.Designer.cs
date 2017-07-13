@@ -74,6 +74,7 @@
             this.btnAyuda.Size = new System.Drawing.Size(41, 34);
             this.btnAyuda.TabIndex = 11;
             this.btnAyuda.UseVisualStyleBackColor = true;
+            this.btnAyuda.Click += new System.EventHandler(this.btnAyuda_Click);
             // 
             // button7
             // 

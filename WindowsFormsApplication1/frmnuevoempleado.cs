@@ -89,7 +89,7 @@ namespace WindowsFormsApplication1
 
         private void btnAyuda_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start(@"c:\ayuda.pdf");
+            System.Diagnostics.Process.Start(@"c:\frmnuevoempleado-criss.pdf");
         }
 
         private void btnEditar_Click(object sender, EventArgs e)

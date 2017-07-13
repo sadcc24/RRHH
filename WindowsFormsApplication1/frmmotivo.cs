@@ -108,5 +108,10 @@ namespace WindowsFormsApplication1
         {
 
         }
+
+        private void btnayuda_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start(Environment.CurrentDirectory + @"\MANUALDEAYUDA-motivo.pdf");
+        }
     }
 }

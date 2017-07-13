@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Diagnostics;
+
 
 namespace WindowsFormsApplication1
 {
@@ -39,9 +39,8 @@ namespace WindowsFormsApplication1
 
         private void btnAyuda_Click(object sender, EventArgs e)
         {
-            Process proceso = new Process();
-            proceso.StartInfo.FileName = @"C:\Users\chepe\Desktop\recursos humanos\RRHH\WindowsFormsApplication1\manuales\MANUALDEAYUDA-aprobacion.pdf";
-            proceso.Start();
+            System.Diagnostics.Process.Start(Environment.CurrentDirectory + @"\MANUALDEAYUDA-aprobacion.pdf");
+
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
